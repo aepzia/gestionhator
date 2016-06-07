@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane prefHeight="292.0" prefWidth="355.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Region layoutX="-17.0" layoutY="-35.0" prefHeight="363.0" prefWidth="390.0" />
+    <Button layoutX="40.0" layoutY="51.0" mnemonicParsing="false" prefWidth="260.0" text="Asoziazioa / Asociación" />
+    <Button layoutX="40.0" layoutY="92.0" mnemonicParsing="false" prefWidth="260.0" text="Bazkideak / Socios" />
+    <Button layoutX="40.0" layoutY="136.0" mnemonicParsing="false" prefWidth="260.0" text="Ekintzak / Actividades" />
+    <Button layoutX="40.0" layoutY="181.0" mnemonicParsing="false" prefWidth="260.0" text="Terceros" />
+    <Button layoutX="40.0" layoutY="223.0" mnemonicParsing="false" prefWidth="260.0" text="Egutegia / Calendario" />
+  </children>
+</AnchorPane>
