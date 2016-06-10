@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="587.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView fx:id="imgFoto" fitHeight="127.0" fitWidth="169.33333333333331" layoutX="296.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+    <TextField fx:id="textNombre" layoutX="55.0" layoutY="40.0" prefWidth="200.0" />
+    <Label layoutX="55.0" layoutY="291.0" prefWidth="48.0" text="Tel.:" />
+    <TextField fx:id="textApellido" layoutX="55.0" layoutY="77.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="240.0" layoutY="291.0" prefWidth="200.0" />
+    <Label layoutX="55.0" layoutY="449.0" text="Dirección" />
+    <TextArea fx:id="textDireccion" layoutX="240.0" layoutY="449.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <Label layoutX="55.0" layoutY="229.0" prefWidth="113.0" text="Fecha de nacimiento" />
+    <Label layoutX="55.0" layoutY="255.0" prefWidth="105.0" text="Fecha de alta" />
+    <TextField fx:id="textNacimiento" layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
+    <TextField fx:id="textAlta" layoutX="240.0" layoutY="255.0" prefWidth="200.0" />
+    <Label layoutX="55.0" layoutY="157.0" prefWidth="85.0" text="Tipo de socio" />
+    <Label layoutX="270.0" layoutY="189.0" text="Sexo" />
+    <TextField fx:id="textDNI" layoutX="142.0" layoutY="119.0" prefWidth="112.99990000000253" />
+    <Label layoutX="55.0" layoutY="125.0" text="DNI" />
+    <TextField fx:id="textTel2" layoutX="240.0" layoutY="315.0" prefWidth="200.0" />
+    <TextField fx:id="textEmail" layoutX="240.0" layoutY="379.0" prefWidth="200.0" />
+    <Label layoutX="55.0" layoutY="382.0" text="e-mail" />
+    <Label layoutX="373.0" layoutY="190.0" text="Nº" />
+    <Label layoutX="55.0" layoutY="184.0" text="Pensionista" />
+    <Label layoutX="55.0" layoutY="348.0" text="Tel. de emergencia" />
+    <TextField fx:id="textTelEm" layoutX="240.0" layoutY="345.0" prefWidth="200.0" />
+    <Button layoutX="53.0" layoutY="657.0" mnemonicParsing="false" prefWidth="73.0" text="Guardar" />
+    <Label layoutX="55.0" layoutY="523.0" text="Otras observaciones" />
+    <TextArea fx:id="textOtros" layoutX="240.0" layoutY="523.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <ChoiceBox fx:id="opTipo" layoutX="142.0" layoutY="155.0" prefWidth="113.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="opSexo" layoutX="304.0" layoutY="187.0" prefWidth="34.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="opPensionista" layoutX="142.0" layoutY="184.0" prefWidth="34.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="opNum" layoutX="406.0" layoutY="187.0" prefWidth="48.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" text="Examinar ..." />
+    <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
+    <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" prefWidth="57.0" text="ver" />
+    <Button fx:id="btnExaminarLOPD" layoutX="360.0" layoutY="608.0" mnemonicParsing="false" text="Examinar ..." />
+    <Label layoutX="53.0" layoutY="414.0" text="Cuenta corriente" />
+    <Group id="Group" layoutX="242.0" layoutY="414.0">
+      <children>
+        <TextField fx:id="textBanco1" layoutX="0.0" layoutY="0.0" prefWidth="37.0" />
+        <TextField fx:id="textBanco2" layoutX="39.0" layoutY="0.0" prefWidth="37.0" />
+        <TextField fx:id="textBanco3" layoutX="80.0" layoutY="0.0" prefWidth="24.0" />
+        <TextField fx:id="textBanco4" layoutX="110.0" layoutY="0.0" prefWidth="88.0" />
+      </children>
+    </Group>
+    <Button fx:id="btnAtras" layoutX="440.0" layoutY="658.0" mnemonicParsing="false" prefWidth="60.0" text="" />
+  </children>
+</AnchorPane>

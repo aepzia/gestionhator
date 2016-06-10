@@ -25,7 +25,7 @@ public class menuPrincipal extends Application {
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 				primaryStage.setScene(scene);
-				primaryStage.setTitle("FXML is Simple");
+				primaryStage.setTitle("Bienvenido");
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

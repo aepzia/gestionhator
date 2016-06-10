@@ -14,7 +14,7 @@
     <ImageView fitHeight="84.0" fitWidth="112.00000435965401" layoutX="241.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
     <TextField layoutX="28.0" layoutY="38.0" prefWidth="200.0" />
     <TextField layoutX="28.0" layoutY="70.0" prefWidth="200.0" />
-    <Button fx:id="btnAtras" layoutX="316.0" layoutY="378.0" mnemonicParsing="false" text="Atras" />
+    <Button fx:id="btnAtras" layoutX="316.0" layoutY="378.0" mnemonicParsing="false" text="" />
     <Button layoutX="28.0" layoutY="411.0" mnemonicParsing="false" prefWidth="69.0" text="Guardar" underline="false" />
     <Label layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
     <TextField layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
