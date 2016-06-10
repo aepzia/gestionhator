@@ -10,10 +10,10 @@
   <!-- TODO Add Nodes -->
   <children>
     <Region layoutX="-17.0" layoutY="-35.0" prefHeight="363.0" prefWidth="390.0" />
-    <Button layoutX="40.0" layoutY="25.0" mnemonicParsing="false" prefWidth="260.0" text="Asoziazioa / Asociación" />
-    <Button layoutX="40.0" layoutY="62.0" mnemonicParsing="false" prefWidth="260.0" text="Bazkideak / Socios" />
-    <Button layoutX="40.0" layoutY="103.0" mnemonicParsing="false" prefWidth="260.0" text="Ekintzak / Actividades" />
-    <Button layoutX="40.0" layoutY="147.0" mnemonicParsing="false" prefWidth="260.0" text="Terceros" />
-    <Button layoutX="40.0" layoutY="188.0" mnemonicParsing="false" prefWidth="260.0" text="Egutegia / Calendario" />
+    <Button fx:id="btnAsociacion" layoutX="40.0" layoutY="25.0" mnemonicParsing="false" prefWidth="260.0" text="Asoziazioa / Asociación" />
+    <Button fx:id="btnSocio" layoutX="40.0" layoutY="62.0" mnemonicParsing="false" prefWidth="260.0" text="Bazkideak / Socios" />
+    <Button fx:id="btnActividades" layoutX="40.0" layoutY="103.0" mnemonicParsing="false" prefWidth="260.0" text="Ekintzak / Actividades" />
+    <Button fx:id="btnTerceros" layoutX="40.0" layoutY="147.0" mnemonicParsing="false" prefWidth="260.0" text="Terceros" />
+    <Button fx:id="btnCalendario" layoutX="40.0" layoutY="188.0" mnemonicParsing="false" prefWidth="260.0" text="Egutegia / Calendario" />
   </children>
 </AnchorPane>
