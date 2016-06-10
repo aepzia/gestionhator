@@ -21,7 +21,7 @@ public class editarSocio extends Application {
     public void start(Stage primaryStage){
             Parent page;
 			try {
-				page = FXMLLoader.load(getClass().getResource("Socio.fxml"));
+				page = FXMLLoader.load(getClass().getResource("editarAñadirSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 				primaryStage.setScene(scene);
