@@ -10,28 +10,28 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
-    <ImageView fitHeight="113.0" fitWidth="150.66666666666666" layoutX="241.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-    <TextField layoutX="28.0" layoutY="38.0" prefWidth="200.0" />
-    <TextField layoutX="28.0" layoutY="70.0" prefWidth="200.0" />
-    <ImageView id="atras" fitHeight="66.0" fitWidth="69.0" layoutX="316.0" layoutY="378.0" pickOnBounds="true">
+    <ImageView id="imgLogo" fx:id="imgLogo" fitHeight="113.0" fitWidth="150.66666666666666" layoutX="241.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+    <TextField fx:id="textNombre" layoutX="28.0" layoutY="38.0" prefWidth="200.0" />
+    <TextField fx:id="textApellido" layoutX="28.0" layoutY="70.0" prefWidth="200.0" />
+    <ImageView id="atras" fx:id="btnAtras" fitHeight="66.0" fitWidth="69.0" layoutX="316.0" layoutY="378.0" pickOnBounds="true">
       <image>
         <Image url="@atras.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Button layoutX="28.0" layoutY="411.0" mnemonicParsing="false" prefWidth="69.0" text="Editar" underline="false" />
+    <Button fx:id="btnEditar" layoutX="28.0" layoutY="411.0" mnemonicParsing="false" prefWidth="69.0" text="Editar" underline="false" />
     <Label layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
-    <TextField layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
+    <TextField fx:id="textPresi" layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
     <Label layoutX="28.0" layoutY="257.0" text="Dirección" />
-    <TextArea layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
+    <TextArea fx:id="textDireccion" layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
     <Label layoutX="28.0" layoutY="145.0" text="Tel.:" />
-    <TextField layoutX="130.0" layoutY="145.0" prefWidth="200.0" />
-    <TextField layoutX="130.0" layoutY="174.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="130.0" layoutY="145.0" prefWidth="200.0" />
+    <TextField fx:id="textTel2" layoutX="130.0" layoutY="174.0" prefWidth="200.0" />
     <Label layoutX="28.0" layoutY="362.0" text="Numeracion de socios" />
-    <TextField layoutX="168.0" layoutY="362.0" prefWidth="162.0" />
+    <TextField fx:id="textNumeracion" layoutX="168.0" layoutY="362.0" prefWidth="162.0" />
     <Label layoutX="28.0" layoutY="215.0" text="Cuenta corriente" />
-    <TextField layoutX="131.0" layoutY="212.0" prefWidth="37.0" />
-    <TextField layoutX="170.0" layoutY="212.0" prefWidth="37.0" />
-    <TextField layoutX="211.0" layoutY="212.0" prefWidth="24.0" />
-    <TextField layoutX="242.0" layoutY="212.0" prefWidth="88.0" />
+    <TextField fx:id="textBanco1" layoutX="131.0" layoutY="212.0" prefWidth="37.0" />
+    <TextField fx:id="textBanco2" layoutX="170.0" layoutY="212.0" prefWidth="37.0" />
+    <TextField fx:id="textBanco3" layoutX="211.0" layoutY="212.0" prefWidth="24.0" />
+    <TextField fx:id="textBanco4" layoutX="242.0" layoutY="212.0" prefWidth="88.0" />
   </children>
 </AnchorPane>
