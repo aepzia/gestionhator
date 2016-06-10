@@ -1,3 +1,6 @@
+#btnAtras{
+	-fx-background-image: url("atras.png");
+}
 .root {
         -fx-background-color:  azure;
         -fx-border-color: white;

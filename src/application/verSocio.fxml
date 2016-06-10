@@ -19,11 +19,7 @@
     <TextArea layoutX="240.0" layoutY="407.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
     <Button layoutX="47.0" layoutY="586.0" mnemonicParsing="false" prefWidth="85.0" text="Ficha" />
     <Button layoutX="255.0" layoutY="586.0" mnemonicParsing="false" prefWidth="85.0" text="Actividades" />
-    <ImageView id="atras" fitHeight="48.0" fitWidth="57.0" layoutX="445.0" layoutY="562.0" pickOnBounds="true">
-      <image>
-        <Image url="@../../../../Desktop/atras.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
+	<Button fx:id="btnAtras" layoutX="445.0" layoutY="562.0" mnemonicParsing="false" text="Atras" />
     <Label layoutX="55.0" layoutY="229.0" prefWidth="113.0" text="Fecha de nacimiento" />
     <Label layoutX="55.0" layoutY="255.0" prefWidth="105.0" text="Fecha de alta" />
     <TextField layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
