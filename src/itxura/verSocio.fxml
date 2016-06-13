@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -27,14 +28,14 @@
       </textFill>
     </Label>
     <TextArea layoutX="240.0" layoutY="437.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
-    <Button layoutX="55.0" layoutY="630.0" mnemonicParsing="false" prefWidth="85.0" text="Ficha" />
-    <Button layoutX="254.0" layoutY="630.0" mnemonicParsing="false" prefWidth="85.0" text="Actividades" />
+    <Button id="btnFicha" layoutX="55.0" layoutY="630.0" mnemonicParsing="false" prefWidth="85.0" text="Ficha" />
+    <Button id="btnActividades" layoutX="254.0" layoutY="631.0" mnemonicParsing="false" prefWidth="85.0" text="Actividades" />
     <Button fx:id="btnAtras" layoutX="445.0" layoutY="607.0" mnemonicParsing="false" prefWidth="48.0" text="" />
     <Label layoutX="55.0" layoutY="232.0" prefWidth="113.0" text="Fecha de nacimiento" textFill="$x1" />
     <Label layoutX="56.0" layoutY="264.0" prefWidth="105.0" text="Fecha de alta" textFill="$x1" />
     <TextField layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
     <TextField layoutX="240.0" layoutY="255.0" prefWidth="200.0" />
-    <Button layoutX="155.0" layoutY="630.0" mnemonicParsing="false" prefWidth="71.0" text="Editar" />
+    <Button id="btnEdit" layoutX="155.0" layoutY="630.0" mnemonicParsing="false" prefWidth="71.0" text="Editar" />
     <Label layoutX="56.0" layoutY="146.0" prefHeight="22.0" prefWidth="80.0" text="Bazkide mota" />
     <Label layoutX="271.0" layoutY="171.0" text="Sexo" textFill="$x1" />
     <TextField layoutX="142.0" layoutY="119.0" prefWidth="112.99990000000253" />
@@ -50,14 +51,17 @@
     <TextField layoutX="142.0" layoutY="184.0" prefWidth="26.0" />
     <Label layoutX="55.0" layoutY="354.0" text="Tel. de emergencia" textFill="$x1" />
     <TextField layoutX="240.0" layoutY="345.0" prefWidth="200.0" />
-    <Button layoutX="363.0" layoutY="630.0" mnemonicParsing="false" text="Pagos" />
+    <Button id="btnPagos" layoutX="363.0" layoutY="630.0" mnemonicParsing="false" text="Pagos" />
     <Label layoutX="54.0" layoutY="516.0" text="Otras observaciones" textFill="$x1" />
     <TextArea layoutX="240.0" layoutY="500.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
     <Label layoutX="52.0" layoutY="577.0" text="Proteccion de datos" textFill="$x1" />
-    <Button id="btnVer" alignment="TOP_CENTER" cancelButton="false" defaultButton="false" layoutX="220.0" layoutY="577.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="80.0" style="-fx-background-image: url(&quot;gafas.png&quot;);" text="Ikusi / ver" textAlignment="LEFT" textFill="BLACK" wrapText="true">
+    <Button id="btnVer" alignment="CENTER" cancelButton="false" defaultButton="false" layoutX="244.0" layoutY="577.0" minHeight="21.999900000002526" mnemonicParsing="false" prefHeight="22.0" prefWidth="52.0" style="" text="Ver" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" wrapText="true">
       <font>
         <Font size="12.0" />
       </font>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
     </Button>
     <Button id="btnExaminarLOPD" layoutX="357.0" layoutY="579.0" mnemonicParsing="false" text="Examinar ..." />
     <Label layoutX="54.0" layoutY="415.0" text="Cuenta corriente" textFill="$x1" />
