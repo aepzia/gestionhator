@@ -27,9 +27,9 @@ public class nuevoSocio extends Application {
     public void start(Stage primaryStage){
     	AnchorPane page;
 			try {
-				page = (AnchorPane) FXMLLoader.load(getClass().getResource("editarAñadirSocio.fxml"));
+				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/editarAñadirSocio.fxml"));
 				Scene scene = new Scene(page);
-		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				
 		        /*
 		         * Argazkia aldatzeko

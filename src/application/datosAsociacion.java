@@ -21,9 +21,9 @@ public class datosAsociacion extends Application {
     public void start(Stage primaryStage){
             Parent page;
 			try {
-				page = FXMLLoader.load(getClass().getResource("datosAsociacion.fxml"));
+				page = FXMLLoader.load(getClass().getResource("../itxura/datosAsociacion.fxml"));
 				Scene scene = new Scene(page);
-		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				primaryStage.setScene(scene);
 				primaryStage.setTitle("Datos de la asociación");
 				primaryStage.show();

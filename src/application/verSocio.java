@@ -25,9 +25,9 @@ public class verSocio extends Application {
     public void start(Stage primaryStage){
     	AnchorPane  page;
 			try {
-				page =(AnchorPane)  FXMLLoader.load(getClass().getResource("verSocio.fxml"));
+				page =(AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/verSocio.fxml"));
 				Scene scene = new Scene(page);
-		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				
 		        /*
 		         * Argazkia aldatzeko 

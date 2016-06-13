@@ -21,9 +21,9 @@ public class sociosActividad extends Application {
     public void start(Stage primaryStage){
             Parent page;
 			try {
-				page = FXMLLoader.load(getClass().getResource("sociosActividad.fxml"));
+				page = FXMLLoader.load(getClass().getResource("../itxura/sociosActividad.fxml"));
 				Scene scene = new Scene(page);
-		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				primaryStage.setScene(scene);
 				primaryStage.setTitle("Actividades del socio");
 				primaryStage.show();
