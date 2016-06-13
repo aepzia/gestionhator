@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="587.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
-    <ImageView fx:id="imgFoto" fitHeight="127.0" fitWidth="169.33333333333331" layoutX="296.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="imgFoto" fitHeight="131.0" fitWidth="131.0" layoutX="309.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" smooth="true" x="0.0" y="0.0" />
     <TextField fx:id="textNombre" layoutX="55.0" layoutY="40.0" prefWidth="200.0" />
     <Label layoutX="55.0" layoutY="291.0" prefWidth="48.0" text="Tel.:" />
     <TextField fx:id="textApellido" layoutX="55.0" layoutY="77.0" prefWidth="200.0" />

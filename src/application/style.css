@@ -6,6 +6,9 @@
     -fx-padding: 15px 10px 15px 10px;
    -fx-background-color: transparent ;
 }
+#imgFoto{
+	-fx-image: url("perfil.png");
+}
 .root {
         -fx-background-color:  azure;
         -fx-border-color: white;

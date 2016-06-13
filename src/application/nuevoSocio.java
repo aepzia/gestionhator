@@ -11,30 +11,38 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class nuevoSocio extends Application {
-	@FXML
-    private ImageView imgFoto;
+	
 	
     public static void main(String[] args) {
         launch(args);
     }
-
+    @FXML
+    public ImageView imgFoto;
+    
     @Override
     public void start(Stage primaryStage){
-            Parent page;
+    	AnchorPane page;
 			try {
-				
-				page = FXMLLoader.load(getClass().getResource("editarAñadirSocio.fxml"));
+				page = (AnchorPane) FXMLLoader.load(getClass().getResource("editarAñadirSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-		        File file = new File("perfil.png");
-		        Image image = new Image(file.toURI().toString());
-		        imgFoto = new ImageView(image);
-		        primaryStage.setScene(scene);
-				primaryStage.setTitle("FXML is Simple");
 				
+		        /*
+		         * Argazkia aldatzeko
+		         * */
+		        imgFoto = new ImageView();
+		        imgFoto.setLayoutX(309);
+		        imgFoto.setLayoutY(13);
+		        String img = "http://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437";
+		        imgFoto.setImage(new Image(img, 140, 140, true, true));
+		        page.getChildren().add(imgFoto);
+		               
+		        primaryStage.setScene(scene);
+				primaryStage.setTitle("Añadir un nuevo socio");
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
