@@ -32,7 +32,7 @@ public class menuPrincipal extends Application {
 	}
 	@FXML private void verActividades(ActionEvent event){
 		actividadesTodos newWindow = new actividadesTodos();
-		//newWindow.start(getPrimaryStage());
+		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verTerceros(ActionEvent event){
 		//datosAsociacion newWindow = new datosAsociacion();
