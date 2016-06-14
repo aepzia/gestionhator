@@ -2,8 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import com.sun.glass.ui.Window;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.application.Application;
@@ -11,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,24 +20,40 @@ public class menuPrincipal extends Application {
 	@FXML private Button btnActividades;
 	@FXML private Button btnTerceros;
 	@FXML private Button btnCalendario;
-	
-	@FXML private void verAsociacion(ActionEvent event) {
-		try{
-		    Parent root = FXMLLoader.load(getClass().getResource("datosAsociacion.fxml"));
-		    FXMLLoader loader = new FXMLLoader(getClass().getResource("datosAsociacion.fxml"));
-		    datosAsociacion controller = new datosAsociacion();
+	private static Stage pStage;
 
-		    loader.setController(controller);
-		    loader.setRoot(root);
-
-		    Stage stage = new Stage();
-		    stage.setScene(new Scene(root));
-		    stage.show();
-		} catch (IOException ex){
-			
-		}
+	@FXML private void verAsociacion(ActionEvent event){
+		datosAsociacion newWindow = new datosAsociacion();
+		newWindow.start(getPrimaryStage());
+	}
+	@FXML private void verSocios(ActionEvent event){
+		sociosTodos newWindow = new sociosTodos();
+		newWindow.start(getPrimaryStage());
+	}
+	@FXML private void verActividades(ActionEvent event){
+		actividadesTodos newWindow = new actividadesTodos();
+		//newWindow.start(getPrimaryStage());
+	}
+	@FXML private void verTerceros(ActionEvent event){
+		//datosAsociacion newWindow = new datosAsociacion();
+		//newWindow.start(getPrimaryStage());
+	}
+	@FXML private void verCalendario(ActionEvent event){
+		//datosAsociacion newWindow = new datosAsociacion();
+		//newWindow.start(getPrimaryStage());
 	}
 	
+	
+	
+	
+	public static Stage getPrimaryStage() {
+        return pStage;
+    }
+
+    private void setPrimaryStage(Stage pStage) {
+        menuPrincipal.pStage = pStage;
+    }
+    
     public static void main(String[] args) {
         launch(args); 
       
@@ -50,6 +63,7 @@ public class menuPrincipal extends Application {
     public void start(Stage primaryStage){
     	
 		try {
+			setPrimaryStage(primaryStage);
 			Parent page = FXMLLoader.load(getClass().getResource("../itxura/menuPrincipal.fxml"));
 			Scene scene = new Scene(page);
 	        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
