@@ -10,13 +10,33 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class sociosTodos extends Application {
 	
+	@FXML private Button btnAtras;
 	
+	
+	private static Stage pStage;
+
+	
+	@FXML private void atras(){
+		menuPrincipal preWindow = new menuPrincipal();
+		preWindow.start(getPrimaryStage());
+	}
+	
+	
+	public static Stage getPrimaryStage() {
+        return pStage;
+    }
+
+    private void setPrimaryStage(Stage pStage) {
+        sociosTodos.pStage = pStage;
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }
@@ -25,6 +45,8 @@ public class sociosTodos extends Application {
     public void start(Stage primaryStage){
     	AnchorPane page;
 			try {
+				setPrimaryStage(primaryStage);
+
 				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/sociosTodos.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
