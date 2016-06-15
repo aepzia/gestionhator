@@ -64,7 +64,9 @@ public class login extends Application {
             @Override
             public void handle(ActionEvent e) {
                 actiontarget.setFill(Color.FIREBRICK);
-                actiontarget.setText("Hurrengo pantaila");
+                //TODO erabiltzailea eta pasagitza konprobatu
+                menuPrincipal newWindow = new menuPrincipal();
+        		newWindow.start(primaryStage);
             }
         });
 
