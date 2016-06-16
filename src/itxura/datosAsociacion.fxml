@@ -7,9 +7,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?scenebuilder-stylesheet style.css?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacion">
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacion">
   <children>
-    <TextField fx:id="textNombre" editable="false" focusTraversable="false" layoutX="28.0" layoutY="59.0" opacity="1.0" prefWidth="200.0" styleClass="notEditable"/>
+    <TextField fx:id="textNombre" editable="false" focusTraversable="false" layoutX="28.0" layoutY="59.0" opacity="1.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textTel1" editable="false" focusTraversable="false" layoutX="133.0" layoutY="147.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textTel2" editable="false" focusTraversable="false" layoutX="132.0" layoutY="176.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textBanco1" editable="false" focusTraversable="false" layoutX="132.0" layoutY="213.0" prefWidth="37.0" styleClass="notEditable" />
@@ -20,12 +21,13 @@
     <TextField fx:id="textPresi" editable="false" focusTraversable="false" layoutX="130.0" layoutY="313.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textNumeracion" editable="false" focusTraversable="false" layoutX="167.0" layoutY="363.0" prefWidth="162.0" styleClass="notEditable" />
     <ImageView fx:id="imgLogo" fitHeight="113.0" fitWidth="150.66666666666666" layoutX="241.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-    <Button fx:id="btnEditar" layoutX="28.0" layoutY="411.0" mnemonicParsing="false" onAction="#editar" prefWidth="69.0" text="Editar" underline="false" />
-    <Label fx:id="label" layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
+    <Button fx:id="btnEditar" layoutX="28.0" layoutY="481.0" mnemonicParsing="false" onAction="#editar" prefWidth="69.0" text="Editar" underline="false" />
+    <Label layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
     <Label layoutX="28.0" layoutY="257.0" text="Dirección" />
     <Label layoutX="28.0" layoutY="145.0" text="Tel.:" />
     <Label layoutX="28.0" layoutY="362.0" text="Numeracion de socios" />
     <Label layoutX="28.0" layoutY="215.0" text="Cuenta corriente" />
-    <Button fx:id="btnAtras" layoutX="306.0" layoutY="399.0" mnemonicParsing="false" onAction="#atras" prefWidth="50.0" text="" />
+    <Button fx:id="btnAtras" layoutX="307.0" layoutY="458.0" mnemonicParsing="false" onAction="#atras" prefWidth="50.0" text="" />
+    <Label fx:id="mezua" layoutX="97.0" layoutY="416.0" prefWidth="232.0" text="" />
   </children>
 </AnchorPane>

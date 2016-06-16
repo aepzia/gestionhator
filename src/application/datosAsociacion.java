@@ -29,7 +29,7 @@ public class datosAsociacion extends Application{
 	@FXML private TextField textPresi;
 	@FXML private TextField textNumeracion;
 	@FXML private ImageView imgLogo;
-	@FXML private Label label;
+
 	
 	
 	private static Stage pStage;

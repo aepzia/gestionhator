@@ -9,35 +9,38 @@
 <?import javafx.scene.paint.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.editarAsociacion">
   <children>
-    <ImageView fitHeight="84.0" fitWidth="112.00000435965401" layoutX="241.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-    <TextField layoutX="28.0" layoutY="38.0" prefWidth="200.0" />
-    <TextField layoutX="28.0" layoutY="70.0" prefWidth="200.0" />
-    <Button fx:id="btnAtras" layoutX="316.0" layoutY="378.0" mnemonicParsing="false" text="" />
-    <Button layoutX="28.0" layoutY="411.0" mnemonicParsing="false" prefWidth="69.0" text="Guardar" underline="false" />
+    <TextField fx:id="textNombre" layoutX="31.0" layoutY="56.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="130.0" layoutY="145.0" prefWidth="200.0" />
+    <TextField fx:id="textTel2" layoutX="130.0" layoutY="174.0" prefWidth="200.0" />
+    <TextField fx:id="textBanco1" layoutX="131.0" layoutY="212.0" prefWidth="37.0" />
+    <TextField fx:id="textBanco2" layoutX="170.0" layoutY="212.0" prefWidth="37.0" />
+    <TextField fx:id="textBanco3" layoutX="211.0" layoutY="212.0" prefWidth="24.0" />
+    <TextField fx:id="textBanco4" layoutX="242.0" layoutY="212.0" prefWidth="88.0" />
+    <TextArea fx:id="textDirecion" layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
+    <TextField fx:id="textPresi" layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
+    <ImageView fx:id="imgLogo" fitHeight="84.0" fitWidth="112.00000435965401" layoutX="241.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@204987A.jpg" />
+      </image>
+    </ImageView>
+    <Button fx:id="btnAtras" layoutX="294.0" layoutY="443.0" minHeight="43.0" mnemonicParsing="false" onAction="#atras" prefHeight="43.0" prefWidth="59.0" text="" />
+    <Button fx:id="btnGuardar" layoutX="28.0" layoutY="464.0" mnemonicParsing="false" onAction="#guardar" prefWidth="69.0" text="Guardar" underline="false" />
     <Label layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
-    <TextField layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
     <Label layoutX="28.0" layoutY="257.0" text="Dirección" />
-    <TextArea layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
     <Label layoutX="28.0" layoutY="145.0" text="Tel.:" />
-    <TextField layoutX="130.0" layoutY="145.0" prefWidth="200.0" />
-    <TextField layoutX="130.0" layoutY="174.0" prefWidth="200.0" />
     <Label layoutX="28.0" layoutY="362.0" text="Numeracion de socios" />
     <Label layoutX="28.0" layoutY="215.0" text="Cuenta corriente" />
-    <TextField layoutX="131.0" layoutY="212.0" prefWidth="37.0" />
-    <TextField layoutX="170.0" layoutY="212.0" prefWidth="37.0" />
-    <TextField layoutX="211.0" layoutY="212.0" prefWidth="24.0" />
-    <TextField layoutX="242.0" layoutY="212.0" prefWidth="88.0" />
-    <ChoiceBox layoutX="158.0" layoutY="362.0" prefWidth="172.0">
+    <ChoiceBox fx:id="textNumeracion" layoutX="158.0" layoutY="362.0" prefWidth="172.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Sumatorio" />
+          <String fx:value="Liberatorio" />
         </FXCollections>
       </items>
     </ChoiceBox>
-    <Button layoutX="268.0" layoutY="108.0" mnemonicParsing="false" text="Examinar..." />
+    <Button fx:id="btnExaminar" layoutX="268.0" layoutY="108.0" mnemonicParsing="false" onAction="#examinar" text="Examinar..." />
+    <Label fx:id="mezua" layoutX="73.0" layoutY="415.0" prefWidth="233.0" text="" />
   </children>
 </AnchorPane>
