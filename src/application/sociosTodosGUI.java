@@ -2,21 +2,35 @@ package application;
 
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class sociosTodosGUI extends Application {
 	
 	@FXML private Button btnAtras;
+	@FXML private Button btnAñadirSocio;
+	@FXML private Button btnElimSocio;
+	@FXML private Button btnPagos;
+	@FXML private Button btnVerSocio;
+	@FXML private TextField textAsociacion;
+	@FXML private ListView<Socio> listSocios;
+	@FXML private TextArea textInformazioa;
 	
-	
+	private static Socio aukera;
 	private static Stage pStage;
-
+	
 	
 	@FXML private void atras(){
 		menuPrincipalGUI preWindow = new menuPrincipalGUI();
@@ -36,6 +50,14 @@ public class sociosTodosGUI extends Application {
 		nuevoSocioGUI preWindow = new nuevoSocioGUI();
 		preWindow.start(getPrimaryStage());
 	}
+	@FXML private void informazioaJarri(){
+		aukera = listSocios.getSelectionModel().getSelectedItem();
+		textInformazioa.setText(aukera.lortuInformazioa());
+		btnElimSocio.setDisable(false);
+		btnVerSocio.setDisable(false);
+	}
+	
+	
 	public static Stage getPrimaryStage() {
         return pStage;
     }
@@ -70,7 +92,17 @@ public class sociosTodosGUI extends Application {
     }
     @FXML
     protected void initialize(){
-    	System.out.println("IHFDU");
+    	Socio socio1 = new Socio();
+    	socio1.setIzena("Aizpea");
+    	socio1.setAbizena("Babaze Aizpurua");
+    	socio1.setnSocio(250);
+    	Socio socio2 = new Socio();
+    	socio2.setIzena("Aizpea");
+    	socio2.setAbizena("yewtureytiruyt");
+    	socio2.setnSocio(251);
+    	
+    	List<Socio> values = Arrays.asList(socio1,socio2);
+    	listSocios.setItems(FXCollections.observableList(values));
     	//TODO datu basetik hartu eta datuak idatzi 
  
     	

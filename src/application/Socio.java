@@ -6,7 +6,7 @@ import java.util.List;
 
 import javafx.scene.image.Image;
 
-public class socio {
+public class Socio {
 	private int nSocio;
 	private String DNI;
 	private boolean pensionista;
