@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class actividadesTodos extends Application {
+public class actividadesTodosGUI extends Application {
 	
 @FXML private Button btnAtras;
 	
@@ -19,7 +19,7 @@ public class actividadesTodos extends Application {
 
 	
 	@FXML private void atras(){
-		menuPrincipal preWindow = new menuPrincipal();
+		menuPrincipalGUI preWindow = new menuPrincipalGUI();
 		preWindow.start(getPrimaryStage());
 	}
 	
@@ -29,7 +29,7 @@ public class actividadesTodos extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        actividadesTodos.pStage = pStage;
+        actividadesTodosGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {

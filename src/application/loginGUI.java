@@ -20,7 +20,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class login extends Application {
+public class loginGUI extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -65,7 +65,7 @@ public class login extends Application {
             public void handle(ActionEvent e) {
                 actiontarget.setFill(Color.FIREBRICK);
                 //TODO erabiltzailea eta pasagitza konprobatu
-                menuPrincipal newWindow = new menuPrincipal();
+                menuPrincipalGUI newWindow = new menuPrincipalGUI();
         		newWindow.start(primaryStage);
             }
         });

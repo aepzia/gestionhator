@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacion">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacionGUI">
   <children>
     <TextField fx:id="textNombre" editable="false" focusTraversable="false" layoutX="28.0" layoutY="59.0" opacity="1.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textTel1" editable="false" focusTraversable="false" layoutX="133.0" layoutY="147.0" prefWidth="200.0" styleClass="notEditable" />

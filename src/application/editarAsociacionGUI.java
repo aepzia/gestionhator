@@ -20,7 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class editarAsociacion extends Application {
+public class editarAsociacionGUI extends Application {
 	
 	@FXML private Button btnAtras;
 	@FXML private Button btnGuardar;
@@ -41,7 +41,7 @@ public class editarAsociacion extends Application {
 	private static Stage pStage;
 	
 	@FXML private void atras(){
-		datosAsociacion preWindow = new datosAsociacion();
+		datosAsociacionGUI preWindow = new datosAsociacionGUI();
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void guardar(){
@@ -51,7 +51,7 @@ public class editarAsociacion extends Application {
 	}
 	@FXML private void examinar(){
 		JFileChooser explorador = new JFileChooser("/home/");
-		explorador.setFileFilter(new FileNameExtensionFilter("Imagen", "jpg", "jpeg", "png"));
+		explorador.setFileFilter(new FileNameExtensionFilter("JPG files", "jpg", "jpeg", "png"));
 		
 		int seleccion = explorador.showDialog(null, "Abrir");
 		  
@@ -83,7 +83,7 @@ public class editarAsociacion extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        editarAsociacion.pStage = pStage;
+        editarAsociacionGUI.pStage = pStage;
     }   
     
     public static void main(String[] args) {

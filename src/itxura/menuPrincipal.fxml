@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="292.0" prefWidth="355.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.menuPrincipal">
+<AnchorPane prefHeight="292.0" prefWidth="355.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.menuPrincipalGUI">
   <!-- TODO Add Nodes -->
   <children>
     <Region layoutX="-17.0" layoutY="-35.0" prefHeight="363.0" prefWidth="390.0" />

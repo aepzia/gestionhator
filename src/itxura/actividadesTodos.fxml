@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="503.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"  fx:controller="application.actividadesTodosGUI">
+  <children>
+    <TextField id="textNombreApellido" fx:id="textActividad" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
+    <ListView fx:id="listSocios" layoutX="43.0" layoutY="142.0" prefHeight="335.0" prefWidth="210.0" />
+    <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
+      <font>
+        <Font name="Book Antiqua" size="16.0" />
+      </font>
+    </Label>
+    <Button id="btnAñadirSocio" fx:id="btnAñadirActi" layoutX="331.0" layoutY="142.0" mnemonicParsing="false" prefWidth="113.0" text="Nuevo actividad" />
+    <Button id="btnElimSocio" fx:id="btnElimActi" layoutX="331.0" layoutY="185.0" mnemonicParsing="false" prefWidth="113.0" text="Eliminar actividad" />
+    <Button fx:id="btnPagos" layoutX="331.0" layoutY="229.0" mnemonicParsing="false" prefWidth="113.0" text="Deudas" />
+    <Button fx:id="btnAtras" layoutX="359.0" layoutY="336.0" onAction="#atras" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" text="" />
+    <Label layoutX="43.0" layoutY="112.0" text="Ordenar" />
+    <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+  </children>
+</AnchorPane>

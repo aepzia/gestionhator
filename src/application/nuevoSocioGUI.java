@@ -14,7 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class nuevoSocio extends Application {
+public class nuevoSocioGUI extends Application {
 	
 	
     public static void main(String[] args) {

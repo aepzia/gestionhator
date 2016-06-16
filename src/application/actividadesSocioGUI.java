@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class sociosActividad extends Application {
+public class actividadesSocioGUI extends Application {
 	
 
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class sociosActividad extends Application {
     public void start(Stage primaryStage){
             Parent page;
 			try {
-				page = FXMLLoader.load(getClass().getResource("../itxura/sociosActividad.fxml"));
+				page = FXMLLoader.load(getClass().getResource("../itxura/actividadesSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				primaryStage.setScene(scene);

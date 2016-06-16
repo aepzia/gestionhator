@@ -14,7 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class datosAsociacion extends Application{
+public class datosAsociacionGUI extends Application{
 
 	@FXML private Button btnAtras;
 	@FXML private Button btnEditar;
@@ -36,11 +36,11 @@ public class datosAsociacion extends Application{
 
 	
 	@FXML private void atras(){
-		menuPrincipal preWindow = new menuPrincipal();
+		menuPrincipalGUI preWindow = new menuPrincipalGUI();
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void editar(){
-		editarAsociacion preWindow = new editarAsociacion();
+		editarAsociacionGUI preWindow = new editarAsociacionGUI();
 		preWindow.start(getPrimaryStage());
 	}
 	
@@ -49,7 +49,7 @@ public class datosAsociacion extends Application{
     }
 
     private void setPrimaryStage(Stage pStage) {
-        datosAsociacion.pStage = pStage;
+        datosAsociacionGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {

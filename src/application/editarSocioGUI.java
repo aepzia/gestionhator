@@ -13,7 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class verSocio extends Application {
+public class editarSocioGUI extends Application {
 	
 
     public static void main(String[] args) {
@@ -21,11 +21,12 @@ public class verSocio extends Application {
     }
     @FXML
     public ImageView imgFoto;
+    
     @Override
     public void start(Stage primaryStage){
     	AnchorPane  page;
 			try {
-				page =(AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/verSocio.fxml"));
+				page = (AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/editarAñadirSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				
@@ -39,9 +40,8 @@ public class verSocio extends Application {
 		        imgFoto.setImage(new Image(img, 140, 140, true, true));
 		        page.getChildren().add(imgFoto);
 		        
-		        
 		        primaryStage.setScene(scene);
-				primaryStage.setTitle("Actividades del socio");
+				primaryStage.setTitle("FXML is Simple");
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

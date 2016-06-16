@@ -1,21 +1,16 @@
 package application;
 
-import java.io.File;
+
 import java.io.IOException;
-
-import javafx.scene.image.Image;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class sociosTodos extends Application {
+public class sociosTodosGUI extends Application {
 	
 	@FXML private Button btnAtras;
 	
@@ -24,17 +19,29 @@ public class sociosTodos extends Application {
 
 	
 	@FXML private void atras(){
-		menuPrincipal preWindow = new menuPrincipal();
+		menuPrincipalGUI preWindow = new menuPrincipalGUI();
 		preWindow.start(getPrimaryStage());
 	}
-	
-	
+	@FXML private void alta(){
+		nuevoSocioGUI preWindow = new nuevoSocioGUI();
+		preWindow.start(getPrimaryStage());
+	}
+	@FXML private void baja(){
+		//TODO baja lehioa
+	}
+	@FXML private void deudas(){
+		//TODO zorren lehioa ikusi
+	}
+	@FXML private void verSocio(){
+		nuevoSocioGUI preWindow = new nuevoSocioGUI();
+		preWindow.start(getPrimaryStage());
+	}
 	public static Stage getPrimaryStage() {
         return pStage;
     }
 
     private void setPrimaryStage(Stage pStage) {
-        sociosTodos.pStage = pStage;
+        sociosTodosGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {
@@ -59,7 +66,14 @@ public class sociosTodos extends Application {
 				e.printStackTrace();
 			}
 			
-           
+		
+    }
+    @FXML
+    protected void initialize(){
+    	System.out.println("IHFDU");
+    	//TODO datu basetik hartu eta datuak idatzi 
+ 
+    	
     }
 }
 

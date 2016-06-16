@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class menuPrincipal extends Application {
+public class menuPrincipalGUI extends Application {
 	
 	@FXML private Text actiontarget;
 	@FXML private Button btnAsociacion;
@@ -23,15 +23,15 @@ public class menuPrincipal extends Application {
 	private static Stage pStage;
 
 	@FXML private void verAsociacion(ActionEvent event){
-		datosAsociacion newWindow = new datosAsociacion();
+		datosAsociacionGUI newWindow = new datosAsociacionGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verSocios(ActionEvent event){
-		sociosTodos newWindow = new sociosTodos();
+		sociosTodosGUI newWindow = new sociosTodosGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verActividades(ActionEvent event){
-		actividadesTodos newWindow = new actividadesTodos();
+		actividadesTodosGUI newWindow = new actividadesTodosGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verTerceros(ActionEvent event){
@@ -51,7 +51,7 @@ public class menuPrincipal extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        menuPrincipal.pStage = pStage;
+        menuPrincipalGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {
