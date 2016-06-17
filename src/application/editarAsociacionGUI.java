@@ -37,7 +37,8 @@ public class editarAsociacionGUI extends Application {
 	@FXML private ChoiceBox textNumeracion;
 	@FXML private ImageView imgLogo;
 	@FXML private Label mezua; 
-	
+	@FXML private TextField textCIF;
+
 	private static Stage pStage;
 	
 	@FXML private void atras(){

@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -29,6 +28,7 @@ public class datosAsociacionGUI extends Application{
 	@FXML private TextField textPresi;
 	@FXML private TextField textNumeracion;
 	@FXML private ImageView imgLogo;
+	@FXML private TextField textCIF;
 
 	
 	
