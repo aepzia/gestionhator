@@ -73,6 +73,7 @@ public class loginGUI extends Application {
         Scene scene = new Scene(grid, 300, 275);
         scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
         primaryStage.setScene(scene);
+		primaryStage.setFullScreen(true);
         primaryStage.show();
     }
 }

@@ -79,9 +79,10 @@ public class sociosTodosGUI extends Application {
 				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/sociosTodos.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
-		               
+		        
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Añadir un nuevo socio");
+				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

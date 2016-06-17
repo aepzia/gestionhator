@@ -26,6 +26,7 @@ public class sociosActividadGUI extends Application {
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				primaryStage.setScene(scene);
 				primaryStage.setTitle("Actividades del socio");
+				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

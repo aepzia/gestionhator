@@ -49,6 +49,7 @@ public class actividadesTodosGUI extends Application {
 		               
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Añadir un nuevo socio");
+				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

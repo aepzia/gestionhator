@@ -66,6 +66,7 @@ public class datosAsociacionGUI extends Application{
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());        
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Datos de la asociación");
+				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				e.printStackTrace();

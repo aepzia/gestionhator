@@ -42,6 +42,7 @@ public class editarSocioGUI extends Application {
 		        
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("FXML is Simple");
+				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
