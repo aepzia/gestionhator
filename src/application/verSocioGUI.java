@@ -1,5 +1,7 @@
 package application;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
@@ -35,13 +37,40 @@ public class verSocioGUI extends Application {
     @FXML public TextArea textDireccion;
     @FXML public TextArea textOtros;
     @FXML public Button btnAtras;
-	
-    private static Socio bazkidea;
-    public static void main(String[] args) {
+    @FXML public Button btnVerLOPD;
+    @FXML public Button btnInprimirFicha;
+    @FXML public Button btnInprimirCarnet;
+    @FXML public Button btnEditar;
+    @FXML public Button btnActividades;
     
-        launch(args);
-    }
 
+    private static Socio bazkidea;
+    
+    
+    @FXML public void verLOPD(){
+    	//TODO Datu basetik hartu pdfaren helbidea
+    	File pdfFile = new File("C:\\Users\\standar\\Desktop\\musikaEskola.pdf");
+    	try {
+			Desktop.getDesktop().open(pdfFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML public void printFicha(){
+    	
+    }
+    @FXML public void printCarnet(){
+    	
+    }
+    @FXML public void atras(){
+    	
+    }
+    @FXML public void editar(){
+    	
+    }
+    @FXML public void verActividadesSocio(){
+    	
+    } 
  
     
     @Override

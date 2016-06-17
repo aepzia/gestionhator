@@ -35,28 +35,27 @@
       </image>
     </ImageView>
     <Label layoutX="59.0" layoutY="298.0" prefWidth="48.000099999997474" text="Tel.:" textFill="BLACK" />
-    <Label layoutX="55.0" layoutY="453.0" text="Dirección" textFill="#9f9f9f" />
-    <Button id="btnFicha" layoutX="55.0" layoutY="630.0" mnemonicParsing="false" prefWidth="85.0" text="Ficha" />
-    <Button id="btnActividades" layoutX="254.0" layoutY="631.0" mnemonicParsing="false" prefWidth="85.0" text="Actividades" />
-    <Button fx:id="btnAtras" layoutX="445.0" layoutY="607.0" mnemonicParsing="false" prefWidth="48.0" text="" />
-    <Label layoutX="55.0" layoutY="232.0" prefWidth="113.0" text="Fecha de nacimiento" />
-    <Label layoutX="56.0" layoutY="264.0" prefWidth="105.0" text="Fecha de alta" />
-    <Button id="btnEdit" layoutX="155.0" layoutY="630.0" mnemonicParsing="false" prefWidth="71.0" text="Editar" />
-    <Label layoutX="56.0" layoutY="146.0" prefHeight="22.0" prefWidth="80.0" text="Bazkide mota" />
-    <Label layoutX="271.0" layoutY="171.0" text="Sexo">
+    <Label layoutX="55.0" layoutY="454.0" text="Dirección">
       <textFill>
-        <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
+        <Color blue="0.500" green="0.500" red="0.500" fx:id="x1" />
       </textFill>
     </Label>
-    <Label layoutX="56.0" layoutY="130.0" text="DNI" />
+    <Button id="btnFicha" fx:id="btnInprimirFicha" layoutX="56.0" layoutY="630.0" mnemonicParsing="false" onAction="#printFicha" prefWidth="85.0" text="Ficha" />
+    <Button fx:id="btnActividades" layoutX="254.0" layoutY="631.0" mnemonicParsing="false" onAction="#verActividadesSocio" prefWidth="85.0" text="Actividades" />
+    <Button fx:id="btnAtras" layoutX="459.0" layoutY="618.0" mnemonicParsing="false" onAction="#atras" prefWidth="48.0" text="" />
+    <Label layoutX="55.0" layoutY="232.0" prefWidth="113.0" text="Fecha de nacimiento" textFill="$x1" />
+    <Label layoutX="56.0" layoutY="264.0" prefWidth="105.0" text="Fecha de alta" textFill="$x1" />
+    <Button id="btnEdit" fx:id="btnEditar" layoutX="155.0" layoutY="630.0" mnemonicParsing="false" onAction="#editar" prefWidth="71.0" text="Editar" />
+    <Label layoutX="53.0" layoutY="146.0" prefHeight="22.0" prefWidth="80.0" text="Bazkide mota" />
+    <Label layoutX="274.0" layoutY="171.0" text="Sexo" textFill="$x1" />
+    <Label layoutX="55.0" layoutY="130.0" text="DNI" textFill="$x1" />
     <Label layoutX="55.0" layoutY="382.0" text="e-mail" textFill="BLACK" />
     <Label layoutX="348.0" layoutY="172.0" text="Nº" textFill="$x1" />
-    <Label layoutX="55.0" layoutY="195.0" text="Pensionista" textFill="BLACK" />
-    <Label layoutX="55.0" layoutY="354.0" text="Tel. de emergencia" />
-    <Button id="btnPagos" layoutX="363.0" layoutY="630.0" mnemonicParsing="false" text="Pagos" />
-    <Label layoutX="54.0" layoutY="516.0" text="Otras observaciones" />
-    <Label layoutX="52.0" layoutY="577.0" text="Proteccion de datos" />
-    <Button id="btnVer" alignment="CENTER" cancelButton="false" defaultButton="false" layoutX="244.0" layoutY="577.0" minHeight="21.999900000002526" mnemonicParsing="false" prefHeight="22.0" prefWidth="52.0" style="" text="Ver" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" wrapText="true">
+    <Label layoutX="55.0" layoutY="195.0" text="Pensionista" textFill="$x1" />
+    <Label layoutX="55.0" layoutY="354.0" text="Tel. de emergencia" textFill="$x1" />
+    <Label layoutX="54.0" layoutY="516.0" text="Otras observaciones" textFill="$x1" />
+    <Label layoutX="52.0" layoutY="577.0" text="Proteccion de datos" textFill="$x1" />
+    <Button id="btnVer" fx:id="btnVerLOPD" alignment="CENTER" cancelButton="false" defaultButton="false" layoutX="244.0" layoutY="577.0" minHeight="21.999900000002526" mnemonicParsing="false" onAction="#verLOPD" prefHeight="22.0" prefWidth="52.0" style="" text="Ver" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" wrapText="true">
       <font>
         <Font size="12.0" />
       </font>
@@ -64,10 +63,9 @@
         <URL value="@style.css" />
       </stylesheets>
     </Button>
-    <Button id="btnExaminarLOPD" layoutX="357.0" layoutY="579.0" mnemonicParsing="false" text="Examinar ..." />
-    <Label layoutX="54.0" layoutY="415.0" text="Cuenta corriente" />
-    <Label layoutX="55.0" layoutY="163.0" text="Tipo de socio" />
-    <Label layoutX="55.0" layoutY="184.0" text="Pentsioduna" textFill="BLACK" />
+    <Label layoutX="54.0" layoutY="414.0" text="Cuenta corriente" textFill="$x1" />
+    <Label layoutX="53.0" layoutY="164.0" text="Tipo de socio" textFill="$x1" />
+    <Label layoutX="53.0" layoutY="184.0" text="Pentsioduna" textFill="BLACK" />
     <Label layoutX="56.0" layoutY="114.0" text="NAN" />
     <Label layoutX="271.0" layoutY="157.0" text="Sexu" />
     <Label layoutX="348.0" layoutY="158.0" text="Znbk." />
@@ -78,5 +76,6 @@
     <Label layoutX="56.0" layoutY="437.0" text="Helbidea" />
     <Label layoutX="55.0" layoutY="500.0" text="Bestelako iruzkinak" />
     <Label layoutX="53.0" layoutY="563.0" text="Datuen babesa" />
+    <Button id="btn" fx:id="btnInprimirCarnet" layoutX="369.0" layoutY="630.0" mnemonicParsing="false" onAction="#printCarnet" text="Carnet" />
   </children>
 </AnchorPane>
