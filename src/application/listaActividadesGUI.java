@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class actividadesTodosGUI extends Application {
+public class listaActividadesGUI extends Application {
 	
 @FXML private Button btnAtras;
 	
@@ -29,7 +29,7 @@ public class actividadesTodosGUI extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        actividadesTodosGUI.pStage = pStage;
+        listaActividadesGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class actividadesTodosGUI extends Application {
 			try {
 				setPrimaryStage(primaryStage);
 
-				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/actividadesTodos.fxml"));
+				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/listaActividades.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 		               

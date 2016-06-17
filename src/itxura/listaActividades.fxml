@@ -10,7 +10,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="503.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"  fx:controller="application.actividadesTodosGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="503.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"  fx:controller="application.listaActividadesGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textActividad" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
     <ListView fx:id="listSocios" layoutX="43.0" layoutY="142.0" prefHeight="335.0" prefWidth="210.0" />

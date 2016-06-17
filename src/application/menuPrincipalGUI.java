@@ -27,11 +27,11 @@ public class menuPrincipalGUI extends Application {
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verSocios(ActionEvent event){
-		sociosTodosGUI newWindow = new sociosTodosGUI();
+		listaSociosGUI newWindow = new listaSociosGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verActividades(ActionEvent event){
-		actividadesTodosGUI newWindow = new actividadesTodosGUI();
+		listaActividadesGUI newWindow = new listaActividadesGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verTerceros(ActionEvent event){

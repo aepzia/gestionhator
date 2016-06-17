@@ -15,7 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class sociosTodosGUI extends Application {
+public class listaSociosGUI extends Application {
 	
 	@FXML private Button btnAtras;
 	@FXML private Button btnAñadirSocio;
@@ -62,7 +62,7 @@ public class sociosTodosGUI extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        sociosTodosGUI.pStage = pStage;
+        listaSociosGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {
@@ -75,7 +75,7 @@ public class sociosTodosGUI extends Application {
 			try {
 				setPrimaryStage(primaryStage);
 
-				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/sociosTodos.fxml"));
+				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/listaSocios.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 		        

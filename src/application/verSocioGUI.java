@@ -57,10 +57,10 @@ public class verSocioGUI extends Application {
 		}
     }
     @FXML public void printFicha(){
-    	
+    	//TODO inprimatu ficha
     }
     @FXML public void printCarnet(){
-    	
+    	//TODO inprimatu karneta
     }
     @FXML public void atras(){
     	
