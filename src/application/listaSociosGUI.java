@@ -102,7 +102,7 @@ public class listaSociosGUI extends Application {
     	
     	List<Socio> values = Arrays.asList(socio1,socio2);
     	listSocios.setItems(FXCollections.observableList(values));
-    	//TODO datu basetik hartu eta datuak idatzi 
+    	//TODO datu basetik hartu eta datuak idatzi (Controler)
  
     	
     }

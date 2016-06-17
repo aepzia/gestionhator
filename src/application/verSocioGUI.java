@@ -43,7 +43,7 @@ public class verSocioGUI extends Application {
     @FXML public Button btnEditar;
     @FXML public Button btnActividades;
     
-
+	private static Stage pStage;
     private static Socio bazkidea;
     
     
@@ -63,21 +63,34 @@ public class verSocioGUI extends Application {
     	//TODO inprimatu karneta
     }
     @FXML public void atras(){
-    	
+    	listaSociosGUI w = new listaSociosGUI();
+    	w.start(getPrimaryStage());
     }
     @FXML public void editar(){
-    	
+    	editarSocioGUI w = new editarSocioGUI();
+    	w.start(getPrimaryStage());
     }
     @FXML public void verActividadesSocio(){
-    	
+    	//TODO datu basetik bazkide honen s
     } 
  
+	public static Stage getPrimaryStage() {
+        return pStage;
+    }
+
+    private void setPrimaryStage(Stage pStage) {
+        verSocioGUI.pStage = pStage;
+    }
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
     
     @Override
     public void start(Stage primaryStage){
     	AnchorPane  page;
 			try {
-				//datuak_kokatu();
+				setPrimaryStage(primaryStage);
 				page =(AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/verSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());       
