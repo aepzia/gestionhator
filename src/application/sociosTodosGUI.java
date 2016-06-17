@@ -1,6 +1,4 @@
 package application;
-
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +29,6 @@ public class sociosTodosGUI extends Application {
 	private static Socio aukera;
 	private static Stage pStage;
 	
-	
 	@FXML private void atras(){
 		menuPrincipalGUI preWindow = new menuPrincipalGUI();
 		preWindow.start(getPrimaryStage());
@@ -47,7 +44,9 @@ public class sociosTodosGUI extends Application {
 		//TODO zorren lehioa ikusi
 	}
 	@FXML private void verSocio(){
-		nuevoSocioGUI preWindow = new nuevoSocioGUI();
+		Controler.autatutakoBazkidea=aukera;
+		verSocioGUI preWindow = new verSocioGUI();
+		//preWindow.setSocio(aukera);
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void informazioaJarri(){
@@ -91,8 +90,7 @@ public class sociosTodosGUI extends Application {
 			
 		
     }
-    @FXML
-    protected void initialize(){
+    @FXML protected void initialize(){
     	Socio socio1 = new Socio();
     	socio1.setIzena("Aizpea");
     	socio1.setAbizena("Babaze Aizpurua");

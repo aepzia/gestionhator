@@ -1,5 +1,6 @@
 package application;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class Socio {
 	private String abizena;
 	private Date fechaNacimiento;
 	private String tpSocio;
-	private char sexo;
+	private String cuentaCorriente;
+	private String sexo;
 	private Image foto;
 	private String helbidea;
 	private String tel1;
@@ -24,6 +26,7 @@ public class Socio {
 	private Date fechaAlta;
 	private Date fechaBaja;
 	private String motivoBaja;
+	private String comentarios;
 	public List<String> actividades;
 	public List<Boolean> pagos;
 	public boolean baja;
@@ -82,10 +85,10 @@ public class Socio {
 	public void setTpSocio(String tpSocio) {
 		this.tpSocio = tpSocio;
 	}
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 	public Image getFoto() {
@@ -160,6 +163,17 @@ public class Socio {
 	public void setBaja(boolean baja) {
 		this.baja = baja;
 	}
-
+	public String getCuentaCorriente() {
+		return cuentaCorriente;
+	}
+	public void setCuentaCorriente(String cuentaCorriente) {
+		this.cuentaCorriente = cuentaCorriente;
+	}
+	public String getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
+	}
 		
 }

@@ -1,45 +1,57 @@
 package application;
 
 import java.io.IOException;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class verSocioGUI extends Application {
 	
-
+	@FXML public ImageView imgFoto;
+    @FXML public TextField textNombre;
+    @FXML public TextField textApellido;
+    @FXML public TextField textDNI;
+    @FXML public TextField textBtype;
+    @FXML public TextField textSexo;
+    @FXML public TextField textNum;
+    @FXML public TextField textPension;
+    @FXML public TextField textJaioteguna;
+    @FXML public TextField textAlta;
+    @FXML public TextField textTel1;
+    @FXML public TextField textTel2;
+    @FXML public TextField textTelEmergencia;
+    @FXML public TextField textEmail;
+    @FXML public TextField textBanco;
+    @FXML public TextArea textDireccion;
+    @FXML public TextArea textOtros;
+    @FXML public Button btnAtras;
+	
+    private static Socio bazkidea;
     public static void main(String[] args) {
+    
         launch(args);
     }
-    @FXML
-    public ImageView imgFoto;
+
+ 
+    
     @Override
     public void start(Stage primaryStage){
     	AnchorPane  page;
 			try {
+				//datuak_kokatu();
 				page =(AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/verSocio.fxml"));
 				Scene scene = new Scene(page);
-		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
-				
-		        /*
-		         * Argazkia aldatzeko 
-		         * */
-		        imgFoto = new ImageView();
-		        imgFoto.setLayoutX(309);
-		        imgFoto.setLayoutY(13);
-		        String img = "http://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437";
-		        imgFoto.setImage(new Image(img, 140, 140, true, true));
-		        page.getChildren().add(imgFoto);
-		        
-		        
+		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());       
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Actividades del socio");
 				primaryStage.setFullScreen(true);
@@ -51,5 +63,37 @@ public class verSocioGUI extends Application {
 			
            
     }
+ 
+
+	@FXML protected void initialize(){
+		bazkidea = Controler.autatutakoBazkidea;
+		//bazkidea = bl.getAutatutakoBazkidea();
+		System.out.println(bazkidea);
+    	//imgFoto.setImage(bazkidea.getFoto());
+    	textNombre.setText(bazkidea.getIzena());
+    	/*textApellido.setText(bazkidea.getAbizena());
+    	textDNI.setText(bazkidea.getDNI());
+    	textBtype.setText(bazkidea.getTpSocio());
+    	textSexo.setText(bazkidea.getSexo());
+    	int n = bazkidea.getnSocio();
+    	textNum.setText(Integer.toString(n));
+    	if (bazkidea.isPensionista()) textPension.setText("BAI/SI");
+    	else textPension.setText("EZ/NO");
+		Format formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String dateNacimiento = formatter.format(bazkidea.getFechaNacimiento());
+    	textJaioteguna.setText(dateNacimiento);
+    	String dateAlta= formatter.format(bazkidea.getFechaAlta());
+    	textJaioteguna.setText(dateAlta);
+    	textTel1.setText(bazkidea.getTel1());
+    	textTel2.setText(bazkidea.getTel2());
+    	textTelEmergencia.setText(bazkidea.getTelEmergencia());
+    	textBanco.setText(bazkidea.getCuentaCorriente());
+    	textDireccion.setText(bazkidea.getHelbidea());
+    	textOtros.setText(bazkidea.getComentarios());
+    	*/
+    	
+    	
+    }
+
 }
 
