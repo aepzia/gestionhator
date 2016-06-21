@@ -13,6 +13,7 @@ public class Actividad {
 	private Date fechaIni;
 	private Date fechaFin;
 	private String Nombre;
+	private int Precio;
 	
 	
 	@Override
@@ -78,5 +79,11 @@ public class Actividad {
 	}
 	public void setNombre(String nombre) {
 		Nombre = nombre;
+	}
+	public int getPrecio() {
+		return Precio;
+	}
+	public void setPrecio(int precio) {
+		Precio = precio;
 	}
 }
