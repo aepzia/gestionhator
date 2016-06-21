@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.9998779296875" prefWidth="1042.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.verActividadGUI">
+  <children>
+    <Label layoutX="65.0" layoutY="80.0" prefWidth="110.0" text="Ekintza mota" />
+    <Label layoutX="65.0" layoutY="97.0" text="Tipo de Actividad">
+      <textFill>
+        <Color blue="0.625" green="0.625" red="0.625" fx:id="x1" />
+      </textFill>
+    </Label>
+    <Label layoutX="65.0" layoutY="144.0" text="Prezioa" />
+    <Label layoutX="65.0" layoutY="160.0" prefHeight="16.0001220703125" prefWidth="39.0" text="Precio" textFill="$x1" />
+    <TextField fx:id="textPrezioa" disable="false" layoutX="234.0" layoutY="151.0" prefWidth="200.0" />
+    <Label layoutX="65.0" layoutY="402.0" text="Begiralea" />
+    <Label layoutX="65.0" layoutY="418.0" text="Monitor" textFill="$x1" />
+    <Label layoutX="65.0" layoutY="197.0" text="Plaza kopurua" />
+    <Label layoutX="66.0" layoutY="213.0" text="Número de plazas" textFill="$x1" />
+    <TextField fx:id="textPlazaKop" disable="false" layoutX="234.0" layoutY="204.0" prefWidth="200.0" />
+    <Label layoutX="66.0" layoutY="247.0" text="Hasiera data" />
+    <Label layoutX="66.0" layoutY="263.0" text="Fecha de inicio" textFill="$x1" />
+    <Label layoutX="66.0" layoutY="290.0" text="Bukatze data" />
+    <Label layoutX="65.0" layoutY="306.0" text="Fecha de finalización">
+      <textFill>
+        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label layoutX="451.0" layoutY="250.0" text="Ordua" />
+    <Label layoutX="451.0" layoutY="263.0" text="Hora" textFill="$x1" />
+    <Label layoutX="447.0" layoutY="290.0" text="Ordua" />
+    <Label layoutX="451.0" layoutY="306.0" text="Hora" textFill="$x2" />
+    <TextField fx:id="textOrHasi" disable="false" layoutX="521.0" layoutY="249.0" prefWidth="145.0" />
+    <TextField fx:id="textOrBuk" disable="false" layoutX="521.0" layoutY="297.0" prefWidth="145.0" />
+    <Button fx:id="btnEditar" layoutX="65.0" layoutY="512.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+    <Button fx:id="btnAtras" layoutX="573.0" layoutY="500.0" mnemonicParsing="false" onAction="#atras" prefWidth="63.0" text="" />
+    <TextField fx:id="textBegiralea" disable="false" layoutX="230.0" layoutY="399.0" prefWidth="404.0" />
+    <TextField id="textHasiData" fx:id="textBukData" disable="false" layoutX="232.0" layoutY="292.0" prefWidth="200.00009999999747" />
+    <TextField fx:id="textHasiData" disable="false" layoutX="234.0" layoutY="252.0" prefWidth="200.00009999999747" />
+    <TextField fx:id="textMota" disable="false" layoutX="234.0" layoutY="86.0" prefWidth="404.0" text="" />
+  </children>
+</AnchorPane>
