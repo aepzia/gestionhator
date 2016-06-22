@@ -2,6 +2,8 @@ package application;
 
 
 import java.io.IOException;
+import java.sql.*;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
@@ -9,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -30,8 +33,6 @@ public class datosAsociacionGUI extends Application{
 	@FXML private ImageView imgLogo;
 	@FXML private TextField textCIF;
 
-	
-	
 	private static Stage pStage;
 
 	
@@ -73,10 +74,34 @@ public class datosAsociacionGUI extends Application{
 			}
           
     }
-    @FXML
-    protected void initialize(){
-    	//TODO datu basetik hartu eta datuak idatzi 
-        textNombre.setText("HOLA");
+    
+    
+    @FXML protected void initialize(){
+
+    		try
+            {
+                Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+        		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+
+        		
+        		Statement stmt = conn.createStatement();
+
+                ResultSet rs = stmt.executeQuery("SELECT * FROM asociacion");
+           
+                while ( rs.next() )
+                {
+                	textNombre.setText(rs.getObject(2).toString());
+                	textTel1.setText(rs.getObject(3).toString());
+                	textTel2.setText(rs.getObject(4).toString());
+                	//TODO ... bete
+                }
+    		
+        	
+            } catch ( Exception e )
+            {
+    			e.printStackTrace();
+            }
+    	
     }
 
 }

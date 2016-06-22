@@ -1,6 +1,10 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -63,6 +67,7 @@ public class menuPrincipalGUI extends Application {
     public void start(Stage primaryStage){
     	
 		try {
+			
 			setPrimaryStage(primaryStage);
 			Parent page = FXMLLoader.load(getClass().getResource("../itxura/menuPrincipal.fxml"));
 			Scene scene = new Scene(page);
@@ -77,5 +82,7 @@ public class menuPrincipalGUI extends Application {
 			e.printStackTrace();
 		}
     }
-  
+    protected void initialize(){
+    	
+    }
 }
