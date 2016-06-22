@@ -80,7 +80,7 @@ public class datosAsociacionGUI extends Application{
 
     		try
             {
-                Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+              
         		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
 
         		
