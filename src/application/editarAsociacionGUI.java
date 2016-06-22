@@ -2,6 +2,10 @@ package application;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -46,8 +50,19 @@ public class editarAsociacionGUI extends Application {
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void guardar(){
-		//TODO Asoziazioko datuak datu basean gorde
-		mezua.setText("mezua ondo bidali da");
+		try
+        {
+          
+    		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+    		Statement stmt = conn.createStatement();
+            stmt.executeQuery("UPDATE asociacion SET izena=textNombre.getText()"
+                    + "WHERE id=2"); //TODO... bete
+                	
+        } catch ( Exception e )
+        {
+			e.printStackTrace();
+        }
+	
 		
 	}
 	@FXML private void examinar(){
@@ -109,12 +124,32 @@ public class editarAsociacionGUI extends Application {
 			
            
     }
-    @FXML
-    protected void initialize(){
-    	System.out.println("IHFDU");
-    	//TODO datu basetik hartu eta datuak idatzi 
- 
+    @FXML protected void initialize(){
+
+		try
+        {
+          
+    		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+
+    		
+    		Statement stmt = conn.createStatement();
+
+            ResultSet rs = stmt.executeQuery("SELECT * FROM asociacion");
+       
+            while ( rs.next() )
+            {
+            	textNombre.setText(rs.getObject(2).toString());
+            	textTel1.setText(rs.getObject(3).toString());
+            	textTel2.setText(rs.getObject(4).toString());
+            	//TODO ... bete
+            }
+		
     	
+        } catch ( Exception e )
+        {
+			e.printStackTrace();
+        }
+	
     }
 }
 
