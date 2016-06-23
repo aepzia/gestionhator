@@ -19,7 +19,7 @@
     <TextField fx:id="textBanco2" layoutX="170.0" layoutY="212.0" prefWidth="37.0" />
     <TextField fx:id="textBanco3" layoutX="211.0" layoutY="212.0" prefWidth="24.0" />
     <TextField fx:id="textBanco4" layoutX="242.0" layoutY="212.0" prefWidth="88.0" />
-    <TextArea fx:id="textDirecion" layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
+    <TextArea fx:id="textDireccion" layoutX="131.0" layoutY="257.0" prefHeight="43.0" prefWidth="200.0" wrapText="true" />
     <TextField fx:id="textPresi" layoutX="130.0" layoutY="312.0" prefWidth="200.0" />
     <ImageView fx:id="imgLogo" fitHeight="84.0" fitWidth="112.00000435965401" layoutX="241.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>

@@ -36,13 +36,14 @@ public class editarAsociacionGUI extends Application {
 	@FXML private TextField textBanco2;
 	@FXML private TextField textBanco3;
 	@FXML private TextField textBanco4;
-	@FXML private TextArea textDirecion;
+	@FXML private TextArea textDireccion;
 	@FXML private TextField textPresi;
 	@FXML private ChoiceBox textNumeracion;
 	@FXML private ImageView imgLogo;
 	@FXML private Label mezua; 
 	@FXML private TextField textCIF;
-
+	
+	private static String imgPath;
 	private static Stage pStage;
 	
 	@FXML private void atras(){
@@ -55,8 +56,11 @@ public class editarAsociacionGUI extends Application {
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
     		Statement stmt = conn.createStatement();
-            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()
-                    +"' WHERE id='1'"); //TODO... bete
+            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"', tel1='"+textTel1.getText()+"', tel2='"+textTel2.getText()
+                    //TODO +"presidente='"
+                    + "', logo='"+imgPath+"', direccion='"+textDireccion.toString()+"', cuenta_corriente='" +
+                    textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
+                    "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"' WHERE id='1'"); //TODO... bete
                 	
         } catch ( Exception e )
         {
@@ -86,8 +90,8 @@ public class editarAsociacionGUI extends Application {
 	
 		String ruta = archivo.getPath().replace("\\", "/");
 		System.out.println(ruta);
-		
-		imgLogo.setImage(new Image("file:"+ruta));
+		imgPath ="file:"+ruta;
+		imgLogo.setImage(new Image(imgPath));
 		
 		//TODO imagena edo ruta gorde.
 		
@@ -126,10 +130,10 @@ public class editarAsociacionGUI extends Application {
     }
     @FXML protected void initialize(){
 
+
 		try
         {
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-
+          
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
 
     		
@@ -139,10 +143,25 @@ public class editarAsociacionGUI extends Application {
        
             while ( rs.next() )
             {
-            	textNombre.setText(rs.getObject(1).toString());
-            	textTel1.setText(rs.getObject(2).toString());
-            	textTel2.setText(rs.getObject(3).toString());
-            	//TODO ... bete
+            	textNombre.setText(rs.getObject("izena").toString());
+            	textTel1.setText(rs.getObject("tel1").toString());
+            	textTel2.setText(rs.getObject("tel2").toString());
+            	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido1, apellido2 FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+            	while ( rs2.next() )
+                {
+            		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido1")+" "+rs2.getObject("apellido2"));
+            		
+                }
+            	imgLogo.setImage(new Image(rs.getObject("logo").toString()));
+            	textDireccion.setText(rs.getObject("direccion").toString());
+            	String s = rs.getObject("cuenta_corriente").toString();
+            	String[] banc = s.split(" ");
+            	textBanco1.setText(banc[0]);
+            	textBanco2.setText(banc[1]);
+            	textBanco3.setText(banc[2]);
+            	textBanco4.setText(banc[3]);
+            	//textNumeracion.setText(rs.getObject("numeracion_de_socios").toString());
+            	textCIF.setText(rs.getObject("CIF").toString());
             }
 		
     	
@@ -150,7 +169,6 @@ public class editarAsociacionGUI extends Application {
         {
 			e.printStackTrace();
         }
-	
     }
 }
 

@@ -4,6 +4,8 @@ package application;
 import java.io.IOException;
 import java.sql.*;
 
+import org.apache.commons.lang.SystemUtils;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
@@ -90,10 +92,25 @@ public class datosAsociacionGUI extends Application{
            
                 while ( rs.next() )
                 {
-                	textNombre.setText(rs.getObject(1).toString());
-                	textTel1.setText(rs.getObject(2).toString());
-                	textTel2.setText(rs.getObject(3).toString());
-                	//TODO ... bete
+                	textNombre.setText(rs.getObject("izena").toString());
+                	textTel1.setText(rs.getObject("tel1").toString());
+                	textTel2.setText(rs.getObject("tel2").toString());
+                	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido1, apellido2 FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+                	while ( rs2.next() )
+                    {
+                		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido1")+" "+rs2.getObject("apellido2"));
+                		
+                    }
+                	imgLogo.setImage(new Image(rs.getObject("logo").toString()));
+                	textDireccion.setText(rs.getObject("direccion").toString());
+                	String s = rs.getObject("cuenta_corriente").toString();
+                	String[] banc = s.split(" ");
+                	textBanco1.setText(banc[0]);
+                	textBanco2.setText(banc[1]);
+                	textBanco3.setText(banc[2]);
+                	textBanco4.setText(banc[3]);
+                	textNumeracion.setText(rs.getObject("numeracion_de_socios").toString());
+                	textCIF.setText(rs.getObject("CIF").toString());
                 }
     		
         	
