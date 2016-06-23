@@ -14,8 +14,8 @@ import javafx.stage.Stage;
 
 public class nuevaActividadGUI extends Application {
 	
-	@FXML ChoiceBox btnTipo;
-	@FXML ChoiceBox btnBergiralea;
+	@FXML ChoiceBox<String> btnTipo;
+	@FXML ChoiceBox<String> btnBergiralea;
 	@FXML Button btnAtras;
 	@FXML TextField textPrezioa;
 	@FXML TextField textPlazaKop;

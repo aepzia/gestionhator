@@ -3,9 +3,6 @@ package application;
 
 import java.io.IOException;
 import java.sql.*;
-
-import org.apache.commons.lang.SystemUtils;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;

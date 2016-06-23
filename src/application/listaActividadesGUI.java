@@ -2,11 +2,8 @@ package application;
 
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

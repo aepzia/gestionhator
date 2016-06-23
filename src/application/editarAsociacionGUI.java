@@ -38,7 +38,7 @@ public class editarAsociacionGUI extends Application {
 	@FXML private TextField textBanco4;
 	@FXML private TextArea textDireccion;
 	@FXML private TextField textPresi;
-	@FXML private ChoiceBox textNumeracion;
+	@FXML private ChoiceBox<String> textNumeracion;
 	@FXML private ImageView imgLogo;
 	@FXML private Label mezua; 
 	@FXML private TextField textCIF;
@@ -152,7 +152,8 @@ public class editarAsociacionGUI extends Application {
             		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido1")+" "+rs2.getObject("apellido2"));
             		
                 }
-            	imgLogo.setImage(new Image(rs.getObject("logo").toString()));
+            	imgPath = rs.getObject("logo").toString();
+            	imgLogo.setImage(new Image(imgPath));
             	textDireccion.setText(rs.getObject("direccion").toString());
             	String s = rs.getObject("cuenta_corriente").toString();
             	String[] banc = s.split(" ");
