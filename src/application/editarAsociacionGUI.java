@@ -55,8 +55,8 @@ public class editarAsociacionGUI extends Application {
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
     		Statement stmt = conn.createStatement();
-            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"'"
-                    ); //TODO... bete
+            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()
+                    +"' WHERE id='1'"); //TODO... bete
                 	
         } catch ( Exception e )
         {
@@ -139,9 +139,9 @@ public class editarAsociacionGUI extends Application {
        
             while ( rs.next() )
             {
-            	textNombre.setText(rs.getObject(2).toString());
-            	textTel1.setText(rs.getObject(3).toString());
-            	textTel2.setText(rs.getObject(4).toString());
+            	textNombre.setText(rs.getObject(1).toString());
+            	textTel1.setText(rs.getObject(2).toString());
+            	textTel2.setText(rs.getObject(3).toString());
             	//TODO ... bete
             }
 		

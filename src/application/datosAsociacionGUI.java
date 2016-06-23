@@ -90,9 +90,9 @@ public class datosAsociacionGUI extends Application{
            
                 while ( rs.next() )
                 {
-                	textNombre.setText(rs.getObject(2).toString());
-                	textTel1.setText(rs.getObject(3).toString());
-                	textTel2.setText(rs.getObject(4).toString());
+                	textNombre.setText(rs.getObject(1).toString());
+                	textTel1.setText(rs.getObject(2).toString());
+                	textTel2.setText(rs.getObject(3).toString());
                 	//TODO ... bete
                 }
     		
