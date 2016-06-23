@@ -52,11 +52,11 @@ public class editarAsociacionGUI extends Application {
 	@FXML private void guardar(){
 		try
         {
-          
+			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
     		Statement stmt = conn.createStatement();
-            stmt.executeQuery("UPDATE asociacion SET izena=textNombre.getText()"
-                    + "WHERE id=2"); //TODO... bete
+            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"'"
+                    ); //TODO... bete
                 	
         } catch ( Exception e )
         {
@@ -128,7 +128,8 @@ public class editarAsociacionGUI extends Application {
 
 		try
         {
-          
+			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
 
     		
