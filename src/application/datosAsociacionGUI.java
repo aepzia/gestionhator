@@ -92,10 +92,10 @@ public class datosAsociacionGUI extends Application{
                 	textNombre.setText(rs.getObject("izena").toString());
                 	textTel1.setText(rs.getObject("tel1").toString());
                 	textTel2.setText(rs.getObject("tel2").toString());
-                	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido1, apellido2 FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+                	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
                 	while ( rs2.next() )
                     {
-                		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido1")+" "+rs2.getObject("apellido2"));
+                		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
                 		
                     }
                 	imgLogo.setImage(new Image(rs.getObject("logo").toString()));

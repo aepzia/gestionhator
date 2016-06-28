@@ -6,9 +6,10 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacionGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="623.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.datosAsociacionGUI">
   <children>
     <TextField fx:id="textNombre" editable="false" focusTraversable="false" layoutX="28.0" layoutY="59.0" opacity="1.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textCIF" focusTraversable="false" layoutX="110.0" layoutY="91.0" prefWidth="118.0" styleClass="notEditable" />
@@ -22,13 +23,17 @@
     <TextField fx:id="textPresi" editable="false" focusTraversable="false" layoutX="130.0" layoutY="313.0" prefWidth="200.0" styleClass="notEditable" />
     <TextField fx:id="textNumeracion" editable="false" focusTraversable="false" layoutX="167.0" layoutY="363.0" prefWidth="162.0" styleClass="notEditable" />
     <ImageView fx:id="imgLogo" fitHeight="113.0" fitWidth="150.66666666666666" layoutX="241.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-    <Button fx:id="btnEditar" layoutX="28.0" layoutY="481.0" mnemonicParsing="false" onAction="#editar" prefWidth="69.0" text="Editar" underline="false" />
-    <Label layoutX="28.0" layoutY="312.0" prefHeight="21.999908447265625" text="Presitende:" />
+    <Button fx:id="btnEditar" layoutX="144.0" layoutY="488.0" mnemonicParsing="false" onAction="#editar" prefWidth="69.0" text="Editar" underline="false" />
+    <Label layoutX="28.0" layoutY="313.0" prefHeight="21.999908447265625" text="Presidente:">
+      <font>
+        <Font size="25.0" fx:id="x1" />
+      </font>
+    </Label>
     <Label layoutX="28.0" layoutY="257.0" text="Dirección" />
     <Label layoutX="28.0" layoutY="145.0" text="Tel.:" />
-    <Label layoutX="28.0" layoutY="362.0" text="Numeracion de socios" />
+    <Label font="$x1" layoutX="28.0" layoutY="362.0" text="Numeracion de socios" />
     <Label layoutX="28.0" layoutY="215.0" text="Cuenta corriente" />
-    <Button fx:id="btnAtras" layoutX="307.0" layoutY="458.0" mnemonicParsing="false" onAction="#atras" prefWidth="50.0" text="" />
+    <Button fx:id="btnAtras" layoutX="474.0" layoutY="464.0" mnemonicParsing="false" onAction="#atras" prefWidth="50.0" text="" />
     <Label fx:id="mezua" layoutX="97.0" layoutY="416.0" prefWidth="232.0" text="" />
     <Label layoutX="28.0" layoutY="94.0" prefWidth="20.999908447265625" text="CIF" />
   </children>

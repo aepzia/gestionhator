@@ -5,13 +5,17 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -38,8 +42,8 @@ public class nuevoSocioGUI extends Application {
 	@FXML public TextField textBanco4;
 	@FXML public ChoiceBox<String> opTipo;
 	@FXML public ChoiceBox<String> opSexo;
-	@FXML public ChoiceBox<String> opPensionista;
-	@FXML public ChoiceBox<String> opNum;
+	@FXML public CheckBox opPensionista;
+	@FXML public ChoiceBox<Integer> opNum;
 	@FXML public Button btnExaminarFoto;
 	@FXML public Button btnExaminarLOPD;
 	@FXML public Button btnVer;
@@ -57,25 +61,32 @@ public class nuevoSocioGUI extends Application {
 	@FXML private void guardar(){
 		try
         {
+			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
+			Date fecha = new Date();
+			String NULL2 = "s";
+			String NULL1 =formatoDeFecha.format(fecha);
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+
     		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
     		Statement stmt = conn.createStatement();
-    		boolean pensionista;
-    		if(opPensionista.getSelectionModel().getSelectedIndex() ==1) pensionista = true;
-    		else pensionista=false;
-            stmt.executeUpdate("INSERT INTO socio VALUES"
+    		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
+    		String sql = "INSERT INTO socio VALUES("
             		+opNum.getSelectionModel().getSelectedItem()
-            		+","+textDNI.getText()+","+pensionista+","+textNombre.toString()
-            		+","+textApellido.getText()+","+ null +","+ opTipo.getSelectionModel().getSelectedItem()
-            		+","+opSexo.getSelectionModel().getSelectedItem()+
-            		","+textDireccion.getText()+","+textTel1.getText()+
-            		","+textTel2.getText()+","+textTelEm.getText()
-            		+","+textEmail.getText()+","+null+","+null+","+imgPath);
-                	
+            		+",'"+textDNI.getText()+"',"+opPensionista.isSelected()+",'"+textNombre.getText()
+            		+"','"+textApellido.getText()+"','"+ NULL1 +"','"+ opTipo.getSelectionModel().getSelectedItem()
+            		+"','"+opSexo.getSelectionModel().getSelectedItem()+
+            		"','"+textDireccion.getText()+"','"+textTel1.getText()+
+            		"','"+textTel2.getText()+"','"+textTelEm.getText()
+            		+"','"+textEmail.getText()+"','"+NULL1+"','"+NULL1+"','"+NULL2+"','"+NULL2+"','"+banco+"','"+textOtros.getText()+"','"+NULL2+"')";
+    		System.out.println(sql);
+    		stmt.executeUpdate(sql);
+            stmt.close();    	
+            conn.close();
         } catch ( Exception e )
         {
 			e.printStackTrace();
         }
+		System.out.println("gorde da");
 	}
 	
 	public static Stage getPrimaryStage() {
@@ -87,6 +98,7 @@ public class nuevoSocioGUI extends Application {
     }   
     
     public static void main(String[] args) {
+
         launch(args);
     }
 
@@ -102,7 +114,7 @@ public class nuevoSocioGUI extends Application {
 					               
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Añadir un nuevo socio");
-				primaryStage.setFullScreen(true);
+				
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -112,7 +124,9 @@ public class nuevoSocioGUI extends Application {
            
     }
     @FXML protected void initialize(){
-    	
+    	opNum.setItems(FXCollections.observableArrayList(
+    		    1,2,3)
+    		);
     }
 }
 

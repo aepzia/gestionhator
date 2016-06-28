@@ -58,7 +58,7 @@ public class editarAsociacionGUI extends Application {
     		Statement stmt = conn.createStatement();
             stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"', tel1='"+textTel1.getText()+"', tel2='"+textTel2.getText()
                     //TODO +"presidente='"
-                    + "', logo='"+imgPath+"', direccion='"+textDireccion.toString()+"', cuenta_corriente='" +
+                    + "', logo='"+imgPath+"', direccion='"+textDireccion.getText()+"', cuenta_corriente='" +
                     textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
                     "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"' WHERE id='1'"); //TODO... bete
                 	
@@ -66,7 +66,7 @@ public class editarAsociacionGUI extends Application {
         {
 			e.printStackTrace();
         }
-	
+		System.out.println("Gorde da");
 		
 	}
 	@FXML private void examinar(){
@@ -146,10 +146,10 @@ public class editarAsociacionGUI extends Application {
             	textNombre.setText(rs.getObject("izena").toString());
             	textTel1.setText(rs.getObject("tel1").toString());
             	textTel2.setText(rs.getObject("tel2").toString());
-            	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido1, apellido2 FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+            	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
             	while ( rs2.next() )
                 {
-            		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido1")+" "+rs2.getObject("apellido2"));
+            		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
             		
                 }
             	imgPath = rs.getObject("logo").toString();

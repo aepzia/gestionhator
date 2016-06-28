@@ -40,38 +40,22 @@
     <ChoiceBox fx:id="opTipo" layoutX="142.0" layoutY="155.0" prefWidth="113.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
         </FXCollections>
       </items>
     </ChoiceBox>
     <ChoiceBox fx:id="opSexo" layoutX="304.0" layoutY="187.0" prefWidth="34.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
         </FXCollections>
       </items>
     </ChoiceBox>
-    <ChoiceBox fx:id="opPensionista" layoutX="142.0" layoutY="184.0" prefWidth="34.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="BAI/SI" />
-          <String fx:value="NO/EZ" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <ChoiceBox fx:id="opNum" layoutX="406.0" layoutY="187.0" prefWidth="48.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
+    <ChoiceBox fx:id="opNum" layoutX="406.0" layoutY="187.0" prefWidth="48.0" />
     <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" text="Examinar ..." />
     <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
     <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" prefWidth="57.0" text="ver" />
@@ -86,5 +70,6 @@
       </children>
     </Group>
     <Button fx:id="btnAtras" layoutX="440.0" layoutY="658.0" mnemonicParsing="false" onAction="#atras" prefWidth="60.0" text="" />
+    <CheckBox fx:id="opPensionista" layoutX="142.0" layoutY="186.0" mnemonicParsing="false" prefWidth="20.999908447265625" text="" />
   </children>
 </AnchorPane>
