@@ -1,5 +1,10 @@
 package application;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -25,6 +31,7 @@ public class listaSociosGUI extends Application {
 	@FXML private TextField textAsociacion;
 	@FXML private ListView<Socio> listSocios;
 	@FXML private TextArea textInformazioa;
+	@FXML private ChoiceBox btnOrderBy;
 	
 	private static Socio aukera;
 	private static Stage pStage;
@@ -81,7 +88,6 @@ public class listaSociosGUI extends Application {
 		        
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("Añadir un nuevo socio");
-				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -91,20 +97,33 @@ public class listaSociosGUI extends Application {
 		
     }
     @FXML protected void initialize(){
-    	Socio socio1 = new Socio();
-    	socio1.setIzena("Aizpea");
-    	socio1.setAbizena("Babaze Aizpurua");
-    	socio1.setnSocio(250);
-    	Socio socio2 = new Socio();
-    	socio2.setIzena("Aizpea");
-    	socio2.setAbizena("yewtureytiruyt");
-    	socio2.setnSocio(251);
+
+    	try {
+			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+			Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+			Statement stmt = conn.createStatement();
+			String sql = "SELECT * FROM socio";
+			ResultSet rs =  stmt.executeQuery(sql);
+			//List<Socio> values = Arrays.asList();
+			List<Socio> values = new ArrayList<Socio>();
+			while ( rs.next() )
+            {
+				
+				Socio s = new Socio(rs);
+				values.add(s);
+            }
+			listSocios.setItems(FXCollections.observableList(values));			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
     	
-    	List<Socio> values = Arrays.asList(socio1,socio2);
-    	listSocios.setItems(FXCollections.observableList(values));
+    	
     	//TODO datu basetik hartu eta datuak idatzi (Controler)
  
     	
     }
 }
+
 
