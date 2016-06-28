@@ -14,29 +14,8 @@
   <children>
     <ImageView fx:id="imgFoto" fitHeight="131.0" fitWidth="131.0" layoutX="309.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" smooth="true" x="0.0" y="0.0" />
     <TextField fx:id="textNombre" layoutX="55.0" layoutY="40.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="291.0" prefWidth="48.0" text="Tel.:" />
     <TextField fx:id="textApellido" layoutX="55.0" layoutY="77.0" prefWidth="200.0" />
-    <TextField fx:id="textTel1" layoutX="240.0" layoutY="291.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="449.0" text="Dirección" />
-    <TextArea fx:id="textDireccion" layoutX="240.0" layoutY="449.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
-    <Label layoutX="55.0" layoutY="229.0" prefWidth="113.0" text="Fecha de nacimiento" />
-    <Label layoutX="55.0" layoutY="255.0" prefWidth="105.0" text="Fecha de alta" />
-    <TextField fx:id="textNacimiento" layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
-    <TextField fx:id="textAlta" layoutX="240.0" layoutY="255.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="157.0" prefWidth="85.0" text="Tipo de socio" />
-    <Label layoutX="270.0" layoutY="189.0" text="Sexo" />
     <TextField fx:id="textDNI" layoutX="142.0" layoutY="119.0" prefWidth="112.99990000000253" />
-    <Label layoutX="55.0" layoutY="125.0" text="DNI" />
-    <TextField fx:id="textTel2" layoutX="240.0" layoutY="315.0" prefWidth="200.0" />
-    <TextField fx:id="textEmail" layoutX="240.0" layoutY="379.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="382.0" text="e-mail" />
-    <Label layoutX="373.0" layoutY="190.0" text="Nº" />
-    <Label layoutX="55.0" layoutY="184.0" text="Pensionista" />
-    <Label layoutX="55.0" layoutY="348.0" text="Tel. de emergencia" />
-    <TextField fx:id="textTelEm" layoutX="240.0" layoutY="345.0" prefWidth="200.0" />
-    <Button fx:id="btnGuardar" layoutX="53.0" layoutY="657.0" mnemonicParsing="false" onAction="#guardar" prefWidth="73.0" text="Guardar" />
-    <Label layoutX="55.0" layoutY="523.0" text="Otras observaciones" />
-    <TextArea fx:id="textOtros" layoutX="240.0" layoutY="523.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
     <ChoiceBox fx:id="opTipo" layoutX="142.0" layoutY="155.0" prefWidth="113.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
@@ -46,6 +25,7 @@
         </FXCollections>
       </items>
     </ChoiceBox>
+    <CheckBox fx:id="opPensionista" layoutX="142.0" layoutY="189.0" mnemonicParsing="false" prefWidth="20.999908447265625" />
     <ChoiceBox fx:id="opSexo" layoutX="304.0" layoutY="187.0" prefWidth="34.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
@@ -56,11 +36,11 @@
       </items>
     </ChoiceBox>
     <ChoiceBox fx:id="opNum" layoutX="406.0" layoutY="187.0" prefWidth="48.0" />
-    <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" text="Examinar ..." />
-    <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
-    <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" prefWidth="57.0" text="ver" />
-    <Button fx:id="btnExaminarLOPD" layoutX="360.0" layoutY="608.0" mnemonicParsing="false" text="Examinar ..." />
-    <Label layoutX="53.0" layoutY="414.0" text="Cuenta corriente" />
+    <DatePicker fx:id="textNacimiento" layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="240.0" layoutY="261.0" prefWidth="200.0" />
+    <TextField fx:id="textTel2" layoutX="240.0" layoutY="293.0" prefWidth="200.0" />
+    <TextField fx:id="textTelEm" layoutX="240.0" layoutY="329.0" prefWidth="200.0" />
+    <TextField fx:id="textEmail" layoutX="240.0" layoutY="374.0" prefWidth="200.0" />
     <Group id="Group" layoutX="242.0" layoutY="414.0">
       <children>
         <TextField fx:id="textBanco1" layoutX="0.0" layoutY="0.0" prefWidth="37.0" />
@@ -69,7 +49,25 @@
         <TextField fx:id="textBanco4" layoutX="110.0" layoutY="0.0" prefWidth="88.0" />
       </children>
     </Group>
+    <TextArea fx:id="textDireccion" layoutX="240.0" layoutY="449.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <TextArea fx:id="textOtros" layoutX="240.0" layoutY="523.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <Label layoutX="55.0" layoutY="261.0" prefWidth="48.0" text="Tel.:" />
+    <Label layoutX="55.0" layoutY="449.0" text="Dirección" />
+    <Label layoutX="55.0" layoutY="229.0" prefWidth="113.0" text="Fecha de nacimiento" />
+    <Label layoutX="55.0" layoutY="157.0" prefWidth="85.0" text="Tipo de socio" />
+    <Label layoutX="270.0" layoutY="189.0" text="Sexo" />
+    <Label layoutX="55.0" layoutY="125.0" text="DNI" />
+    <Label layoutX="55.0" layoutY="374.0" text="e-mail" />
+    <Label layoutX="373.0" layoutY="190.0" text="Nº" />
+    <Label layoutX="55.0" layoutY="184.0" text="Pensionista" />
+    <Label layoutX="55.0" layoutY="329.0" text="Tel. de emergencia" />
+    <Button fx:id="btnGuardar" layoutX="53.0" layoutY="657.0" mnemonicParsing="false" onAction="#guardar" prefWidth="73.0" text="Guardar" />
+    <Label layoutX="55.0" layoutY="523.0" text="Otras observaciones" />
+    <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" onAction="#examinarFoto" text="Examinar ..." />
+    <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
+    <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" onAction="#verLOPD" prefWidth="57.0" text="ver" />
+    <Button fx:id="btnExaminarLOPD" layoutX="360.0" layoutY="608.0" mnemonicParsing="false" onAction="#examinarPDF" text="Examinar ..." />
+    <Label layoutX="53.0" layoutY="414.0" text="Cuenta corriente" />
     <Button fx:id="btnAtras" layoutX="440.0" layoutY="658.0" mnemonicParsing="false" onAction="#atras" prefWidth="60.0" text="" />
-    <CheckBox fx:id="opPensionista" layoutX="142.0" layoutY="186.0" mnemonicParsing="false" prefWidth="20.999908447265625" text="" />
   </children>
 </AnchorPane>
