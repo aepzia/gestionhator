@@ -27,9 +27,9 @@
     <TextArea fx:id="textOtros" layoutX="240.0" layoutY="500.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
     <TextField fx:id="textNum" layoutX="388.0" layoutY="163.0" prefWidth="71.0" />
     <TextField fx:id="textTelEmergencia" layoutX="240.0" layoutY="345.0" prefWidth="200.0" />
-    <TextField fx:id="textPension" layoutX="142.0" layoutY="184.0" prefWidth="26.0" />
+    <CheckBox fx:id="opPensionista" layoutX="142.0" layoutY="184.0" prefWidth="26.0" />
     <TextField fx:id="textBanco" layoutX="240.0" layoutY="400.0" prefWidth="200.0" />
-    <ImageView fitHeight="127.0" fitWidth="169.33333333333331" layoutX="313.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="imgFoto" fitHeight="127.0" fitWidth="169.33333333333331" layoutX="313.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@perfil.jpg" />
       </image>

@@ -9,8 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -24,7 +26,7 @@ public class verSocioGUI extends Application {
     @FXML public TextField textBtype;
     @FXML public TextField textSexo;
     @FXML public TextField textNum;
-    @FXML public TextField textPension;
+    @FXML public CheckBox opPensionista;
     @FXML public TextField textJaioteguna;
     @FXML public TextField textAlta;
     @FXML public TextField textTel1;
@@ -40,14 +42,16 @@ public class verSocioGUI extends Application {
     @FXML public Button btnInprimirCarnet;
     @FXML public Button btnEditar;
     @FXML public Button btnActividades;
-    
+    @FXML public Button btnExaminarFoto;
+    @FXML public Button btnExaminarLOPD;
+
+
 	private static Stage pStage;
     private static Socio bazkidea;
     
-    
     @FXML public void verLOPD(){
     	//TODO Datu basetik hartu pdfaren helbidea
-    	File pdfFile = new File("C:\\Users\\standar\\Desktop\\musikaEskola.pdf");
+    	File pdfFile = new File(bazkidea.getLOPD());
     	try {
 			Desktop.getDesktop().open(pdfFile);
 		} catch (IOException e) {
@@ -80,9 +84,6 @@ public class verSocioGUI extends Application {
         verSocioGUI.pStage = pStage;
     }
     
-    public static void main(String[] args) {
-        launch(args);
-    }
     
     @Override
     public void start(Stage primaryStage){
@@ -109,28 +110,25 @@ public class verSocioGUI extends Application {
 		bazkidea = Controler.autatutakoBazkidea;
 		//bazkidea = bl.getAutatutakoBazkidea();
 		System.out.println(bazkidea);
-    	//imgFoto.setImage(bazkidea.getFoto());
     	textNombre.setText(bazkidea.getIzena());
-    	/*textApellido.setText(bazkidea.getAbizena());
+    	textApellido.setText(bazkidea.getAbizena());
     	textDNI.setText(bazkidea.getDNI());
     	textBtype.setText(bazkidea.getTpSocio());
     	textSexo.setText(bazkidea.getSexo());
-    	int n = bazkidea.getnSocio();
-    	textNum.setText(Integer.toString(n));
-    	if (bazkidea.isPensionista()) textPension.setText("BAI/SI");
-    	else textPension.setText("EZ/NO");
-		Format formatter = new SimpleDateFormat("yyyy-MM-dd");
-		String dateNacimiento = formatter.format(bazkidea.getFechaNacimiento());
-    	textJaioteguna.setText(dateNacimiento);
-    	String dateAlta= formatter.format(bazkidea.getFechaAlta());
-    	textJaioteguna.setText(dateAlta);
+    	textNum.setText(bazkidea.getnSocio());
+    	textAlta.setText(bazkidea.getFechaAlta());
+    	textEmail.setText(bazkidea.getEmail());
+    	opPensionista.setSelected(bazkidea.isPensionista());
+    	textJaioteguna.setText(bazkidea.getFechaNacimiento());
+    	textJaioteguna.setText(bazkidea.getFechaAlta());
     	textTel1.setText(bazkidea.getTel1());
     	textTel2.setText(bazkidea.getTel2());
     	textTelEmergencia.setText(bazkidea.getTelEmergencia());
     	textBanco.setText(bazkidea.getCuentaCorriente());
     	textDireccion.setText(bazkidea.getHelbidea());
     	textOtros.setText(bazkidea.getComentarios());
-    	*/
+    	imgFoto.setImage(bazkidea.getFoto());
+    	
     	
     	
     }

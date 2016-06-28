@@ -12,7 +12,7 @@ import javafx.scene.image.Image;
 public class Socio {
 	private String nSocio;
 	private String DNI;
-	private String pensionista;
+	private boolean pensionista;
 	private String izena;
 	private String abizena;
 	private String fechaNacimiento;
@@ -39,7 +39,7 @@ public class Socio {
 	Socio(ResultSet rs) throws SQLException{
 		setnSocio(rs.getObject("nSocio").toString());
 		setDNI(rs.getObject("DNI").toString());
-		setPensionista(rs.getObject("pensionista").toString());
+		setPensionista(rs.getBoolean("pensionista"));
 		setIzena(rs.getObject("nombre").toString());
 		setAbizena(rs.getObject("apellido").toString());
 		setFechaNacimiento(rs.getObject("fechaNacimiento").toString());
@@ -79,11 +79,11 @@ public class Socio {
 	public void setDNI(String dNI) {
 		DNI = dNI;
 	}
-	public String isPensionista() {
+	public boolean isPensionista() {
 		return pensionista;
 	}
-	public void setPensionista(String string) {
-		this.pensionista = string;
+	public void setPensionista(boolean b) {
+		this.pensionista = b;
 	}
 	public String getIzena() {
 		return izena;

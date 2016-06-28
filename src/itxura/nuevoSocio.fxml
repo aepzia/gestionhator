@@ -63,7 +63,7 @@
     <Label layoutX="55.0" layoutY="329.0" text="Tel. de emergencia" />
     <Button fx:id="btnGuardar" layoutX="53.0" layoutY="657.0" mnemonicParsing="false" onAction="#guardar" prefWidth="73.0" text="Guardar" />
     <Label layoutX="55.0" layoutY="523.0" text="Otras observaciones" />
-    <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" onAction="#examinarFoto" text="Examinar ..." />
+    <Button fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" onAction="#examinarFoto" text="Examinar ..." />
     <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
     <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" onAction="#verLOPD" prefWidth="57.0" text="ver" />
     <Button fx:id="btnExaminarLOPD" layoutX="360.0" layoutY="608.0" mnemonicParsing="false" onAction="#examinarPDF" text="Examinar ..." />
