@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="697.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.listadosGUI">
+  <children>
+    <CheckBox fx:id="chNSocio" layoutX="277.0" layoutY="61.0" mnemonicParsing="false" text="" />
+    <Label layoutX="296.0" layoutY="53.0" text="Bazkide Zenbakia" />
+    <Label layoutX="296.0" layoutY="69.0" text="Numero de socio" textFill="#bfbfbf" />
+    <CheckBox fx:id="chDNI" layoutX="277.0" layoutY="101.0" mnemonicParsing="false" text="" />
+    <Label layoutX="296.0" layoutY="93.0" text="NAN" />
+    <Label layoutX="296.0" layoutY="109.0" text="DNI">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x1" />
+      </textFill>
+    </Label>
+    <CheckBox fx:id="chPensionista" layoutX="276.0" layoutY="143.0" mnemonicParsing="false" text="" />
+    <Label layoutX="295.0" layoutY="135.0" text="Pentsio duna" />
+    <Label layoutX="295.0" layoutY="151.0" text="Pensionista" textFill="$x1" />
+    <CheckBox id="cnNombre" fx:id="chNombre" layoutX="275.0" layoutY="184.0" mnemonicParsing="false" text="" />
+    <Label layoutX="294.0" layoutY="176.0" text="Izena" />
+    <Label layoutX="294.0" layoutY="192.0" text="Nombre" textFill="$x1" />
+    <CheckBox fx:id="chApellido" layoutX="275.0" layoutY="234.0" mnemonicParsing="false" text="" />
+    <Label layoutX="294.0" layoutY="226.0" text="Abizena" />
+    <Label layoutX="294.0" layoutY="242.0" text="Apellido" textFill="$x1" />
+    <CheckBox fx:id="chFechaNacimiento" layoutX="275.0" layoutY="283.0" mnemonicParsing="false" text="" />
+    <Label layoutX="295.0" layoutY="277.0" text="Jaiotze eguna" />
+    <Label layoutX="295.0" layoutY="291.0" text="Fecha de nacimiento" textFill="$x1" />
+    <CheckBox id="chTIpoSocio" fx:id="chTipoSocio" layoutX="275.0" layoutY="323.0" mnemonicParsing="false" text="" />
+    <Label layoutX="294.0" layoutY="315.0" text="Bazkide mota" />
+    <Label layoutX="294.0" layoutY="331.0" text="Tipo de socio" textFill="$x1" />
+    <CheckBox fx:id="chSexo" layoutX="276.0" layoutY="366.0" mnemonicParsing="false" text="" />
+    <Label layoutX="295.0" layoutY="358.0" text="Sexo" />
+    <Label layoutX="295.0" layoutY="374.0" text="Sexua" textFill="$x1" />
+    <CheckBox fx:id="chDireccion" layoutX="276.0" layoutY="412.0" mnemonicParsing="false" text="" />
+    <Label layoutX="295.0" layoutY="404.0" text="Helbidea" />
+    <Label layoutX="295.0" layoutY="420.0" text="Dirección" textFill="$x1" />
+    <CheckBox fx:id="chTelefono" layoutX="458.0" layoutY="61.0" mnemonicParsing="false" text="" />
+    <Label layoutX="477.0" layoutY="53.0" text="Telefonoa" />
+    <Label layoutX="477.0" layoutY="69.0" text="Teléfono" textFill="$x1" />
+    <CheckBox fx:id="chEmail" layoutX="458.0" layoutY="101.0" mnemonicParsing="false" text="" />
+    <Label layoutX="477.0" layoutY="101.0" text="e-mail" />
+    <CheckBox id="chIzen" fx:id="chFechaAlta" layoutX="458.0" layoutY="146.0" mnemonicParsing="false" text="" />
+    <Label layoutX="478.0" layoutY="138.0" text="Izen emate eguna" />
+    <Label layoutX="477.0" layoutY="154.0" text="Fecha de alta" textFill="$x1" />
+    <CheckBox fx:id="chFechaBaja" layoutX="458.0" layoutY="189.0" mnemonicParsing="false" text="" />
+    <Label layoutX="477.0" layoutY="181.0" text="Baja data" />
+    <Label layoutX="477.0" layoutY="197.0" text="Fecha de baja" textFill="$x1" />
+    <CheckBox fx:id="chMotivoBaja" layoutX="458.0" layoutY="234.0" mnemonicParsing="false" text="" />
+    <Label layoutX="477.0" layoutY="226.0" text="Baja zergatia" />
+    <Label layoutX="477.0" layoutY="242.0" text="Motivo de baja" textFill="$x1" />
+    <CheckBox fx:id="chFoto" layoutX="458.0" layoutY="283.0" mnemonicParsing="false" text="" />
+    <Label layoutX="477.0" layoutY="275.0" text="Argazkia" />
+    <Label layoutX="477.0" layoutY="291.0" text="Foto" textFill="$x1" />
+    <CheckBox fx:id="chBanco" layoutX="457.0" layoutY="323.0" mnemonicParsing="false" text="" />
+    <Label layoutX="476.0" layoutY="315.0" text="Kontu Korrontea" />
+    <Label layoutX="476.0" layoutY="331.0" text="Cuenta corriente" textFill="$x1" />
+    <Button fx:id="btnOk" layoutX="117.0" layoutY="485.0" mnemonicParsing="false" onAction="#getPdf" text="Ok" />
+    <ChoiceBox fx:id="listAukerak" layoutX="35.0" layoutY="105.0" prefWidth="186.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button fx:id="btnAtras" layoutX="496.0" layoutY="444.0" mnemonicParsing="false" onAction="#atras" prefHeight="63.0" prefWidth="68.0" text="" />
+  </children>
+</AnchorPane>
