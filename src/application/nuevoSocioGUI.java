@@ -200,7 +200,7 @@ public class nuevoSocioGUI extends Application {
     }
     @FXML protected void initialize(){
     	opNum.setItems(FXCollections.observableArrayList(
-    		    1,2,3)
+    		    Controler.socioKop)
     		);
     		opPensionista.setSelected(false);
     }

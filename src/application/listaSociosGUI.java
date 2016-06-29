@@ -103,9 +103,10 @@ public class listaSociosGUI extends Application {
 			Statement stmt = conn.createStatement();
 			String sql = "SELECT * FROM socio";
 			ResultSet rs =  stmt.executeQuery(sql);
+			Controler.socioKop =1;
 			while ( rs.next() )
             {
-			
+				Controler.socioKop++; 
 				Socio s = new Socio(rs);
 				sql = "SELECT  * FROM socioActividad where socioApuntado='"+rs.getObject("DNI")+"' AND pagado='false'";
 				ResultSet rs2 =  stmt.executeQuery(sql);
@@ -115,7 +116,6 @@ public class listaSociosGUI extends Application {
 				listSocios.getItems().add(s);
 
             }
-		
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
