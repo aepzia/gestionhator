@@ -19,11 +19,17 @@ public class menuPrincipalGUI extends Application {
 	@FXML private Button btnSocios;
 	@FXML private Button btnActividades;
 	@FXML private Button btnTerceros;
+	@FXML private Button btnLibro;
+	@FXML private Button btnListados;
 	@FXML private Button btnCalendario;
 	private static Stage pStage;
 
 	@FXML private void verAsociacion(ActionEvent event){
 		datosAsociacionGUI newWindow = new datosAsociacionGUI();
+		newWindow.start(getPrimaryStage());
+	}
+	@FXML private void verListados(ActionEvent event){
+		listadosGUI newWindow = new listadosGUI();
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verSocios(ActionEvent event){

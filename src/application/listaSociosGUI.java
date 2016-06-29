@@ -103,24 +103,25 @@ public class listaSociosGUI extends Application {
 			Statement stmt = conn.createStatement();
 			String sql = "SELECT * FROM socio";
 			ResultSet rs =  stmt.executeQuery(sql);
-			//List<Socio> values = Arrays.asList();
-			List<Socio> values = new ArrayList<Socio>();
 			while ( rs.next() )
             {
-				
+			
 				Socio s = new Socio(rs);
-				values.add(s);
+				sql = "SELECT  * FROM socioActividad where socioApuntado='"+rs.getObject("DNI")+"' AND pagado='false'";
+				ResultSet rs2 =  stmt.executeQuery(sql);
+				if (rs2 !=null) {
+					
+				}
+				listSocios.getItems().add(s);
+
             }
-			listSocios.setItems(FXCollections.observableList(values));			
+		
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-    	
-    	
-    	//TODO datu basetik hartu eta datuak idatzi (Controler)
- 
+	
     	
     }
 }
