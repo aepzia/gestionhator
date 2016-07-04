@@ -8,84 +8,90 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="587.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="1211.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.editarSocioGUI">
   <children>
-    <ImageView fx:id="imgFoto" fitHeight="131.0" fitWidth="131.0" layoutX="309.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" smooth="true" x="0.0" y="0.0" />
-    <TextField fx:id="textNombre" layoutX="55.0" layoutY="40.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="291.0" prefWidth="48.0" text="Tel.:" />
-    <TextField fx:id="textApellido" layoutX="55.0" layoutY="77.0" prefWidth="200.0" />
-    <TextField fx:id="textTel1" layoutX="240.0" layoutY="291.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="449.0" text="Dirección" />
-    <TextArea fx:id="textDireccion" layoutX="240.0" layoutY="449.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
-    <Label layoutX="55.0" layoutY="229.0" prefWidth="113.0" text="Fecha de nacimiento" />
-    <Label layoutX="55.0" layoutY="255.0" prefWidth="105.0" text="Fecha de alta" />
-    <TextField fx:id="textNacimiento" layoutX="240.0" layoutY="226.0" prefWidth="200.0" />
-    <TextField fx:id="textAlta" layoutX="240.0" layoutY="255.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="157.0" prefWidth="85.0" text="Tipo de socio" />
-    <Label layoutX="270.0" layoutY="189.0" text="Sexo" />
-    <TextField fx:id="textDNI" layoutX="142.0" layoutY="119.0" prefWidth="112.99990000000253" />
-    <Label layoutX="55.0" layoutY="125.0" text="DNI" />
-    <TextField fx:id="textTel2" layoutX="240.0" layoutY="315.0" prefWidth="200.0" />
-    <TextField fx:id="textEmail" layoutX="240.0" layoutY="379.0" prefWidth="200.0" />
-    <Label layoutX="55.0" layoutY="382.0" text="e-mail" />
-    <Label layoutX="373.0" layoutY="190.0" text="Nº" />
-    <Label layoutX="55.0" layoutY="184.0" text="Pensionista" />
-    <Label layoutX="55.0" layoutY="348.0" text="Tel. de emergencia" />
-    <TextField fx:id="textTelEm" layoutX="240.0" layoutY="345.0" prefWidth="200.0" />
-    <Button layoutX="53.0" layoutY="657.0" mnemonicParsing="false" prefWidth="73.0" text="Guardar" />
-    <Label layoutX="55.0" layoutY="523.0" text="Otras observaciones" />
-    <TextArea fx:id="textOtros" layoutX="240.0" layoutY="523.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
-    <ChoiceBox fx:id="opTipo" layoutX="142.0" layoutY="155.0" prefWidth="113.0">
+    <ImageView fx:id="imgFoto" fitHeight="244.0" fitWidth="244.0" layoutX="668.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" smooth="true" x="0.0" y="0.0" />
+    <TextField fx:id="textNombre" layoutX="240.0" layoutY="44.0" prefWidth="259.0" />
+    <TextField fx:id="textApellido" layoutX="240.0" layoutY="96.0" prefWidth="259.0" />
+    <TextField fx:id="textDNI" layoutX="240.0" layoutY="153.0" prefWidth="259.0" />
+    <ChoiceBox fx:id="opTipo" layoutX="240.0" layoutY="201.0" prefWidth="113.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
         </FXCollections>
       </items>
     </ChoiceBox>
-    <ChoiceBox fx:id="opSexo" layoutX="304.0" layoutY="187.0" prefWidth="34.0">
+    <CheckBox fx:id="opPensionista" layoutX="183.0" layoutY="275.0" mnemonicParsing="false" prefWidth="20.999908447265625" />
+    <ChoiceBox fx:id="opSexo" layoutX="474.0" layoutY="204.0" prefWidth="34.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
+          <String fx:value="Item" />
         </FXCollections>
       </items>
     </ChoiceBox>
-    <ChoiceBox fx:id="opPensionista" layoutX="142.0" layoutY="184.0" prefWidth="34.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <ChoiceBox fx:id="opNum" layoutX="406.0" layoutY="187.0" prefWidth="48.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <Button id="btnExaminar" fx:id="btnExaminarFoto" layoutX="381.0" layoutY="157.0" mnemonicParsing="false" text="Examinar ..." />
-    <Label layoutX="55.0" layoutY="608.0" text="Proteccion de datos" />
-    <Button fx:id="btnVer" layoutX="237.0" layoutY="608.0" mnemonicParsing="false" prefWidth="57.0" text="ver" />
-    <Button fx:id="btnExaminarLOPD" layoutX="360.0" layoutY="608.0" mnemonicParsing="false" text="Examinar ..." />
-    <Label layoutX="53.0" layoutY="414.0" text="Cuenta corriente" />
-    <Group id="Group" layoutX="242.0" layoutY="414.0">
+    <ChoiceBox fx:id="opNum" layoutX="590.0" layoutY="202.0" prefWidth="48.0" />
+    <DatePicker fx:id="textNacimiento" layoutX="340.0" layoutY="332.0" prefHeight="21.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="340.0" layoutY="387.0" prefWidth="200.0" />
+    <TextField fx:id="textTel2" layoutX="340.0" layoutY="413.0" prefWidth="200.0" />
+    <TextField fx:id="textTelEm" layoutX="340.0" layoutY="457.0" prefWidth="200.0" />
+    <TextField fx:id="textEmail" layoutX="340.0" layoutY="525.0" prefWidth="200.0" />
+    <Group id="Group" layoutX="942.0" layoutY="313.0">
       <children>
         <TextField fx:id="textBanco1" layoutX="0.0" layoutY="0.0" prefWidth="37.0" />
-        <TextField fx:id="textBanco2" layoutX="39.0" layoutY="0.0" prefWidth="37.0" />
-        <TextField fx:id="textBanco3" layoutX="80.0" layoutY="0.0" prefWidth="24.0" />
-        <TextField fx:id="textBanco4" layoutX="110.0" layoutY="0.0" prefWidth="88.0" />
+        <TextField fx:id="textBanco2" layoutX="44.0" layoutY="0.0" prefWidth="37.0" />
+        <TextField fx:id="textBanco3" layoutX="87.0" layoutY="0.0" prefWidth="24.0" />
+        <TextField fx:id="textBanco4" layoutX="125.0" layoutY="0.0" prefWidth="80.0" />
       </children>
     </Group>
-    <Button fx:id="btnAtras" layoutX="440.0" layoutY="658.0" mnemonicParsing="false" prefWidth="60.0" text="" />
+    <TextArea fx:id="textDireccion" layoutX="945.0" layoutY="372.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <TextArea fx:id="textOtros" layoutX="947.0" layoutY="457.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <Label layoutX="50.0" layoutY="382.0" prefWidth="48.0" text="Tel.:" textFill="BLACK" wrapText="true">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="699.0" layoutY="362.0" text="Dirección" wrapText="true" />
+    <Label font="$x1" layoutX="49.0" layoutY="299.0" prefHeight="54.0" prefWidth="216.0" text="Fecha de nacimiento" wrapText="true" />
+    <Label font="$x1" layoutX="52.0" layoutY="178.0" prefHeight="47.0" prefWidth="132.0" text="Tipo de socio" wrapText="true" />
+    <Label font="$x1" layoutX="410.0" layoutY="185.0" text="Sexo" textFill="BLACK" />
+    <Label font="$x1" layoutX="53.0" layoutY="135.0" text="DNI" wrapText="true" />
+    <Label font="$x1" layoutX="54.0" layoutY="520.0" text="e-mail" wrapText="true" />
+    <Label font="$x1" layoutX="541.0" layoutY="190.0" text="Nº" textFill="BLACK" />
+    <Label font="$x1" layoutX="54.0" layoutY="248.0" text="Pensionista" wrapText="true" />
+    <Label font="$x1" layoutX="49.0" layoutY="435.0" text="Tel. de emergencia" wrapText="true" />
+    <Button fx:id="btnGuardar" layoutX="65.0" layoutY="630.0" mnemonicParsing="false" onAction="#guardar" prefHeight="47.0" prefWidth="104.0" text="Guardar" />
+    <Label font="$x1" layoutX="699.0" layoutY="440.0" text="Otras observaciones" wrapText="true" />
+    <Button fx:id="btnExaminarFoto" layoutX="958.0" layoutY="46.0" mnemonicParsing="false" onAction="#examinarFoto" prefHeight="47.0" prefWidth="104.0" text="Examinar ..." />
+    <Label font="$x1" layoutX="700.0" layoutY="537.0" text="Proteccion de datos" wrapText="true" />
+    <Button fx:id="btnVer" layoutX="942.0" layoutY="553.0" mnemonicParsing="false" onAction="#verLOPD" prefHeight="27.0" prefWidth="81.0" text="ver" />
+    <Button fx:id="btnExaminarLOPD" layoutX="1062.0" layoutY="556.0" mnemonicParsing="false" onAction="#examinarPDF" text="Examinar ..." />
+    <Label font="$x1" layoutX="699.0" layoutY="296.0" text="Cuenta corriente" wrapText="true" />
+    <Button fx:id="btnAtras" layoutX="1002.0" layoutY="611.0" mnemonicParsing="false" onAction="#atras" prefHeight="86.0" prefWidth="106.0" text="" />
+    <Label font="$x1" layoutX="50.0" layoutY="83.0" text="Apellido" wrapText="true" />
+    <Label font="$x1" layoutX="50.0" layoutY="26.0" text="Nombre" wrapText="true" />
+    <Label font="$x1" layoutX="51.0" layoutY="39.0" text="Izena" wrapText="true">
+      <textFill>
+        <Color blue="0.750" green="0.750" red="0.750" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="49.0" layoutY="103.0" prefWidth="73.99990844726562" text="Abizena" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="54.0" layoutY="153.0" text="NA" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="53.0" layoutY="210.0" text="Bazkide mota" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="54.0" layoutY="269.0" text="Pentsioduna" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="49.0" layoutY="335.0" text="Jaioteguna" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="49.0" layoutY="455.0" text="Larrialdietarako telefonoa" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="410.0" layoutY="204.0" text="Sexua" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="530.0" layoutY="207.0" text="Znbk" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="699.0" layoutY="313.0" text="Kontu korrontea" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="699.0" layoutY="385.0" text="Helbidea" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="700.0" layoutY="455.0" text="Bestelako iruzkinak" textFill="$x2" wrapText="true" />
+    <Label font="$x1" layoutX="700.0" layoutY="556.0" text="Datu babesa" textFill="$x2" wrapText="true" />
   </children>
 </AnchorPane>
