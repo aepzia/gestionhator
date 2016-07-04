@@ -120,7 +120,6 @@ public class editarAsociacionGUI extends Application {
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 				primaryStage.setScene(scene);
 				primaryStage.setTitle("Editar ascoiación");
-				primaryStage.setFullScreen(true);
 				primaryStage.show();
 			} catch (IOException e) {
 				e.printStackTrace();
