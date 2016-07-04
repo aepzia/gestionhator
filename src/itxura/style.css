@@ -1,9 +1,69 @@
+
+
 #btnAtras{
 	-fx-background-image: url("atras.png");
 	-fx-background-size: 45 45;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;   
     -fx-padding: 15px 10px 15px 10px;
+   -fx-background-color: transparent ;
+}
+
+#btnActividades{
+	-fx-background-image: url("actividades.png");
+	-fx-background-size:200 200 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    -fx-padding: 15px 10px 15px 10px;
+   -fx-background-color: transparent ;
+}
+#btnTerceros{
+	-fx-background-image: url("terceros.png");
+	-fx-background-size:200 200 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    -fx-padding: 15px 10px 15px 10px;
+   -fx-background-color: transparent ;
+}
+
+#btnSocios{
+	-fx-background-image: url("Socios.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnLibro{
+	-fx-background-image: url("libroDiario.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnCalendario{
+	-fx-background-image: url("Calendario.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnListados{
+	-fx-background-image: url("listados.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnAsociacion{
+	-fx-background-image: url("asociacion.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
    -fx-background-color: transparent ;
 }
 
