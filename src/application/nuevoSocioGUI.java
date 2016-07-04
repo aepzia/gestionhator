@@ -10,6 +10,9 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
+//import org.hsqldb.util.DatabaseManager;
+
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -73,9 +76,8 @@ public class nuevoSocioGUI extends Application {
 			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
 			Date fecha = new Date();
 			currentData =formatoDeFecha.format(fecha);
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-
-    		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+	        Class.forName("org.hsqldb.jdbcDriver");  
+    		Connection conn = DriverManager.getConnection("jdbc:hsqldb://C:/Users/standar/Desktop/base.odb");
     		Statement stmt = conn.createStatement();
     		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
     		String sql = "INSERT INTO socio (nSocio,DNI,pensionista,nombre,apellido,fechaNacimiento,tpSocio,"

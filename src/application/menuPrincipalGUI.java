@@ -76,7 +76,6 @@ public class menuPrincipalGUI extends Application {
 	        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 	        primaryStage.setScene(scene);
 			primaryStage.setTitle("Editar asociación");
-			primaryStage.setFullScreen(true);
 			primaryStage.show();
 		
 		} catch (IOException e) {

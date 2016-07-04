@@ -24,20 +24,10 @@ public class editarSocioGUI extends Application {
     public void start(Stage primaryStage){
     	AnchorPane  page;
 			try {
-				page = (AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/editarAñadirSocio.fxml"));
+				page = (AnchorPane)  FXMLLoader.load(getClass().getResource("../itxura/editarSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
-				
-		        /*
-		         * Argazkia aldatzeko 
-		         * */
-		        imgFoto = new ImageView();
-		        imgFoto.setLayoutX(309);
-		        imgFoto.setLayoutY(13);
-		        String img = "http://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437";
-		        imgFoto.setImage(new Image(img, 140, 140, true, true));
-		        page.getChildren().add(imgFoto);
-		        
+		
 		        primaryStage.setScene(scene);
 				primaryStage.setTitle("FXML is Simple");
 				primaryStage.setFullScreen(true);
