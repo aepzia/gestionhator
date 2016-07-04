@@ -7,24 +7,23 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
-<?scenebuilder-stylesheet ikonoak.css?>
 
 <AnchorPane minHeight="624.0" prefHeight="624.0" prefWidth="957.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.menuPrincipalGUI">
   <!-- TODO Add Nodes -->
   <children>
     <Button fx:id="btnAsociacion" layoutX="272.0" layoutY="369.0" onAction="#verAsociacion" prefHeight="169.0" prefWidth="222.0" text="" />
-    <Button fx:id="btnSocios" layoutX="272.0" layoutY="56.0" mnemonicParsing="false" onAction="#verSocios" prefHeight="180.0" prefWidth="201.0" text="" />
-    <Button fx:id="btnActividades" layoutX="449.0" layoutY="61.0" mnemonicParsing="false" onAction="#verActividades" prefHeight="223.0" prefWidth="250.0" text="" />
-    <Button fx:id="btnTerceros" layoutX="601.0" layoutY="297.0" mnemonicParsing="false" onAction="#verTerceros" prefWidth="260.0" text="Bitartekoak / Terceros" />
+    <Button fx:id="btnSocios" layoutX="378.0" layoutY="77.0" mnemonicParsing="false" onAction="#verSocios" prefHeight="180.0" prefWidth="201.0" text="" />
+    <Button fx:id="btnActividades" layoutX="594.0" layoutY="61.0" mnemonicParsing="false" onAction="#verActividades" prefHeight="223.0" prefWidth="250.0" text="" />
+    <Button fx:id="btnTerceros" layoutX="674.0" layoutY="442.0" mnemonicParsing="false" onAction="#verTerceros" prefWidth="232.0" text="" />
     <Button fx:id="btnCalendario" layoutX="37.0" layoutY="339.0" mnemonicParsing="false" onAction="#verCalendario" prefHeight="206.0" prefWidth="260.0" text="" />
-    <Button fx:id="btnLibro" layoutX="34.0" layoutY="61.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="250.0" text="" />
+    <Button fx:id="btnLibro" layoutX="114.0" layoutY="88.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="250.0" text="" />
     <Button fx:id="btnListados" layoutX="494.0" layoutY="376.0" mnemonicParsing="false" onAction="#verListados" prefHeight="155.0" prefWidth="199.0" text="" />
     <Label layoutX="114.0" layoutY="319.0" prefHeight="40.0" prefWidth="106.0" text="Calendario">
       <font>
         <Font size="20.0" fx:id="x1" />
       </font>
     </Label>
-    <Label font="$x1" layoutX="120.0" layoutY="533.0" text="Egutegia">
+    <Label font="$x1" layoutX="120.0" layoutY="528.0" text="Egutegia">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x2" />
       </textFill>
@@ -32,6 +31,18 @@
     <Label font="$x1" layoutX="328.0" layoutY="324.0" prefHeight="40.0" prefWidth="106.0" text="Asociación" />
     <Label font="$x1" layoutX="334.0" layoutY="538.0" text="Asoziazioa" textFill="$x2" />
     <Label font="$x1" layoutX="541.0" layoutY="324.0" prefHeight="40.0" prefWidth="106.0" text="Listados" />
-    <Label font="$x1" layoutX="540.0" layoutY="533.0" text="Zerrendak" textFill="$x2" />
+    <Label font="$x1" layoutX="540.0" layoutY="538.0" text="Zerrendak" textFill="$x2" />
+    <Label font="$x1" layoutX="746.0" layoutY="331.0" text="Terceros" />
+    <Label font="$x1" layoutX="734.0" layoutY="538.0" text="Bitartekoak">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="171.0" layoutY="50.0" text="Libro diario" />
+    <Label font="$x1" layoutX="165.0" layoutY="257.0" text="Egunerokoa" textFill="$x3" />
+    <Label font="$x1" layoutX="450.0" layoutY="55.0" text="Socios" />
+    <Label font="$x1" layoutX="434.0" layoutY="262.0" text="Bazkideak" textFill="$x3" />
+    <Label font="$x1" layoutX="653.0" layoutY="55.0" text="Actividades" />
+    <Label font="$x1" layoutX="667.0" layoutY="262.0" text="Ekintzak" textFill="$x3" />
   </children>
 </AnchorPane>
