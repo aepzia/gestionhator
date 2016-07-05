@@ -17,6 +17,14 @@
     -fx-padding: 15px 10px 15px 10px;
    -fx-background-color: transparent ;
 }
+#btnActividadesSocio{
+	-fx-background-image: url("verActividades.png");
+	-fx-background-size:80 80 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    -fx-padding: 15px 10px 15px 10px;
+   -fx-background-color: transparent ;
+}
 #btnTerceros{
 	-fx-background-image: url("terceros.png");
 	-fx-background-size:200 200 ;
@@ -125,6 +133,22 @@
 #btnVerLOPD{
 	-fx-background-image: url("Verpdf.png");
 	-fx-background-size: 50 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnEditSocio{
+	-fx-background-image: url("editarSocio.png");
+	-fx-background-size: 80 80;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnFicha{
+	-fx-background-image: url("tarjeta.png");
+	-fx-background-size: 80 80;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;   
     
