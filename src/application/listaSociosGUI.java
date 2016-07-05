@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 public class listaSociosGUI extends Application {
 	
 	@FXML private Button btnAtras;
-	@FXML private Button btnAñadirSocio;
+	@FXML private Button btnAnadirSocio;
 	@FXML private Button btnElimSocio;
 	@FXML private Button btnPagos;
 	@FXML private Button btnVerSocio;

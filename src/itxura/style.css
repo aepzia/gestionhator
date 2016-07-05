@@ -2,7 +2,7 @@
 
 #btnAtras{
 	-fx-background-image: url("atras.png");
-	-fx-background-size: 45 45;
+	-fx-background-size: 55 55;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;   
     -fx-padding: 15px 10px 15px 10px;
@@ -66,7 +66,38 @@
     
    -fx-background-color: transparent ;
 }
-
+#btnAnadirSocio{
+	-fx-background-image: url("anadirSocio.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnElimSocio{
+	-fx-background-image: url("eliminarSocio.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnPagos{
+	-fx-background-image: url("deudas.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnVerSocio{
+	-fx-background-image: url("verSocio.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
 #imgFoto{
 	-fx-image: url("perfil.png");
 }
