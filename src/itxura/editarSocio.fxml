@@ -66,14 +66,14 @@
     <Label font="$x1" layoutX="541.0" layoutY="190.0" text="Nº" textFill="BLACK" />
     <Label font="$x1" layoutX="54.0" layoutY="248.0" text="Pensionista" wrapText="true" />
     <Label font="$x1" layoutX="49.0" layoutY="435.0" text="Tel. de emergencia" wrapText="true" />
-    <Button fx:id="btnGuardar" layoutX="65.0" layoutY="630.0" mnemonicParsing="false" onAction="#guardar" prefHeight="47.0" prefWidth="104.0" text="Guardar" />
+    <Button fx:id="btnGuardar" layoutX="113.0" layoutY="575.0" mnemonicParsing="false" onAction="#guardar" prefHeight="102.0" prefWidth="129.00009999999747" text="" />
     <Label font="$x1" layoutX="699.0" layoutY="440.0" text="Otras observaciones" wrapText="true" />
-    <Button fx:id="btnExaminarFoto" layoutX="958.0" layoutY="46.0" mnemonicParsing="false" onAction="#examinarFoto" prefHeight="47.0" prefWidth="104.0" text="Examinar ..." />
+    <Button fx:id="btnExaminarFoto" layoutX="932.0" layoutY="172.0" mnemonicParsing="false" onAction="#examinarFoto" prefHeight="102.0" prefWidth="113.0" text="" />
     <Label font="$x1" layoutX="700.0" layoutY="537.0" text="Proteccion de datos" wrapText="true" />
-    <Button fx:id="btnVer" layoutX="942.0" layoutY="553.0" mnemonicParsing="false" onAction="#verLOPD" prefHeight="27.0" prefWidth="81.0" text="ver" />
-    <Button fx:id="btnExaminarLOPD" layoutX="1062.0" layoutY="556.0" mnemonicParsing="false" onAction="#examinarPDF" text="Examinar ..." />
+    <Button id="btnVerLOPD" fx:id="btnVer" layoutX="943.0" layoutY="537.0" mnemonicParsing="false" onAction="#verLOPD" prefHeight="64.0" prefWidth="80.0001220703125" text="" />
+    <Button fx:id="btnExaminarLOPD" layoutX="1062.0" layoutY="542.0" mnemonicParsing="false" onAction="#examinarPDF" prefHeight="54.0" prefWidth="65.0" text="" />
     <Label font="$x1" layoutX="699.0" layoutY="296.0" text="Cuenta corriente" wrapText="true" />
-    <Button fx:id="btnAtras" layoutX="1002.0" layoutY="611.0" mnemonicParsing="false" onAction="#atras" prefHeight="86.0" prefWidth="106.0" text="" />
+    <Button fx:id="btnAtras" layoutX="806.0" layoutY="603.0" mnemonicParsing="false" onAction="#atras" prefHeight="86.0" prefWidth="106.0" text="" />
     <Label font="$x1" layoutX="50.0" layoutY="83.0" text="Apellido" wrapText="true" />
     <Label font="$x1" layoutX="50.0" layoutY="26.0" text="Nombre" wrapText="true" />
     <Label font="$x1" layoutX="51.0" layoutY="39.0" text="Izena" wrapText="true">
@@ -93,5 +93,23 @@
     <Label font="$x1" layoutX="699.0" layoutY="385.0" text="Helbidea" textFill="$x2" wrapText="true" />
     <Label font="$x1" layoutX="700.0" layoutY="455.0" text="Bestelako iruzkinak" textFill="$x2" wrapText="true" />
     <Label font="$x1" layoutX="700.0" layoutY="556.0" text="Datu babesa" textFill="$x2" wrapText="true" />
+    <Label layoutX="148.0" layoutY="554.0" text="Guardar">
+      <font>
+        <Font size="15.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label font="$x3" layoutX="153.0" layoutY="673.0" text="Gorde">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
+      </textFill>
+    </Label>
+    <Label font="$x3" layoutX="842.0" layoutY="603.0" text="Atrás" />
+    <Label font="$x3" layoutX="838.0" layoutY="673.0" text="Atzera" textFill="$x4" />
+    <Label font="$x3" layoutX="972.0" layoutY="524.0" text="Ver" />
+    <Label font="$x3" layoutX="971.0" layoutY="591.0" prefHeight="22.0" text="Ikusi" textFill="$x4" />
+    <Label font="$x3" layoutX="1067.0" layoutY="535.0" text="Examinar" />
+    <Label font="$x3" layoutX="1073.0" layoutY="596.0" prefHeight="22.0" text="Aztertu" textFill="$x4" />
+    <Label font="$x3" layoutX="949.0" layoutY="172.0" text="Examinar" />
+    <Label font="$x3" layoutX="960.0" layoutY="276.0" text="Aztertu" textFill="$x4" />
   </children>
 </AnchorPane>
