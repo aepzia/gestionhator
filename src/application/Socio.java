@@ -51,7 +51,10 @@ public class Socio {
 		setTelEmergencia(rs.getObject("telContacto").toString());
 		setEmail(rs.getObject("email").toString());
 		setFechaAlta(rs.getObject("fechaAlta").toString());
-		setFoto(new Image(rs.getObject("foto").toString()));
+		if(!rs.getObject("foto").toString().equals("null")){
+			setFoto(new Image(rs.getObject("foto").toString()));		
+		}
+		
 		setCuentaCorriente(rs.getObject("cuenta_corriente").toString());
 		setComentarios(rs.getObject("otras_observaciones").toString());
 		setLOPD(rs.getObject("proteccion_de_datos").toString());
