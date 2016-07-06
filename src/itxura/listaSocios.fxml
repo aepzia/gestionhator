@@ -4,6 +4,7 @@
 <?import java.util.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
@@ -53,5 +54,11 @@
     <Label font="$x1" layoutX="711.0" layoutY="411.0" text="Bazkidea ikusi" textFill="$x2" />
     <Label font="$x1" layoutX="706.0" layoutY="110.0" text="Pagos sin realizar" />
     <Label font="$x1" layoutX="686.0" layoutY="236.0" text="Egin gabeko ordaiketak" textFill="$x2" />
+    <TextField fx:id="textBuscar" layoutX="280.0" layoutY="110.0" prefWidth="212.0" />
+    <ImageView fitHeight="41.00001525878906" fitWidth="41.00001525878906" layoutX="227.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@lupa.png" />
+      </image>
+    </ImageView>
   </children>
 </AnchorPane>
