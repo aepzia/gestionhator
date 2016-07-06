@@ -56,6 +56,11 @@ public class datuBasea {
 	            		+ " cuenta_corriente varchar(50),"
 	            		+ " numeracion_de_socios varchar(50),"
 	            		+ " CIF varchar(50))");
+	            stmt.executeUpdate( "CREATE TABLE socioActividad ( "
+	            		+ " actividadId varchar(50),"
+	            		+ " socioApuntado varchar(50),"
+	            		+ " pagado boolean)");
+	            		
 	           /* ResultSet rs = stmt.executeQuery("SELECT * FROM table1");
 	            while( rs.next() )
 	            {
