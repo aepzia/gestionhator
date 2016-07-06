@@ -32,7 +32,7 @@
         </FXCollections>
       </items>
     </ChoiceBox>
-    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="445.0" prefWidth="622.0" wrapText="true" />
+    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="465.0" prefHeight="131.0" prefWidth="622.0" wrapText="true" />
     <Button id="btnVerActi" fx:id="btnVer" disable="false" layoutX="681.0" layoutY="307.0" mnemonicParsing="false" onAction="#verActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Label layoutX="751.0" layoutY="465.0" text="Atrás">
       <font>
@@ -54,7 +54,7 @@
     </Label>
     <Label font="$x1" layoutX="695.0" layoutY="283.0" text="Ver actividad" />
     <Label font="$x1" layoutX="698.0" layoutY="409.0" text="Ekintza ikusi" textFill="$x3" />
-    <TextField id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
+    <TextField fx:id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
     <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="293.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@lupa.png" />

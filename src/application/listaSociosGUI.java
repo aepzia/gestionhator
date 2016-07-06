@@ -35,9 +35,9 @@ public class listaSociosGUI extends Application {
 	@FXML private TextField textAsociacion;
 	@FXML private ListView<Socio> listSocios;
 	@FXML private TextArea textInformazioa;
-	@FXML private ChoiceBox btnOrderBy;
+	@FXML private ChoiceBox<String> btnOrderBy;
 	@FXML private TextField textBuscar;
-	ObservableList<Socio> lag ;
+	private static ObservableList<Socio> lag ;
 	private static Socio aukera;
 	private static Stage pStage;
 	
@@ -109,7 +109,7 @@ public class listaSociosGUI extends Application {
 			Statement stmt = conn.createStatement();
 			String sql = "SELECT * FROM socio";
 			ResultSet rs =  stmt.executeQuery(sql);
-			Controler.socioKop =1;
+			Controler.socioKop=1;
 			while ( rs.next() )
             {
 				Controler.socioKop++; 
