@@ -1,21 +1,41 @@
 package application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
 public class Actividad {
-	private int id;
+	private String id;
 	private boolean closed;
 	private String tpActivididad;
 	private String monitorDNI;
 	private List<String> apuntadosDNI;
 	private List<Boolean> pagos;
-	private Date fechaIni;
-	private Date fechaFin;
+	private String fechaIni;
+	private String fechaFin;
 	private String Nombre;
-	private int Precio;
+	private String Precio;
+	private String numeroPlazas;
 	
 	
+	public Actividad(ResultSet rs) {
+		// TODO Auto-generated constructor stub
+		try {
+			id = rs.getObject("Id").toString();
+			tpActivididad = rs.getObject("tpActividad").toString();
+			monitorDNI = rs.getObject("monitorDNI").toString();
+			fechaIni = rs.getObject("fechaIni").toString();
+			Nombre = rs.getObject("nombre").toString();
+			numeroPlazas = rs.getObject("numero_de_plazas").toString();
+			Precio = rs.getObject("precio").toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	
+	}
 	@Override
 	public String toString(){
 		return getNombre()+" "+ getTpActivididad()+" "+ getFechaIni();
@@ -26,10 +46,10 @@ public class Actividad {
 				"\nBukatze eguna / Fecha de Finalizacion: "+getFechaFin();
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public boolean isClosed() {
@@ -62,16 +82,16 @@ public class Actividad {
 	public void setPagos(List<Boolean> pagos) {
 		this.pagos = pagos;
 	}
-	public Date getFechaIni() {
+	public String getFechaIni() {
 		return fechaIni;
 	}
-	public void setFechaIni(Date fechaIni) {
+	public void setFechaIni(String fechaIni) {
 		this.fechaIni = fechaIni;
 	}
-	public Date getFechaFin() {
+	public String getFechaFin() {
 		return fechaFin;
 	}
-	public void setFechaFin(Date fechaFin) {
+	public void setFechaFin(String fechaFin) {
 		this.fechaFin = fechaFin;
 	}
 	public String getNombre() {
@@ -80,10 +100,16 @@ public class Actividad {
 	public void setNombre(String nombre) {
 		Nombre = nombre;
 	}
-	public int getPrecio() {
+	public String getPrecio() {
 		return Precio;
 	}
-	public void setPrecio(int precio) {
+	public void setPrecio(String precio) {
 		Precio = precio;
+	}
+	public String getNumeroPlazas() {
+		return numeroPlazas;
+	}
+	public void setNumeroPlazas(String numeroPlazas) {
+		this.numeroPlazas = numeroPlazas;
 	}
 }
