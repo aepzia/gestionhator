@@ -10,18 +10,18 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="1138.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.listaActividadesGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="932.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.listaActividadesGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textAsociacion" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
-    <ListView id="listSocios" fx:id="listAcitivad" layoutX="43.0" layoutY="142.0" prefHeight="367.0" prefWidth="500.0" />
+    <ListView id="listSocios" fx:id="listActividad" layoutX="43.0" layoutY="142.0" prefHeight="289.0" prefWidth="500.0" />
     <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
       <font>
         <Font name="Book Antiqua" size="16.0" />
       </font>
     </Label>
-    <Button id="btnAñadirSocio" fx:id="btnAñadirActi" layoutX="651.0" layoutY="173.0" mnemonicParsing="false" onAction="#nuevaActividad" prefWidth="113.0" text="Nueva actividad" />
-    <Button id="btnElimSocio" fx:id="btnElimActi" disable="true" layoutX="652.0" layoutY="255.0" mnemonicParsing="false" onAction="#eliminarActividad" prefWidth="113.0" text="Eliminar actividad" />
-    <Button fx:id="btnAtras" layoutX="679.0" layoutY="385.0" mnemonicParsing="false" onAction="#atras" prefHeight="60.0" prefWidth="85.0" text="" />
+    <Button id="btnAnadirActi" fx:id="btnAñadirActi" layoutX="600.0" layoutY="150.0" mnemonicParsing="false" onAction="#nuevaActividad" prefHeight="97.0" prefWidth="121.0" text="" />
+    <Button fx:id="btnElimActi" disable="false" layoutX="751.0" layoutY="150.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
+    <Button fx:id="btnAtras" layoutX="726.0" layoutY="481.0" mnemonicParsing="false" onAction="#atras" prefHeight="75.0" prefWidth="92.0" text="" />
     <Label layoutX="43.0" layoutY="112.0" text="Ordenar" />
     <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
       <items>
@@ -32,7 +32,33 @@
         </FXCollections>
       </items>
     </ChoiceBox>
-    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="549.0" prefWidth="622.0" wrapText="true" />
-    <Button fx:id="btnVer" disable="true" layoutX="652.0" layoutY="297.0" mnemonicParsing="false" onAction="#verActividad" prefWidth="113.0" text="Ver actividad" />
+    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="445.0" prefWidth="622.0" wrapText="true" />
+    <Button id="btnVerActi" fx:id="btnVer" disable="false" layoutX="681.0" layoutY="307.0" mnemonicParsing="false" onAction="#verActividad" prefHeight="97.0" prefWidth="113.0" text="" />
+    <Label layoutX="751.0" layoutY="465.0" text="Atrás">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="751.0" layoutY="556.0" text="Atzera">
+      <textFill>
+        <Color blue="0.750" green="0.750" red="0.750" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="608.0" layoutY="125.0" text="Nueva actividad" />
+    <Label font="$x1" layoutX="616.0" layoutY="247.0" text="Ekintza berria" textFill="$x2" />
+    <Label font="$x1" layoutX="755.0" layoutY="128.0" text="Eliminar actividad" />
+    <Label font="$x1" layoutX="763.0" layoutY="250.0" text="Ekintza ezabatu">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="695.0" layoutY="283.0" text="Ver actividad" />
+    <Label font="$x1" layoutX="698.0" layoutY="409.0" text="Ekintza ikusi" textFill="$x3" />
+    <TextField id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
+    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="293.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@lupa.png" />
+      </image>
+    </ImageView>
   </children>
 </AnchorPane>
