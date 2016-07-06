@@ -76,8 +76,8 @@ public class nuevoSocioGUI extends Application {
 			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
 			Date fecha = new Date();
 			currentData =formatoDeFecha.format(fecha);
-	        Class.forName("org.hsqldb.jdbcDriver");  
-    		Connection conn = DriverManager.getConnection("jdbc:hsqldb://C:/Users/standar/Desktop/base.odb");
+			Class.forName("org.h2.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
     		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
     		String sql = "INSERT INTO socio (nSocio,DNI,pensionista,nombre,apellido,fechaNacimiento,tpSocio,"
