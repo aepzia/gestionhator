@@ -14,6 +14,8 @@ public class Actividad {
 	private List<Boolean> pagos;
 	private String fechaIni;
 	private String fechaFin;
+	private String horaIni;
+	private String horaFin;
 	private String Nombre;
 	private String Precio;
 	private String numeroPlazas;
@@ -26,6 +28,9 @@ public class Actividad {
 			tpActivididad = rs.getObject("tpActividad").toString();
 			monitorDNI = rs.getObject("monitorDNI").toString();
 			fechaIni = rs.getObject("fechaIni").toString();
+			fechaFin = rs.getObject("fechaFin").toString();
+			horaIni = rs.getObject("horaIni").toString();
+			horaFin = rs.getObject("horaFin").toString();
 			Nombre = rs.getObject("nombre").toString();
 			numeroPlazas = rs.getObject("numero_de_plazas").toString();
 			Precio = rs.getObject("precio").toString();

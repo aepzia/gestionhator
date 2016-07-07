@@ -39,10 +39,12 @@ public class datuBasea {
 	            		+ " otras_observaciones varchar(200),"
 	            		+ " proteccion_de_datos varchar(200))" );
 	            stmt.executeUpdate( "CREATE TABLE actividad ( id varchar(50)NOT NULL PRIMARY KEY,"
-	            		+ " tpActivi varchar(50),"
+	            		+ " tpActividad varchar(50),"
 	            		+ " monitorDNI varchar(50),"
 	            		+ " fechaIni varchar(50),"
 	            		+ " fechaFin varchar(50),"
+	            		+ " horaIni varchar(50),"
+	            		+ " horaFin varchar(50),"
 	            		+ " nombre varchar(50) NOT NULL,"
 	            		+ " numero_de_plazas varchar(50),"
 	            		+ " precio varchar(50))");

@@ -107,12 +107,13 @@ public class listaActividadesGUI extends Application {
 			Statement stmt = conn.createStatement();
 			String sql = "SELECT * FROM actividad";
 			ResultSet rs =  stmt.executeQuery(sql);
+			
 			while ( rs.next() )
-            {
+            {	
 				Actividad s = new Actividad(rs);
 				listActividad.getItems().add(s);
-
-            }
+				Controler.actiKop = Integer.parseInt(s.getId());
+            }	
 			lag = listActividad.getItems();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

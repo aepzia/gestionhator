@@ -13,14 +13,14 @@
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="932.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.listaActividadesGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textAsociacion" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
-    <ListView id="listSocios" fx:id="listActividad" layoutX="43.0" layoutY="142.0" prefHeight="289.0" prefWidth="500.0" />
+    <ListView id="listSocios" fx:id="listActividad" layoutX="43.0" layoutY="142.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="500.0" />
     <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
       <font>
         <Font name="Book Antiqua" size="16.0" />
       </font>
     </Label>
     <Button id="btnAnadirActi" fx:id="btnAñadirActi" layoutX="600.0" layoutY="150.0" mnemonicParsing="false" onAction="#nuevaActividad" prefHeight="97.0" prefWidth="121.0" text="" />
-    <Button fx:id="btnElimActi" disable="false" layoutX="751.0" layoutY="150.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
+    <Button fx:id="btnElimActi" disable="true" layoutX="751.0" layoutY="150.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Button fx:id="btnAtras" layoutX="726.0" layoutY="481.0" mnemonicParsing="false" onAction="#atras" prefHeight="75.0" prefWidth="92.0" text="" />
     <Label layoutX="43.0" layoutY="112.0" text="Ordenar" />
     <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
@@ -33,7 +33,7 @@
       </items>
     </ChoiceBox>
     <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="465.0" prefHeight="131.0" prefWidth="622.0" wrapText="true" />
-    <Button id="btnVerActi" fx:id="btnVer" disable="false" layoutX="681.0" layoutY="307.0" mnemonicParsing="false" onAction="#verActividad" prefHeight="97.0" prefWidth="113.0" text="" />
+    <Button id="btnVerActi" fx:id="btnVer" disable="true" layoutX="681.0" layoutY="307.0" mnemonicParsing="false" onAction="#verActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Label layoutX="751.0" layoutY="465.0" text="Atrás">
       <font>
         <Font size="15.0" fx:id="x1" />

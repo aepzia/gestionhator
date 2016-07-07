@@ -23,9 +23,9 @@
     <ChoiceBox fx:id="btnTipo" layoutX="280.0" layoutY="93.0" prefWidth="404.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
+          <String fx:value="Socio-recreativa / gizarte-jolasa" />
+          <String fx:value="Cultural / Kulturala" />
+          <String fx:value="Preventiva / Prebentziozkoa" />
         </FXCollections>
       </items>
     </ChoiceBox>
@@ -49,18 +49,14 @@
     <Label font="$x2" layoutX="509.0" layoutY="296.0" text="Hora" />
     <ChoiceBox fx:id="btnBegiralea" layoutX="280.0" layoutY="362.0" prefWidth="404.0">
       <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item 1" />
-          <String fx:value="Item 2" />
-          <String fx:value="Item 3" />
-        </FXCollections>
+        <FXCollections fx:factory="observableArrayList" />
       </items>
     </ChoiceBox>
     <Button fx:id="btnGuardar" layoutX="91.0" layoutY="427.0" minHeight="19.9998779296875" mnemonicParsing="false" onAction="#guardar" prefHeight="99.0" prefWidth="110.0" text="" />
     <Button fx:id="btnAtras" layoutX="549.0" layoutY="436.0" mnemonicParsing="false" onAction="#atras" prefHeight="82.0" prefWidth="79.0" text="" />
     <Label font="$x2" layoutX="64.0" layoutY="27.0" prefWidth="85.0" text="Nombre" />
     <Label font="$x2" layoutX="65.0" layoutY="43.0" prefWidth="49.0" text="Izena" textFill="$x1" />
-    <TextField layoutX="280.0" layoutY="35.0" prefWidth="404.0" />
+    <TextField fx:id="textNombre" layoutX="280.0" layoutY="35.0" prefWidth="404.0" />
     <Label layoutX="112.0" layoutY="402.0" text="Guardar">
       <font>
         <Font size="15.0" fx:id="x3" />
@@ -89,13 +85,13 @@
           <String fx:value="14" />
           <String fx:value="15" />
           <String fx:value="16" />
-     	  <String fx:value="17" />
-     	  <String fx:value="18" />
-     	  <String fx:value="19" />
-     	  <String fx:value="20" />
-     	  <String fx:value="21" />
-     	  <String fx:value="22" />
-     	  <String fx:value="23" />
+          <String fx:value="17" />
+          <String fx:value="18" />
+          <String fx:value="19" />
+          <String fx:value="20" />
+          <String fx:value="21" />
+          <String fx:value="22" />
+          <String fx:value="23" />
         </FXCollections>
       </items>
     </ChoiceBox>
@@ -105,7 +101,7 @@
           <String fx:value="00" />
           <String fx:value="15" />
           <String fx:value="30" />
-     	  <String fx:value="45" />
+          <String fx:value="45" />
         </FXCollections>
       </items>
     </ChoiceBox>
@@ -129,13 +125,13 @@
           <String fx:value="14" />
           <String fx:value="15" />
           <String fx:value="16" />
-     	  <String fx:value="17" />
-     	  <String fx:value="18" />
-     	  <String fx:value="19" />
-     	  <String fx:value="20" />
-     	  <String fx:value="21" />
-     	  <String fx:value="22" />
-     	  <String fx:value="23" />
+          <String fx:value="17" />
+          <String fx:value="18" />
+          <String fx:value="19" />
+          <String fx:value="20" />
+          <String fx:value="21" />
+          <String fx:value="22" />
+          <String fx:value="23" />
         </FXCollections>
       </items>
     </ChoiceBox>
@@ -145,7 +141,7 @@
           <String fx:value="00" />
           <String fx:value="15" />
           <String fx:value="30" />
-     	  <String fx:value="45" />
+          <String fx:value="45" />
         </FXCollections>
       </items>
     </ChoiceBox>
