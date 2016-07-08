@@ -78,9 +78,8 @@ public class datosAsociacionGUI extends Application{
 
     		try
             {
-              
-        		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
-
+    			Class.forName("org.h2.Driver");
+                Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
         		
         		Statement stmt = conn.createStatement();
 
@@ -91,13 +90,10 @@ public class datosAsociacionGUI extends Application{
                 	textNombre.setText(rs.getObject("izena").toString());
                 	textTel1.setText(rs.getObject("tel1").toString());
                 	textTel2.setText(rs.getObject("tel2").toString());
-                	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
-                	while ( rs2.next() )
-                    {
-                		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
-                		
-                    }
-                	imgLogo.setImage(new Image(rs.getObject("logo").toString()));
+                
+                	if(!rs.getObject("logo").toString().equals("null")){
+                	//	imgLogo.setImage(new Image(rs.getObject("logo").toString()));            		
+                	}
                 	textDireccion.setText(rs.getObject("direccion").toString());
                 	String s = rs.getObject("cuenta_corriente").toString();
                 	String[] banc = s.split(" ");
@@ -107,6 +103,12 @@ public class datosAsociacionGUI extends Application{
                 	textBanco4.setText(banc[3]);
                 	textNumeracion.setText(rs.getObject("numeracion_de_socios").toString());
                 	textCIF.setText(rs.getObject("CIF").toString());
+                	/*ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+                	while ( rs2.next() )
+                    {
+                		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
+                		
+                    }*/
                 }
     		
         	

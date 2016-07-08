@@ -1,6 +1,10 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,5 +89,6 @@ public class menuPrincipalGUI extends Application {
     }
     protected void initialize(){
     	
+       
     }
 }

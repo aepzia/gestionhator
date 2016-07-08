@@ -2,7 +2,10 @@ package application;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import com.itextpdf.text.DocumentException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -60,6 +63,12 @@ public class verSocioGUI extends Application {
     }
     @FXML public void printFicha(){
     	//TODO inprimatu ficha
+    	try {
+			ficha.getFicha();
+		} catch (FileNotFoundException | DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     @FXML public void printCarnet(){
     	//TODO inprimatu karneta
@@ -127,7 +136,9 @@ public class verSocioGUI extends Application {
     	textBanco.setText(bazkidea.getCuentaCorriente());
     	textDireccion.setText(bazkidea.getHelbidea());
     	textOtros.setText(bazkidea.getComentarios());
-    	imgFoto.setImage(bazkidea.getFoto());
+    	if(!bazkidea.getFoto().equals("null")){
+			imgFoto.setImage((new Image(bazkidea.getFoto())));		
+		}
     	
     	
     	

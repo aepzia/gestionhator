@@ -19,7 +19,7 @@ public class Socio {
 	private String tpSocio;
 	private String cuentaCorriente;
 	private String sexo;
-	private Image foto;
+	private String foto;
 	private String helbidea;
 	private String tel1;
 	private String tel2;
@@ -51,10 +51,7 @@ public class Socio {
 		setTelEmergencia(rs.getObject("telContacto").toString());
 		setEmail(rs.getObject("email").toString());
 		setFechaAlta(rs.getObject("fechaAlta").toString());
-		if(!rs.getObject("foto").toString().equals("null")){
-			setFoto(new Image(rs.getObject("foto").toString()));		
-		}
-		
+		setFoto(rs.getObject("foto").toString());		
 		setCuentaCorriente(rs.getObject("cuenta_corriente").toString());
 		setComentarios(rs.getObject("otras_observaciones").toString());
 		setLOPD(rs.getObject("proteccion_de_datos").toString());
@@ -118,10 +115,10 @@ public class Socio {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Image getFoto() {
+	public String getFoto() {
 		return foto;
 	}
-	public void setFoto(Image foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 	public String getHelbidea() {

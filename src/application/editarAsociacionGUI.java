@@ -53,8 +53,8 @@ public class editarAsociacionGUI extends Application {
 	@FXML private void guardar(){
 		try
         {
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-    		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+			Class.forName("org.h2.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
             stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"', tel1='"+textTel1.getText()+"', tel2='"+textTel2.getText()
                     //TODO +"presidente='"
@@ -133,7 +133,8 @@ public class editarAsociacionGUI extends Application {
 		try
         {
           
-    		Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+			Class.forName("org.h2.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
 
     		
     		Statement stmt = conn.createStatement();
@@ -145,14 +146,10 @@ public class editarAsociacionGUI extends Application {
             	textNombre.setText(rs.getObject("izena").toString());
             	textTel1.setText(rs.getObject("tel1").toString());
             	textTel2.setText(rs.getObject("tel2").toString());
-            	ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
-            	while ( rs2.next() )
-                {
-            		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
-            		
-                }
+            	//ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+            	
             	imgPath = rs.getObject("logo").toString();
-            	imgLogo.setImage(new Image(imgPath));
+            	//imgLogo.setImage(new Image(imgPath));
             	textDireccion.setText(rs.getObject("direccion").toString());
             	String s = rs.getObject("cuenta_corriente").toString();
             	String[] banc = s.split(" ");
@@ -162,6 +159,12 @@ public class editarAsociacionGUI extends Application {
             	textBanco4.setText(banc[3]);
             	//textNumeracion.setText(rs.getObject("numeracion_de_socios").toString());
             	textCIF.setText(rs.getObject("CIF").toString());
+            	/*ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
+            	while ( rs2.next() )
+                {
+            		textPresi.setText(rs2.getObject("nombre").toString()+" "+rs2.getObject("apellido"));
+            		
+                }*/
             }
 		
     	
