@@ -70,9 +70,6 @@ public class verSocioGUI extends Application {
 			e.printStackTrace();
 		}
     }
-    @FXML public void printCarnet(){
-    	//TODO inprimatu karneta
-    }
     @FXML public void atras(){
     	listaSociosGUI w = new listaSociosGUI();
     	w.start(getPrimaryStage());
@@ -83,6 +80,8 @@ public class verSocioGUI extends Application {
     }
     @FXML public void verActividadesSocio(){
     	//TODO datu basetik bazkide honen s
+    	actividadesDeSocioGUI w = new actividadesDeSocioGUI();
+    	w.start(getPrimaryStage());
     } 
  
 	public static Stage getPrimaryStage() {
@@ -103,8 +102,7 @@ public class verSocioGUI extends Application {
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());       
 		        primaryStage.setScene(scene);
-				primaryStage.setTitle("Actividades del socio");
-				primaryStage.setFullScreen(true);
+				primaryStage.setTitle("lista de socios");
 				primaryStage.show();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

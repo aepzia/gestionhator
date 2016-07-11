@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="751.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.asignarActividadGUI">
+  <children>
+    <ListView fx:id="listActividades" layoutX="50.0" layoutY="90.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="500.0" />
+    <Label contentDisplay="LEFT" layoutX="50.0" layoutY="21.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
+      <font>
+        <Font name="Book Antiqua" size="16.0" />
+      </font>
+    </Label>
+    <Label layoutX="50.0" layoutY="60.0" text="Ordenar" />
+    <ChoiceBox id="btnOrderBy" layoutX="119.0" layoutY="60.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextField fx:id="textBuscar" layoutX="350.0" layoutY="57.0" prefWidth="200.0" text="Buscar ..." />
+    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="300.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@lupa.png" />
+      </image>
+    </ImageView>
+    <TextArea fx:id="textInformacion" layoutX="50.0" layoutY="409.0" prefHeight="93.0" prefWidth="500.0" wrapText="true" />
+    <CheckBox fx:id="chPagado" layoutX="587.0" layoutY="121.0" mnemonicParsing="false" text="" />
+    <ImageView fitHeight="64.0" fitWidth="85.33333129882813" layoutX="596.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/standar/git/gestionhator/src/itxura/Pagado.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="619.0" layoutY="109.0" text="Pagado">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="619.0" layoutY="129.0" text="Pagatua" textFill="#bfbfbf" />
+    <Button fx:id="btnGuardar" layoutX="587.0" layoutY="206.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="106.0" onAction="#gorde" text="" />
+    <Label font="$x1" layoutX="610.0" layoutY="186.0" text="Asignar" />
+    <Label font="$x1" layoutX="616.0" layoutY="306.0" text="Ezarri">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Button fx:id="btnAtras" layoutX="587.0" layoutY="359.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="106.0" onAction="#atras" text="" />
+    <Label font="$x1" layoutX="616.0" layoutY="349.0" text="Atrás" />
+    <Label font="$x1" layoutX="616.0" layoutY="449.0" text="Atzrera" textFill="$x2" />
+  </children>
+</AnchorPane>
