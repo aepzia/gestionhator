@@ -19,8 +19,8 @@
         <Font name="Book Antiqua" size="16.0" />
       </font>
     </Label>
-    <Button id="btnAnadirActi" fx:id="btnAñadirActi" layoutX="599.0" layoutY="238.0" mnemonicParsing="false" onAction="#nuevaActividad" prefHeight="97.0" prefWidth="121.0" text="" />
-    <Button fx:id="btnElimActi" disable="true" layoutX="750.0" layoutY="238.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
+    <Button id="btnAnadirActi" fx:id="btnAñadirActi" layoutX="600.0" layoutY="150.0" mnemonicParsing="false" onAction="#nuevaActividad" prefHeight="97.0" prefWidth="121.0" text="" />
+    <Button fx:id="btnElimActi" disable="true" layoutX="751.0" layoutY="150.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Button fx:id="btnAtras" layoutX="726.0" layoutY="481.0" mnemonicParsing="false" onAction="#atras" prefHeight="75.0" prefWidth="92.0" text="" />
     <Label layoutX="43.0" layoutY="112.0" text="Ordenar" />
     <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
@@ -33,6 +33,7 @@
       </items>
     </ChoiceBox>
     <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="465.0" prefHeight="131.0" prefWidth="622.0" wrapText="true" />
+    <Button id="btnVerActi" fx:id="btnVer" disable="true" layoutX="681.0" layoutY="307.0" mnemonicParsing="false" onAction="#verActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Label layoutX="751.0" layoutY="465.0" text="Atrás">
       <font>
         <Font size="15.0" fx:id="x1" />
@@ -43,14 +44,16 @@
         <Color blue="0.750" green="0.750" red="0.750" fx:id="x2" />
       </textFill>
     </Label>
-    <Label font="$x1" layoutX="607.0" layoutY="213.0" text="Nueva actividad" />
-    <Label font="$x1" layoutX="615.0" layoutY="335.0" text="Ekintza berria" textFill="$x2" />
-    <Label font="$x1" layoutX="754.0" layoutY="216.0" text="Eliminar actividad" />
-    <Label font="$x1" layoutX="762.0" layoutY="338.0" text="Ekintza ezabatu">
+    <Label font="$x1" layoutX="608.0" layoutY="125.0" text="Nueva actividad" />
+    <Label font="$x1" layoutX="616.0" layoutY="247.0" text="Ekintza berria" textFill="$x2" />
+    <Label font="$x1" layoutX="755.0" layoutY="128.0" text="Eliminar actividad" />
+    <Label font="$x1" layoutX="763.0" layoutY="250.0" text="Ekintza ezabatu">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
       </textFill>
     </Label>
+    <Label font="$x1" layoutX="695.0" layoutY="283.0" text="Ver actividad" />
+    <Label font="$x1" layoutX="698.0" layoutY="409.0" text="Ekintza ikusi" textFill="$x3" />
     <TextField fx:id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
     <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="293.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
       <image>
