@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button fx:id="btnMonitor" layoutX="48.0" layoutY="86.0" mnemonicParsing="false" prefHeight="228.0" prefWidth="243.0" text="" />
+    <Label layoutX="135.0" layoutY="61.0" text="Monitor">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="135.0" layoutY="316.0" text="Begiralea" textFill="#bfbfbf" />
+    <Button fx:id="btnCesionario" layoutX="312.0" layoutY="95.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="227.0" text="" />
+    <Label font="$x1" layoutX="385.0" layoutY="66.0" text="Cesionario" />
+    <Label font="$x1" layoutX="349.0" layoutY="311.0" text="Lgapen-hartzaile" textFill="#bfbfbf" />
+  </children>
+</AnchorPane>

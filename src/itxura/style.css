@@ -194,6 +194,22 @@
     
    -fx-background-color: transparent ;
 }
+#btnMonitor{
+	-fx-background-image: url("monitor.png");
+	-fx-background-size: 200 200;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnCesionario{
+	-fx-background-image: url("cesionarios.png");
+	-fx-background-size: 175 175;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
 #imgFoto{
 	-fx-image: url("perfil.png");
 }
