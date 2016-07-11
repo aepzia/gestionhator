@@ -92,7 +92,7 @@ public class datosAsociacionGUI extends Application{
                 	textTel2.setText(rs.getObject("tel2").toString());
                 
                 	if(!rs.getObject("logo").toString().equals("null")){
-                	//	imgLogo.setImage(new Image(rs.getObject("logo").toString()));            		
+                		imgLogo.setImage(new Image(rs.getObject("logo").toString()));            		
                 	}
                 	textDireccion.setText(rs.getObject("direccion").toString());
                 	String s = rs.getObject("cuenta_corriente").toString();

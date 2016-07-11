@@ -178,6 +178,14 @@
     
    -fx-background-color: transparent ;
 }
+#btnEditarAsociacion{
+	-fx-background-image: url("editarAsociacion.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
 #imgFoto{
 	-fx-image: url("perfil.png");
 }

@@ -149,7 +149,9 @@ public class editarAsociacionGUI extends Application {
             	//ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
             	
             	imgPath = rs.getObject("logo").toString();
-            	//imgLogo.setImage(new Image(imgPath));
+            	if(!rs.getObject("logo").toString().equals("null")){
+            		imgLogo.setImage(new Image(rs.getObject("logo").toString()));            		
+            	}
             	textDireccion.setText(rs.getObject("direccion").toString());
             	String s = rs.getObject("cuenta_corriente").toString();
             	String[] banc = s.split(" ");
