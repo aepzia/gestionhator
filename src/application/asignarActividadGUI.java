@@ -50,6 +50,7 @@ public class asignarActividadGUI extends Application {
 				String sql = "INSERT INTO socioActividad VALUES ('"+aukera.getId()+"','"+bazkidea.getDNI()+"','"+chPagado.isSelected()+"')";
 				System.out.println(sql);
 				stmt.executeUpdate(sql);
+				conn.close();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
