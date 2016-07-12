@@ -9,6 +9,24 @@ public class Monitor {
 	private String DNI ;
 	private String CIF ;
 	
+	
+	@Override public String toString() {
+		return profesional+" "+empresa.toUpperCase();
+	}
+	
+	public String getInformacionEmpresa() {
+		return empresa.toUpperCase()+
+				"\nTel.:" +telEmpresa+
+				"\nCIF" +CIF
+				+"\nDirecion: "+direccion;
+	}
+	public String getInformacionProfesional() {
+		return profesional.toUpperCase()+
+				"\nTel.:" +telProfesional+
+				"\nDNI" +DNI;
+	}
+	
+	
 	public String getEmpresa() {
 		return empresa;
 	}
@@ -51,4 +69,5 @@ public class Monitor {
 	public void setCIF(String cIF) {
 		CIF = cIF;
 	}
+	
 }
