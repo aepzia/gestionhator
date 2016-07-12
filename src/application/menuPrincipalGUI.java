@@ -45,8 +45,8 @@ public class menuPrincipalGUI extends Application {
 		newWindow.start(getPrimaryStage());
 	}
 	@FXML private void verTerceros(ActionEvent event){
-		//datosAsociacion newWindow = new datosAsociacion();
-		//newWindow.start(getPrimaryStage());
+		tercerosGUI w = new tercerosGUI();
+		w.start(getPrimaryStage());
 	}
 	@FXML private void verCalendario(ActionEvent event){
 		//datosAsociacion newWindow = new datosAsociacion();
