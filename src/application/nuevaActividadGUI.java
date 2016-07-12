@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +11,8 @@ import java.util.Date;
 import org.hsqldb.HsqlException;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -23,13 +26,14 @@ import javafx.stage.Stage;
 public class nuevaActividadGUI extends Application {
 	
 	@FXML ChoiceBox<String> btnTipo;
-	@FXML ChoiceBox<String> btnBegiralea;
+	@FXML ChoiceBox<Monitor> btnBegiralea;
 	@FXML ChoiceBox<String> hasiOr;
 	@FXML ChoiceBox<String> hasiMin;
 	@FXML ChoiceBox<String> bukOr;
 	@FXML ChoiceBox<String> bukMin;
 	@FXML Button btnAtras;
 	@FXML Button btnGuardar;
+
 	@FXML TextField textPrezioa;
 	@FXML TextField textPlazaKop;
 	@FXML DatePicker hasData;
@@ -113,9 +117,23 @@ public class nuevaActividadGUI extends Application {
            
     }
     @FXML protected void initialize(){
-    	//TODO monitore aukera datu basetik osatu 
-    	
-    	
+    	try {
+    		Class.forName("org.h2.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
+			Statement stmt = conn.createStatement();
+			String sql = "SELECT * FROM profesional";
+			ResultSet rs =  stmt.executeQuery(sql);
+			while ( rs.next() )
+            {
+				Monitor m = new Monitor(rs);
+				btnBegiralea.getItems().add(m);
+
+            }
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
 
