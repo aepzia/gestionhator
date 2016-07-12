@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet style.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0000999999975" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevoProfesionalGUI">
+  <children>
+    <Accordion layoutX="41.0" layoutY="73.0" prefHeight="336.0" prefWidth="442.0">
+      <expandedPane>
+        <TitledPane fx:id="x3" animated="false" text="Empresa">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="31.0" layoutY="31.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre">
+                  <font>
+                    <Font size="15.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label font="$x1" layoutX="31.0" layoutY="47.0" text="Izena" textFill="#9f9f9f" />
+                <Label font="$x1" layoutX="31.0" layoutY="94.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="CIF" />
+                <Label font="$x1" layoutX="31.0" layoutY="110.0" text="IFK">
+                  <textFill>
+                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                  </textFill>
+                </Label>
+                <Label font="$x1" layoutX="31.0" layoutY="153.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
+                <Label font="$x1" layoutX="31.0" layoutY="198.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Dirección" />
+                <Label font="$x1" layoutX="31.0" layoutY="214.0" text="Helbidea" textFill="$x2" />
+                <TextField fx:id="textEmpresa" layoutX="152.0" layoutY="36.0" prefWidth="200.0" />
+                <TextField fx:id="textCIF" layoutX="152.0" layoutY="102.0" prefWidth="200.0" />
+                <TextField fx:id="textTel1" layoutX="152.0" layoutY="153.0" prefWidth="200.0" />
+                <TextField fx:id="textDirec" layoutX="152.0" layoutY="203.0" prefWidth="200.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <fx:reference source="x3" />
+        <TitledPane animated="false" prefHeight="239.0" prefWidth="442.0" text="Profesional">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label font="$x1" layoutX="42.0" layoutY="42.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre" />
+                <Label font="$x1" layoutX="42.0" layoutY="58.0" text="Izena" textFill="$x2" />
+                <Label font="$x1" layoutX="42.0" layoutY="105.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="DNI" />
+                <Label font="$x1" layoutX="42.0" layoutY="121.0" text="NA" textFill="#9f9f9f" />
+                <Label font="$x1" layoutX="42.0" layoutY="164.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
+                <TextField fx:id="textNombre" layoutX="163.0" layoutY="47.0" prefWidth="200.0" />
+                <TextField fx:id="textNAN" layoutX="163.0" layoutY="113.0" prefWidth="200.0" />
+                <TextField fx:id="textTel2" layoutX="163.0" layoutY="164.0" prefWidth="200.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </panes>
+    </Accordion>
+    <Button fx:id="btnGuardar" layoutX="541.0" layoutY="97.0" mnemonicParsing="false" prefHeight="102.0" onAction="#guardar" prefWidth="132.0" text="" />
+    <Label layoutX="565.0" layoutY="66.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="84.0" text="Guardar">
+      <font>
+        <Font size="20.0" fx:id="x4" />
+      </font>
+    </Label>
+    <Label font="$x4" layoutX="573.0" layoutY="203.0" text="Gorde" textFill="$x2" />
+    <Button fx:id="btnAtras" layoutX="573.0" layoutY="304.0" mnemonicParsing="false" onAction="#atras" prefHeight="73.0" prefWidth="80.0" text="" />
+    <Label font="$x4" layoutX="586.0" layoutY="273.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="55.0" text="Atrás" />
+    <Label font="$x4" layoutX="587.0" layoutY="382.0" text="Atzera" textFill="$x2" />
+  </children>
+</AnchorPane>
