@@ -36,14 +36,14 @@ public class Monitor {
 	
 	public String getInformacionEmpresa() {
 		return empresa.toUpperCase()+
-				"\nTel.:" +telEmpresa+
-				"\nCIF" +CIF
+				"\nTel.: " +telEmpresa+
+				"\nCIF: " +CIF
 				+"\nDirecion: "+direccion;
 	}
 	public String getInformacionProfesional() {
 		return profesional.toUpperCase()+
-				"\nTel.:" +telProfesional+
-				"\nDNI" +DNI;
+				"\nTel.: " +telProfesional+
+				"\nDNI: " +DNI;
 	}
 	
 	
