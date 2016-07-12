@@ -64,7 +64,35 @@ public class datuBasea {
 	            		+ " actividadId varchar(50),"
 	            		+ " socioApuntado varchar(50),"
 	            		+ " pagado boolean)");
-	            		
+	            stmt.executeUpdate("CREATE TABLE profesional ("
+	            		+ " empresa varchar(50),"
+	            		+ " dirección varchar(50),"
+	            		+ " telEmpresa varchar(50),"
+	            		+ " profesional varchar(50),"
+	            		+ " telProfesional varchar(50),"
+	            		+ " DNI varchar(50) NOT NULL,"
+	            		+ " CIF varchar(50)NOT NULL"
+	            		+ " PRIMARY KEY (DNI, CIF))");
+	            stmt.executeUpdate("CREATE TABLE profesionalActividad ("
+	            		+ " DNI varchar(50) NOT NULL,"
+	            		+ " CIF varchar(50)NOT NULL"
+	            		+ " actividad varchar(50) NOT NULL)");
+	            stmt.executeUpdate("CREATE TABLE cesionario ("
+	            		+ " empresa varchar(50),"
+	            		+ " dirección varchar(50),"
+	            		+ " telEmpresa varchar(50),"
+	            		+ " profesional varchar(50),"
+	            		+ " telProfesional varchar(50),"
+	            		+ " DNI varchar(50) NOT NULL,"
+	            		+ " CIF varchar(50)NOT NULL"
+	            		+ " PRIMARY KEY (DNI, CIF)"
+	            		+ " respondabilidadCivil boolean"
+	            		+ "	responsabilidadCivilFecha varchar(50)"
+	            		+ " obligacionesFiscales boolean"
+	            		+ "	obligacionesFiscalesFecha varchar(50)"
+	            		+ " altaAutonomos boolean"
+	            		+ "	altaAutonomosFecha varchar(50)"
+	            		+ "	contrato varchar(200))");
 	           /* ResultSet rs = stmt.executeQuery("SELECT * FROM table1");
 	            while( rs.next() )
 	            {
