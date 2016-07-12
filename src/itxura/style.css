@@ -162,8 +162,24 @@
     
    -fx-background-color: transparent ;
 }
+#btnAnadirMoni{
+	-fx-background-image: url("anadirMonitor.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
 #btnElimActi{
 	-fx-background-image: url("elimActividad.png");
+	-fx-background-size: 100 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;   
+    
+   -fx-background-color: transparent ;
+}
+#btnElimMoni{
+	-fx-background-image: url("elimMonitor.png");
 	-fx-background-size: 100 100;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;   

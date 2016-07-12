@@ -1,5 +1,8 @@
 package application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Monitor {
 	private String empresa;
 	private String direccion ;
@@ -10,6 +13,23 @@ public class Monitor {
 	private String CIF ;
 	
 	
+	
+
+	public Monitor(ResultSet rs) {
+		try {
+			empresa=rs.getObject("empresa").toString();
+			direccion=rs.getObject("direccion").toString();
+			telEmpresa=rs.getObject("telEmpresa").toString();
+			profesional=rs.getObject("profesional").toString();
+			telProfesional=rs.getObject("telProfesional").toString();
+			DNI=rs.getObject("DNI").toString();
+			CIF=rs.getObject("CIF").toString();		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
+
 	@Override public String toString() {
 		return profesional+" "+empresa.toUpperCase();
 	}

@@ -66,7 +66,7 @@ public class datuBasea {
 	            		+ " pagado boolean)");
 	            stmt.executeUpdate("CREATE TABLE profesional ("
 	            		+ " empresa varchar(50),"
-	            		+ " dirección varchar(50),"
+	            		+ " direccion varchar(50),"
 	            		+ " telEmpresa varchar(50),"
 	            		+ " profesional varchar(50),"
 	            		+ " telProfesional varchar(50),"
