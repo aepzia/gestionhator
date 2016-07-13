@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -130,7 +132,11 @@ public class listaSociosGUI extends Application {
     	    	handleSearchByKey(oldValue, (String)newValue);
     	    }
     	});
-    	
+    	btnOrderBy.valueProperty().addListener(new ChangeListener<String>() {
+            @Override public void changed(ObservableValue ov, String t, String t1) {
+              ordenatu();
+            }    
+        });
     }
     public void handleSearchByKey(String oldVal, String newVal) {
         // If the number of characters in the text box is less than last time
@@ -165,7 +171,24 @@ public class listaSociosGUI extends Application {
         }
         listSocios.setItems(subentries);
     }
- 
+    Comparator<? super Socio> comparatorSocio_byNumber = new Comparator<Socio>() {
+        @Override
+        public int compare(Socio s1, Socio s2) {
+            return Integer.parseInt(s1.getnSocio())-Integer.parseInt(s2.getnSocio());
+        }
+    };
+    Comparator<? super Socio> comparatorSocio_byApellido = new Comparator<Socio>() {
+        @Override
+        public int compare(Socio s1, Socio s2) {
+        	 return s1.getAbizena().compareTo(s2.getAbizena());        }
+    };
+    private void ordenatu(){
+    	if(btnOrderBy.getSelectionModel().getSelectedIndex()==0)
+    	  listSocios.getItems().sort(comparatorSocio_byNumber);
+    	if(btnOrderBy.getSelectionModel().getSelectedIndex()==1)
+      	  listSocios.getItems().sort(comparatorSocio_byApellido);
+	}
+	
 }
 
 

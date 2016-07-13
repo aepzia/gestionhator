@@ -3,13 +3,14 @@ package application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
 
 import javafx.scene.image.Image;
 
-public class Socio {
+public class Socio implements Comparator {
 	private String nSocio;
 	private String DNI;
 	private boolean pensionista;
@@ -206,6 +207,11 @@ public class Socio {
 	}
 	public void setLOPD(String lOPD) {
 		LOPD = lOPD;
+	}
+	@Override
+	public int compare(Object arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 		
 }
