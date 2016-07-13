@@ -75,7 +75,7 @@ public class ficha {
 
 
 	 	    //EZAUGARRIAK DATUAK
-	 	    canvas.setFontAndSize(bf, 10);
+	 	   	canvas.setFontAndSize(bf, 10);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getnSocio(), 160, 765, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getIzena() +" "+bazkidea.getAbizena(), 70, 740, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getHelbidea(), 35, 710, 0);
@@ -100,9 +100,67 @@ public class ficha {
 	        canvas.restoreState();
 	        canvas.addImage(img1);
 	        canvas.addImage(img2);
+	        
+	        
+	        canvas.moveTo(0, 450);
+	        canvas.lineTo(800, 450);
+	        
+	        //FITXA
+	        //TAULA
+	        canvas.rectangle(30, 320, 500, -30);
+	        canvas.rectangle(30, 290, 400, -30);
+	        canvas.rectangle(430, 290, 100, -30);
+	        canvas.rectangle(30, 260, 210, -30);
+	        canvas.rectangle(240, 260, 160, -30);
+	        canvas.rectangle(400, 260, 130, -30);
+	        canvas.rectangle(30, 230, 500, -30);
+	        canvas.rectangle(30, 200, 250, -30);
+	        canvas.rectangle(280, 200, 250, -30);
+	        canvas.rectangle(30, 170, 500, -30);
+	        
+	        //canvas.restoreState();
+
+	        canvas.beginText();
+
+	        //EZAUGARRIAK
+	        
+
+	        canvas.setFontAndSize(bf, 8);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Izen-deiturak / Nombre y apellidos", 40, 310, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Helbidea / Domicilio", 40, 280, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "NAN / DNI", 440, 280, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Tel.", 40, 250, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Jaioteguna / Fecha de nacimiento", 250, 250, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Pentsioduna / Pensionista", 410, 250, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Larrialdietan hona deitu / En caso de urgencia avisar a", 40, 220, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Noiz sartua / Fecha de admisión", 40, 190, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Noiz joan da / Fecha baja", 290, 190, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Zergatik joan da / Motivo de la baja", 40, 160, 0);
+
+	        
+
+	 	    //DATUAK
+	 	    canvas.setFontAndSize(bf, 10);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getIzena()+" "+bazkidea.getAbizena(), 40, 300, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getHelbidea(), 40, 270, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getDNI(), 440, 270, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getTel1() + " / " + bazkidea.getTel2() , 40, 240, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getFechaNacimiento(), 250, 240, 0);
+	 	    if (bazkidea.isPensionista()) canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Bai / Sí", 410, 240, 0);
+	 	    else canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Ez / No", 410, 240, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getTelEmergencia(), 40, 210, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getFechaAlta(), 40, 180, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getFechaBaja(), 290, 180, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getMotivoBaja(), 40, 150, 0);
+
+
+
+
+	        canvas.endText();
 
 	        canvas.closePathStroke();
 	    	
+	        
 	     
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block

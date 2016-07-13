@@ -26,7 +26,7 @@ public class Socio {
 	private String telEmergencia;
 	private String email;
 	private String fechaAlta;
-	private Date fechaBaja;
+	private String fechaBaja;
 	private String motivoBaja;
 	private String comentarios;
 	private String LOPD;
@@ -55,6 +55,8 @@ public class Socio {
 		setCuentaCorriente(rs.getObject("cuenta_corriente").toString());
 		setComentarios(rs.getObject("otras_observaciones").toString());
 		setLOPD(rs.getObject("proteccion_de_datos").toString());
+		setFechaBaja("");
+		setMotivoBaja("");
 	}
 	@Override
 	public String toString(){
@@ -157,10 +159,10 @@ public class Socio {
 	public void setFechaAlta(String string) {
 		this.fechaAlta = string;
 	}
-	public Date getFechaBaja() {
+	public String getFechaBaja() {
 		return fechaBaja;
 	}
-	public void setFechaBaja(Date fechaBaja) {
+	public void setFechaBaja(String fechaBaja) {
 		this.fechaBaja = fechaBaja;
 	}
 	public String getMotivoBaja() {
