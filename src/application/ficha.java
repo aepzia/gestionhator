@@ -25,6 +25,7 @@ public class ficha {
 		document.open();
 		Image img1;
 		Image img2;
+		Image img3;
 
 		try {
 			try {
@@ -106,6 +107,11 @@ public class ficha {
 	        canvas.lineTo(800, 450);
 	        
 	        //FITXA
+	        img3 = Image.getInstance(imgAsociacion);
+			img3.scaleAbsolute(60f, 60f);
+			img3.setAbsolutePosition(40, 360);
+			canvas.rectangle(110, 400, 110, -30);
+
 	        //TAULA
 	        canvas.rectangle(30, 320, 500, -30);
 	        canvas.rectangle(30, 290, 400, -30);
@@ -121,11 +127,15 @@ public class ficha {
 	        //canvas.restoreState();
 
 	        canvas.beginText();
-
+	        canvas.setFontAndSize(bf, 12);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, nombreAsociacion.toUpperCase(), 30, 340, 0);
 	        //EZAUGARRIAK
+	
 	        
-
 	        canvas.setFontAndSize(bf, 8);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Bazkide zk:", 120, 388, 0);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Nº de socio/a:", 120, 378, 0);
+
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Izen-deiturak / Nombre y apellidos", 40, 310, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "Helbidea / Domicilio", 40, 280, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, "NAN / DNI", 440, 280, 0);
@@ -141,6 +151,8 @@ public class ficha {
 
 	 	    //DATUAK
 	 	    canvas.setFontAndSize(bf, 10);
+	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getnSocio(), 180, 383, 0);
+
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getIzena()+" "+bazkidea.getAbizena(), 40, 300, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getHelbidea(), 40, 270, 0);
 	 	    canvas.showTextAligned(PdfContentByte.ALIGN_LEFT, bazkidea.getDNI(), 440, 270, 0);
@@ -157,6 +169,7 @@ public class ficha {
 
 
 	        canvas.endText();
+	        canvas.addImage(img3);
 
 	        canvas.closePathStroke();
 	    	
