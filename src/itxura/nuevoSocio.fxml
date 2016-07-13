@@ -20,9 +20,8 @@
     <ChoiceBox fx:id="opTipo" layoutX="240.0" layoutY="201.0" prefWidth="113.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item" />
-          <String fx:value="Item" />
-          <String fx:value="Item" />
+          <String fx:value="Protector" />
+          <String fx:value="Numerario" />
         </FXCollections>
       </items>
     </ChoiceBox>
@@ -30,9 +29,8 @@
     <ChoiceBox fx:id="opSexo" layoutX="474.0" layoutY="204.0" prefWidth="34.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Item" />
-          <String fx:value="Item" />
-          <String fx:value="Item" />
+          <String fx:value="H / G" />
+          <String fx:value="M / E" />
         </FXCollections>
       </items>
     </ChoiceBox>
