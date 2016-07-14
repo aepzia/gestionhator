@@ -52,7 +52,9 @@ public class listaSociosGUI extends Application {
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void baja(){
-		//TODO baja lehioa
+		Controler.autatutakoBazkidea=aukera;
+		darBajaGUI w = new darBajaGUI();
+		w.start(getPrimaryStage());
 	}
 	@FXML private void deudas(){
 		//TODO zorren lehioa ikusi
