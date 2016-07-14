@@ -18,10 +18,12 @@ public class tercerosGUI extends Application {
 	private static Stage pStage;
 	
 	@FXML public void verMonitores(){
-		
+		listMonitorGUI w = new listMonitorGUI();
+		w.start(getPrimaryStage());
 	}
 	@FXML public void verCesionarios(){
-		
+		listaCesionariosGUI w = new listaCesionariosGUI();
+		w.start(getPrimaryStage());
 	}
 	public static Stage getPrimaryStage() {
         return pStage;

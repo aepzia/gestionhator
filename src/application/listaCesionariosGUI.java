@@ -29,7 +29,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-public class listMonitorGUI extends Application {
+public class listaCesionariosGUI extends Application {
 	
 	@FXML private Button btnAtras;
 	@FXML private Button btnAnadirMoni;
@@ -47,12 +47,10 @@ public class listMonitorGUI extends Application {
 	private static Stage pStage;
 	
 	@FXML private void atras(){
-		tercerosGUI w = new tercerosGUI();
-		w.start(getPrimaryStage());
+		
 	}
 	@FXML private void nuevoMoni(){
-		nuevoProfesionalGUI w = new nuevoProfesionalGUI();
-		w.start(getPrimaryStage());
+	
 	}
 	@FXML private void elimMoni(){
 		
@@ -72,7 +70,7 @@ public class listMonitorGUI extends Application {
     }
 
     private void setPrimaryStage(Stage pStage) {
-        listMonitorGUI.pStage = pStage;
+    	listaCesionariosGUI.pStage = pStage;
     }
     
     public static void main(String[] args) {
@@ -85,7 +83,7 @@ public class listMonitorGUI extends Application {
 			try {
 				setPrimaryStage(primaryStage);
 
-				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/listaMonitores.fxml"));
+				page = (AnchorPane) FXMLLoader.load(getClass().getResource("../itxura/listaCesionarios.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 		        
