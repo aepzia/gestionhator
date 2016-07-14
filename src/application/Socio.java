@@ -61,6 +61,7 @@ public class Socio implements Comparator {
 	}
 	@Override
 	public String toString(){
+		
 		return getnSocio() + " " + getIzena()+" "+ getAbizena();
 	}
 	public String lortuInformazioa(){

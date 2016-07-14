@@ -14,7 +14,9 @@
 <AnchorPane id="AnchorPane" disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0000999999975" prefWidth="868.0000999999975" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.listaSociosGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textAsociacion" editable="false" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
-    <ListView fx:id="listSocios" layoutX="43.0" layoutY="142.0" onMouseClicked="#informazioaJarri" orientation="VERTICAL" prefHeight="315.0" prefWidth="449.0" />
+    <ListView fx:id="listSocios" layoutX="43.0" layoutY="142.0" onMouseClicked="#informazioaJarri" orientation="VERTICAL" prefHeight="315.0" prefWidth="449.0">
+    	
+    </ListView>
     <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de socios">
       <font>
         <Font name="Book Antiqua" size="16.0" />

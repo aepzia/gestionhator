@@ -8,67 +8,57 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0000999999975" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevoProfesionalGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0000999999975" prefWidth="734.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevoProfesionalGUI">
   <children>
-    <Accordion layoutX="41.0" layoutY="73.0" prefHeight="336.0" prefWidth="442.0">
-      <expandedPane>
-        <TitledPane fx:id="x3" animated="false" text="Empresa">
-          <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <children>
-                <Label layoutX="31.0" layoutY="31.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre">
-                  <font>
-                    <Font size="15.0" fx:id="x1" />
-                  </font>
-                </Label>
-                <Label font="$x1" layoutX="31.0" layoutY="47.0" text="Izena" textFill="#9f9f9f" />
-                <Label font="$x1" layoutX="31.0" layoutY="94.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="CIF" />
-                <Label font="$x1" layoutX="31.0" layoutY="110.0" text="IFK">
-                  <textFill>
-                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
-                  </textFill>
-                </Label>
-                <Label font="$x1" layoutX="31.0" layoutY="153.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
-                <Label font="$x1" layoutX="31.0" layoutY="198.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Dirección" />
-                <Label font="$x1" layoutX="31.0" layoutY="214.0" text="Helbidea" textFill="$x2" />
-                <TextField fx:id="textEmpresa" layoutX="152.0" layoutY="36.0" prefWidth="200.0" />
-                <TextField fx:id="textCIF" layoutX="152.0" layoutY="102.0" prefWidth="200.0" />
-                <TextField fx:id="textTel1" layoutX="152.0" layoutY="153.0" prefWidth="200.0" />
-                <TextField fx:id="textDirec" layoutX="152.0" layoutY="203.0" prefWidth="200.0" />
-              </children>
-            </AnchorPane>
-          </content>
-        </TitledPane>
-      </expandedPane>
-      <panes>
-        <fx:reference source="x3" />
-        <TitledPane animated="false" prefHeight="239.0" prefWidth="442.0" text="Profesional">
-          <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <children>
-                <Label font="$x1" layoutX="42.0" layoutY="42.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre" />
-                <Label font="$x1" layoutX="42.0" layoutY="58.0" text="Izena" textFill="$x2" />
-                <Label font="$x1" layoutX="42.0" layoutY="105.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="DNI" />
-                <Label font="$x1" layoutX="42.0" layoutY="121.0" text="NA" textFill="#9f9f9f" />
-                <Label font="$x1" layoutX="42.0" layoutY="164.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
-                <TextField fx:id="textNombre" layoutX="163.0" layoutY="47.0" prefWidth="200.0" />
-                <TextField fx:id="textNAN" layoutX="163.0" layoutY="113.0" prefWidth="200.0" />
-                <TextField fx:id="textTel2" layoutX="163.0" layoutY="164.0" prefWidth="200.0" />
-              </children>
-            </AnchorPane>
-          </content>
-        </TitledPane>
-      </panes>
-    </Accordion>
-    <Button fx:id="btnGuardar" layoutX="541.0" layoutY="97.0" mnemonicParsing="false" prefHeight="102.0" onAction="#guardar" prefWidth="132.0" text="" />
-    <Label layoutX="565.0" layoutY="66.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="84.0" text="Guardar">
+    <Button fx:id="btnGuardar" layoutX="520.0" layoutY="125.0" mnemonicParsing="false" onAction="#guardar" prefHeight="102.0" prefWidth="132.0" text="" />
+    <Label layoutX="544.0" layoutY="94.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="84.0" text="Guardar">
       <font>
         <Font size="20.0" fx:id="x4" />
       </font>
     </Label>
-    <Label font="$x4" layoutX="573.0" layoutY="203.0" text="Gorde" textFill="$x2" />
-    <Button fx:id="btnAtras" layoutX="573.0" layoutY="304.0" mnemonicParsing="false" onAction="#atras" prefHeight="73.0" prefWidth="80.0" text="" />
-    <Label font="$x4" layoutX="586.0" layoutY="273.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="55.0" text="Atrás" />
-    <Label font="$x4" layoutX="587.0" layoutY="382.0" text="Atzera" textFill="$x2" />
+    <Label font="$x4" layoutX="552.0" layoutY="231.0" text="Gorde">
+      <textFill>
+        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Button fx:id="btnAtras" layoutX="557.0" layoutY="364.0" mnemonicParsing="false" onAction="#atras" prefHeight="73.0" prefWidth="80.0" text="" />
+    <Label font="$x4" layoutX="570.0" layoutY="333.0" minHeight="15.999908447265625" prefHeight="23.0" prefWidth="55.0" text="Atrás" />
+    <Label font="$x4" layoutX="571.0" layoutY="442.0" text="Atzera" textFill="$x2" />
+    <Label layoutX="91.0" layoutY="321.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="91.0" layoutY="337.0" text="Izena">
+      <textFill>
+        <Color blue="0.624" green="0.624" red="0.624" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="91.0" layoutY="384.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="CIF" />
+    <Label font="$x1" layoutX="91.0" layoutY="400.0" text="IFK" textFill="$x2" />
+    <Label font="$x1" layoutX="91.0" layoutY="443.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
+    <Label font="$x1" layoutX="91.0" layoutY="488.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Dirección" />
+    <Label font="$x1" layoutX="91.0" layoutY="504.0" text="Helbidea" textFill="$x2" />
+    <TextField fx:id="textEmpresa" layoutX="212.0" layoutY="326.0" prefWidth="200.0" />
+    <TextField fx:id="textCIF" layoutX="212.0" layoutY="392.0" prefWidth="200.0" />
+    <TextField fx:id="textTel1" layoutX="212.0" layoutY="443.0" prefWidth="200.0" />
+    <TextField fx:id="textDirec" layoutX="212.0" layoutY="493.0" prefWidth="200.0" />
+    <Label font="$x1" layoutX="91.0" layoutY="90.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="Nombre" />
+    <Label font="$x1" layoutX="91.0" layoutY="106.0" text="Izena" textFill="$x2" />
+    <Label font="$x1" layoutX="91.0" layoutY="153.0" minHeight="15.999908447265625" prefHeight="15.999908447265625" text="DNI" />
+    <Label font="$x1" layoutX="91.0" layoutY="169.0" text="NA" textFill="$x3" />
+    <Label font="$x1" layoutX="91.0" layoutY="212.0" minHeight="15.999908447265625" prefHeight="16.0" text="Tel.:" />
+    <TextField fx:id="textNombre" layoutX="212.0" layoutY="95.0" prefWidth="200.0" />
+    <TextField fx:id="textNAN" layoutX="212.0" layoutY="161.0" prefWidth="200.0" />
+    <TextField fx:id="textTel2" layoutX="212.0" layoutY="212.0" prefWidth="200.0" />
+    <Label layoutX="59.0" layoutY="50.0" text="Profesional">
+      <font>
+        <Font name="Arial Black" size="20.0" fx:id="x5" />
+      </font>
+    </Label>
+    <Label font="$x5" layoutX="61.0" layoutY="266.0" text="Empresa" />
+    <CheckBox fx:id="chEqual" layoutX="192.0" layoutY="273.0" mnemonicParsing="false" onAction="#idatziBerdin" text="" />
+    <Label font="$x1" layoutX="212.0" layoutY="258.0" minHeight="15.999908447265625" prefHeight="27.0" prefWidth="258.0" text="Empresa y profesional son lo mismo" />
+    <Label font="$x1" layoutX="212.0" layoutY="282.0" text="Enpresa eta profesionala bera da" textFill="$x3" />
   </children>
 </AnchorPane>

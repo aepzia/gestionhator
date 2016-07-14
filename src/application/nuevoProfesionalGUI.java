@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -28,6 +29,7 @@ public class nuevoProfesionalGUI extends Application {
 	@FXML TextField textNombre;
 	@FXML TextField textNAN;
 	@FXML TextField textTel2;
+	@FXML CheckBox chEqual;
 	@FXML Button btnAtras;
 	@FXML Button btnGuardar;
 	
@@ -59,6 +61,17 @@ public class nuevoProfesionalGUI extends Application {
 			e.printStackTrace();
 		}
 		
+	}
+	@FXML public void idatziBerdin(){
+		if(chEqual.isSelected()){
+			textCIF.setText(textNAN.getText());
+			textEmpresa.setText(textNombre.getText());
+			textTel1.setText(textTel2.getText());
+		}else{
+			textCIF.setText("");
+			textEmpresa.setText("");
+			textTel1.setText("");
+		}
 	}
 	@FXML public void atras(){
 		listMonitorGUI w = new listMonitorGUI();

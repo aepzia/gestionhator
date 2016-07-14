@@ -9,7 +9,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-
+import javafx.scene.shape.Rectangle;
+import javafx.scene.paint.Color;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,12 +21,15 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 public class listaSociosGUI extends Application {
 	
@@ -119,9 +123,9 @@ public class listaSociosGUI extends Application {
 				Controler.socioKop++; 
 				Socio s = new Socio(rs);
 				listSocios.getItems().add(s);
-
             }
 			lag = listSocios.getItems();
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -139,6 +143,18 @@ public class listaSociosGUI extends Application {
               ordenatu();
             }    
         });
+    }
+    static class ColorRectCell extends ListCell<Socio> {
+        @Override
+        public void updateItem(Socio item, boolean empty) {
+            super.updateItem(item, empty);
+            Rectangle rect = new Rectangle(100, 20);
+            //if (item.getFechaBaja().equals("")){
+            	 //rect.setFill(Color.CADETBLUE);
+            	
+           // }
+           
+        }
     }
     public void handleSearchByKey(String oldVal, String newVal) {
         // If the number of characters in the text box is less than last time
