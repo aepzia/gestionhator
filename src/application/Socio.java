@@ -56,8 +56,8 @@ public class Socio implements Comparator {
 		setCuentaCorriente(rs.getObject("cuenta_corriente").toString());
 		setComentarios(rs.getObject("otras_observaciones").toString());
 		setLOPD(rs.getObject("proteccion_de_datos").toString());
-		setFechaBaja("");
-		setMotivoBaja("");
+		setFechaBaja(rs.getObject("fechaBaja").toString());
+		setMotivoBaja(rs.getObject("motivoBaja").toString());
 	}
 	@Override
 	public String toString(){
