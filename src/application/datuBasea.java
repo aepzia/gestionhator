@@ -47,6 +47,7 @@ public class datuBasea {
 	            		+ " horaFin varchar(50),"
 	            		+ " nombre varchar(50) NOT NULL,"
 	            		+ " numero_de_plazas varchar(50),"
+	            		+ " numero_disponibles varchar(50),"
 	            		+ " precio varchar(50))");
 	            stmt.executeUpdate( "CREATE TABLE asociacion ( "
 	            		+ " id  varchar(50)NOT NULL PRIMARY KEY,"

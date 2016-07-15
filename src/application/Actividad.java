@@ -7,11 +7,8 @@ import java.util.List;
 
 public class Actividad {
 	private String id;
-	private boolean closed;
 	private String tpActivididad;
 	private String monitorDNI;
-	private List<String> apuntadosDNI;
-	private List<Boolean> pagos;
 	private String fechaIni;
 	private String fechaFin;
 	private String horaIni;
@@ -19,6 +16,8 @@ public class Actividad {
 	private String Nombre;
 	private String Precio;
 	private String numeroPlazas;
+	private String numeroDisponibles;
+
 	
 	
 	public Actividad(ResultSet rs) {
@@ -29,10 +28,12 @@ public class Actividad {
 			monitorDNI = rs.getObject("monitorDNI").toString();
 			fechaIni = rs.getObject("fechaIni").toString();
 			fechaFin = rs.getObject("fechaFin").toString();
-			horaIni = rs.getObject("horaIni").toString();
-			horaFin = rs.getObject("horaFin").toString();
+			setHoraIni(rs.getObject("horaIni").toString());
+			setHoraFin(rs.getObject("horaFin").toString());
 			Nombre = rs.getObject("nombre").toString();
 			numeroPlazas = rs.getObject("numero_de_plazas").toString();
+			numeroDisponibles = (rs.getObject("numero_disponibles").toString());
+
 			Precio = rs.getObject("precio").toString();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -57,12 +58,6 @@ public class Actividad {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public boolean isClosed() {
-		return closed;
-	}
-	public void setClosed(boolean closed) {
-		this.closed = closed;
-	}
 	public String getTpActivididad() {
 		return tpActivididad;
 	}
@@ -75,18 +70,7 @@ public class Actividad {
 	public void setMonitorDNI(String monitorDNI) {
 		this.monitorDNI = monitorDNI;
 	}
-	public List<String> getApuntadosDNI() {
-		return apuntadosDNI;
-	}
-	public void setApuntadosDNI(List<String> apuntadosDNI) {
-		this.apuntadosDNI = apuntadosDNI;
-	}
-	public List<Boolean> getPagos() {
-		return pagos;
-	}
-	public void setPagos(List<Boolean> pagos) {
-		this.pagos = pagos;
-	}
+	
 	public String getFechaIni() {
 		return fechaIni;
 	}
@@ -116,5 +100,23 @@ public class Actividad {
 	}
 	public void setNumeroPlazas(String numeroPlazas) {
 		this.numeroPlazas = numeroPlazas;
+	}
+	public String getHoraIni() {
+		return horaIni;
+	}
+	public void setHoraIni(String horaIni) {
+		this.horaIni = horaIni;
+	}
+	public String getHoraFin() {
+		return horaFin;
+	}
+	public void setHoraFin(String horaFin) {
+		this.horaFin = horaFin;
+	}
+	public String getNumeroDisponibles() {
+		return numeroDisponibles;
+	}
+	public void setNumeroDisponibles(String numeroDisponibles) {
+		this.numeroDisponibles = numeroDisponibles;
 	}
 }
