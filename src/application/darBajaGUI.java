@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -31,6 +32,7 @@ public class darBajaGUI extends Application {
 	@FXML Label textAbizena;
 	@FXML Label textDNI;
 	@FXML ChoiceBox<String> chMotivo;
+	@FXML DatePicker textFecha;
 	@FXML ImageView imgFoto;
 	
 	private Socio bazkidea;

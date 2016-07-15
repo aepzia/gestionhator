@@ -10,39 +10,47 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="599.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.darBajaGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="599.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.darBajaGUI">
   <children>
-    <ImageView fx:id="imgFoto" fitHeight="147.0" fitWidth="147.0" layoutX="330.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-    </ImageView>
+    <ImageView fx:id="imgFoto" fitHeight="147.0" fitWidth="147.0" layoutX="330.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
     <Label fx:id="textIzena" layoutX="91.0" layoutY="34.0" prefHeight="22.0" prefWidth="169.0" />
-    <Label fx:id="textAbizena" layoutX="91.0" layoutY="77.0" prefHeight="22.0" prefWidth="169.0"/>
-    <Label fx:id="textDNI"  layoutX="91.0" layoutY="119.0" prefHeight="22.0" prefWidth="169.0" />
-    <Label layoutX="86.0" layoutY="219.0" prefWidth="117.0" text="Motivo baja">
+    <Label fx:id="textAbizena" layoutX="91.0" layoutY="77.0" prefHeight="22.0" prefWidth="169.0" />
+    <Label fx:id="textDNI" layoutX="91.0" layoutY="119.0" prefHeight="22.0" prefWidth="169.0" />
+    <Label layoutX="89.0" layoutY="314.0" prefWidth="117.0" text="Motivo baja">
       <font>
         <Font size="15.0" fx:id="x1" />
       </font>
     </Label>
-    <ChoiceBox fx:id="chMotivo" layoutX="236.0" layoutY="230.0" prefWidth="241.0">
+    <ChoiceBox fx:id="chMotivo" layoutX="239.0" layoutY="325.0" prefWidth="241.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Voluntaria / Borondatezkoa" />
           <String fx:value="Pagos no realizados / Ordaiketak egin gabeak" />
           <String fx:value="Defunción / Heriotza" />
           <String fx:value="Otros / Bestelakoa" />
-          
         </FXCollections>
       </items>
     </ChoiceBox>
-    <Button id="btnGuardar" layoutX="83.0" layoutY="305.0" onAction="#gorde" mnemonicParsing="false" prefHeight="104.0" prefWidth="112.0" text="" />
-    <Button id="btnAtras" layoutX="413.0" layoutY="315.0" onAction="#atras" mnemonicParsing="false" prefHeight="84.0" prefWidth="111.0" text="" />
-    <Label font="$x1" layoutX="102.0" layoutY="277.0" text="Guardar" />
-    <Label font="$x1" layoutX="104.0" layoutY="409.0" text="Gorde" textFill="#bfbfbf" />
-    <Label font="$x1" layoutX="86.0" layoutY="240.0" text="Bajaren arrazoia">
+    <Button id="btnGuardar" layoutX="86.0" layoutY="415.0" mnemonicParsing="false" onAction="#gorde" prefHeight="104.0" prefWidth="112.0" text="" />
+    <Button id="btnAtras" layoutX="416.0" layoutY="425.0" mnemonicParsing="false" onAction="#atras" prefHeight="84.0" prefWidth="111.0" text="" />
+    <Label font="$x1" layoutX="105.0" layoutY="387.0" text="Guardar" />
+    <Label font="$x1" layoutX="107.0" layoutY="519.0" text="Gorde">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="89.0" layoutY="335.0" text="Bajaren arrazoia">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x2" />
       </textFill>
     </Label>
-    <Label font="$x1" layoutX="447.0" layoutY="283.0" prefHeight="22.0" text="Atras" />
-    <Label font="$x1" layoutX="447.0" layoutY="405.0" text="Atzera" textFill="$x2" />
+    <Label font="$x1" layoutX="450.0" layoutY="393.0" prefHeight="22.0" text="Atras" />
+    <Label font="$x1" layoutX="450.0" layoutY="515.0" text="Atzera" textFill="$x2" />
+    <Label font="$x1" layoutX="89.0" layoutY="254.0" prefWidth="117.0" text="Fecha baja" />
+    <Label font="$x1" layoutX="89.0" layoutY="275.0" text="Bajaren arrazoia" textFill="$x3" />
+    <DatePicker fx:id="textFecha" layoutX="239.0" layoutY="268.0" prefWidth="241.0" text="" />
+    <Label layoutX="239.0" layoutY="246.0" text="(dd/mm/aaa)" />
+    <Label font="$x1" layoutX="226.0" layoutY="262.0" prefWidth="13.0" text="*" textFill="RED" />
+    <Label font="$x1" layoutX="226.0" layoutY="318.0" prefWidth="13.0" text="*" textFill="RED" />
   </children>
 </AnchorPane>
