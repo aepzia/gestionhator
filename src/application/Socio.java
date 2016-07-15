@@ -3,6 +3,7 @@ package application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 import javafx.scene.image.Image;
 
 public class Socio implements Comparator {
+	private static final Object[] String = null;
 	private String nSocio;
 	private String DNI;
 	private boolean pensionista;
@@ -61,8 +63,11 @@ public class Socio implements Comparator {
 	}
 	@Override
 	public String toString(){
-		
-		return getnSocio() + " " + getIzena()+" "+ getAbizena();
+		String[] fecha = getFechaNacimiento().split("/");
+		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+		int añoNacimiento = Integer.parseInt(fecha[3]);
+		int edad = currentYear -añoNacimiento;
+		return getnSocio() + " " + getIzena()+" "+ getAbizena()+" "+getFechaAlta()+" "+edad+" años/urte";
 	}
 	public String lortuInformazioa(){
 		return getIzena()+" "+getAbizena()+"\n"+"NAN/DNI: " +getDNI()+"\n"+"Znb/Nº " +
