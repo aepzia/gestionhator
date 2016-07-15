@@ -61,8 +61,8 @@
       </image>
     </ImageView>
     <Button fx:id="btnPagado" disable="true" layoutX="678.0" layoutY="307.0" mnemonicParsing="false" onAction="#eguneratu" prefHeight="93.0" prefWidth="104.0" text="" />
-    <Label font="$x1" layoutX="705.0" layoutY="297.0" text="Pagado" />
-    <Label font="$x1" layoutX="695.0" layoutY="405.0" text="Ordaindua" textFill="#bfbfbf" />
+    <Label font="$x1" layoutX="705.0" layoutY="297.0" text="Pagar" />
+    <Label font="$x1" layoutX="695.0" layoutY="405.0" text="Ordaindu" textFill="#bfbfbf" />
     <ListView id="listSocios" fx:id="listActividad" layoutX="47.0" layoutY="153.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="496.0" />
   </children>
 </AnchorPane>
