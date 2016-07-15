@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -40,14 +42,12 @@ public class darBajaGUI extends Application {
 	
 	
 	@FXML public void gorde(){
-		SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
-		Date fecha = new Date();
-		String currentData =formatoDeFecha.format(fecha);
+		
 		try {
 			Class.forName("org.h2.Driver");
 			Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
 			Statement stmt = conn.createStatement();
-			stmt.executeUpdate("UPDATE socio SET fechaBaja='"+currentData+"',motivoBaja='"+ chMotivo.getSelectionModel().getSelectedItem()+"' WHERE DNI='"+bazkidea.getDNI()+"'");
+			stmt.executeUpdate("UPDATE socio SET fechaBaja='"+textFecha.getValue()+"',motivoBaja='"+ chMotivo.getSelectionModel().getSelectedItem()+"' WHERE DNI='"+bazkidea.getDNI()+"'");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -102,7 +102,12 @@ public class darBajaGUI extends Application {
 		//imgFoto.setImage((new Image(bazkidea.getFoto())));		
 	
     	System.out.println(bazkidea.getFoto());
-    	
+    	SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
+		Date fecha = new Date();
+		String currentData =formatoDeFecha.format(fecha);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate date = LocalDate.parse(currentData, formatter);
+		textFecha.setValue(date);
 	}
 	
 }

@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
@@ -206,6 +208,12 @@ public class nuevoSocioGUI extends Application {
     		    Controler.socioKop)
     		);
     		opPensionista.setSelected(false);
+    		SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
+    		Date fecha = new Date();
+    		String currentData =formatoDeFecha.format(fecha);
+    		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    		LocalDate date = LocalDate.parse(currentData, formatter);
+    		textAlta.setValue(date);
     }
 }
 
