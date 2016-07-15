@@ -40,6 +40,8 @@ public class listaSociosGUI extends Application {
 	@FXML private Button btnVerSocio;
 	@FXML private TextField textAsociacion;
 	@FXML private ListView<Socio> listSocios;
+	@FXML private ListView<String> listPagos;
+
 	@FXML private TextArea textInformazioa;
 	@FXML private ChoiceBox<String> btnOrderBy;
 	@FXML private TextField textBuscar;

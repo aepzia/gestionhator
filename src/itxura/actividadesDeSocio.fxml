@@ -13,7 +13,6 @@
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="932.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.actividadesDeSocioGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textAsociacion" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
-    <ListView id="listSocios" fx:id="listActividad" layoutX="43.0" layoutY="142.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="500.0" />
     <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
       <font>
         <Font name="Book Antiqua" size="16.0" />
@@ -64,5 +63,6 @@
     <Button fx:id="btnPagado" disable="true" layoutX="678.0" layoutY="307.0" mnemonicParsing="false" onAction="#eguneratu" prefHeight="93.0" prefWidth="104.0" text="" />
     <Label font="$x1" layoutX="705.0" layoutY="297.0" text="Pagado" />
     <Label font="$x1" layoutX="695.0" layoutY="405.0" text="Ordaindua" textFill="#bfbfbf" />
+    <ListView id="listSocios" fx:id="listActividad" layoutX="47.0" layoutY="153.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="496.0" />
   </children>
 </AnchorPane>

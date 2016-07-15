@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-
+import javafx.scene.control.ListCell;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,8 +25,10 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import javafx.util.Callback;
 public class actividadesDeSocioGUI extends Application {
 
 	private static Stage pStage;
@@ -35,7 +37,7 @@ public class actividadesDeSocioGUI extends Application {
 
 	private static ObservableList<Actividad> lag ;
 
-	
+
 	@FXML ListView<Actividad> listActividad;
 	@FXML TextField textAsociacion;
 	@FXML TextArea textInformacion;
@@ -46,7 +48,7 @@ public class actividadesDeSocioGUI extends Application {
 	@FXML Button btnAtras;
 	@FXML ChoiceBox<String> btnOrderBy;
 
-	private ListView<Boolean> pagos = new ListView<Boolean>() ;
+	@FXML  ListView<String> listPagos;
 
 	@FXML private void atras(){
 		verSocioGUI preWindow = new verSocioGUI();
@@ -64,7 +66,7 @@ public class actividadesDeSocioGUI extends Application {
 			String sql = "DELETE FROM socioActividad  WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
 			System.out.println(sql);
 			stmt.executeUpdate(sql);
-			pagos.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
+			listPagos.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
 			listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
 
 			conn.close();
@@ -84,7 +86,7 @@ public class actividadesDeSocioGUI extends Application {
 			String sql = "UPDATE socioActividad SET pagado='true' WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
 			System.out.println(sql);
 			stmt.executeUpdate(sql);
-			pagos.getItems().set(listActividad.getSelectionModel().getSelectedIndex(), true);
+			listPagos.getItems().set(listActividad.getSelectionModel().getSelectedIndex(), "true");
 			conn.close();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -99,14 +101,10 @@ public class actividadesDeSocioGUI extends Application {
 
 	@FXML private void informazioaJarri(){
 		aukera = listActividad.getSelectionModel().getSelectedItem();
-		
+		if(aukera.pagatua=="No / Ez") btnPagado.setDisable(false);
 		btnElimActi.setDisable(false);
-		String pagatua = "Bai / Sí";
-		if (!pagos.getItems().get(listActividad.getSelectionModel().getSelectedIndex())){
-			btnPagado.setDisable(false);
-			pagatua = "Ez / No";
-		}
-		textInformacion.setText(aukera.getInformation()+"\nPagatua? / ¿Pagado? "+pagatua );
+		
+		textInformacion.setText(aukera.getInformation()+"\nPagatua? / ¿Pagado? "+aukera.pagatua );
 	}
 	
 	public static Stage getPrimaryStage() {
@@ -154,9 +152,9 @@ public class actividadesDeSocioGUI extends Application {
 			while ( rs.next() )
             {	
 					Actividad s = new Actividad(rs);
+					if((Boolean) rs.getObject("pagado")) s.pagatua="Si / Bai";
+					else s.pagatua = "No / Ez";
 					listActividad.getItems().add(s);
-				
-				pagos.getItems().add((Boolean) rs.getObject("pagado"));
             }	
 			lag = listActividad.getItems();
 			conn.close();
@@ -165,6 +163,14 @@ public class actividadesDeSocioGUI extends Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+    	listActividad.setCellFactory(new Callback<ListView<Actividad>, 
+                ListCell<Actividad>>() {
+                    @Override 
+                    public ListCell<Actividad> call(ListView<Actividad> list) {
+                        return new ColorRectCell();
+                    }
+                }
+            );
     	textBuscar.textProperty().addListener(new ChangeListener<String>() {
     	    @Override
     	    public void changed(ObservableValue<? extends String> observable,
@@ -209,5 +215,24 @@ public class actividadesDeSocioGUI extends Application {
         }
         listActividad.setItems(subentries);
     }
+    static class ColorRectCell extends ListCell<Actividad> {
+        int i = 0;
+    	@Override
+        
+        public void updateItem(Actividad item, boolean empty) {
+            super.updateItem(item, empty);
+ 
+
+            Text rect = new Text();
+            if (item != null) {
+            	if (item.pagatua=="No / Ez")
+                rect.setFill(Color.web("red"));
+                rect.setText(item.toString());
+                setGraphic(rect);
+            }
+        }
+    }
+    
+   
 }
 

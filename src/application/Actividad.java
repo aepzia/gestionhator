@@ -17,6 +17,7 @@ public class Actividad {
 	private String Precio;
 	private String numeroPlazas;
 	private String numeroDisponibles;
+	String pagatua;
 
 	
 	
@@ -32,7 +33,7 @@ public class Actividad {
 			setHoraFin(rs.getObject("horaFin").toString());
 			Nombre = rs.getObject("nombre").toString();
 			numeroPlazas = rs.getObject("numero_de_plazas").toString();
-			numeroDisponibles = (rs.getObject("numero_disponibles").toString());
+			//numeroDisponibles = (rs.getObject("numero_disponibles").toString());
 
 			Precio = rs.getObject("precio").toString();
 		} catch (SQLException e) {
