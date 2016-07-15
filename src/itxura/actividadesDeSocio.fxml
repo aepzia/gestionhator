@@ -26,12 +26,12 @@
     <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-           <String fx:value="Socio-recreativa / gizarte-jolasa" />
+          <String fx:value="Socio-recreativa / gizarte-jolasa" />
           <String fx:value="Cultural / Kulturala" />
           <String fx:value="Preventiva / Prebentziozkoa" />
-           <String fx:value="Socio-recreativa / gizarte-jolasa" />
+          <String fx:value="Socio-recreativa / gizarte-jolasa" />
           <String fx:value="Alfabetico / Alfabetiko" />
-           <String fx:value="Fecha más reciente / Data berriena" />
+          <String fx:value="Fecha más reciente / Data berriena" />
           <String fx:value="Fecha menos reciente / Data zaharrena" />
         </FXCollections>
       </items>
@@ -55,13 +55,13 @@
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
       </textFill>
     </Label>
-    <TextField fx:id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
-    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="293.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+    <TextField fx:id="textBuscar" layoutX="437.0" layoutY="108.0" prefWidth="106.0" text="Buscar ..." />
+    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="389.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@lupa.png" />
       </image>
     </ImageView>
-    <Button fx:id="btnPagado" layoutX="678.0" layoutY="307.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="104.0" disable="true" text="" onAction="#eguneratu"/>
+    <Button fx:id="btnPagado" disable="true" layoutX="678.0" layoutY="307.0" mnemonicParsing="false" onAction="#eguneratu" prefHeight="93.0" prefWidth="104.0" text="" />
     <Label font="$x1" layoutX="705.0" layoutY="297.0" text="Pagado" />
     <Label font="$x1" layoutX="695.0" layoutY="405.0" text="Ordaindua" textFill="#bfbfbf" />
   </children>

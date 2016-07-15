@@ -82,14 +82,14 @@ public class nuevoSocioGUI extends Application {
     		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
     		String sql = "INSERT INTO socio (nSocio,DNI,pensionista,nombre,apellido,fechaNacimiento,tpSocio,"
     				+ "sexo,direccion,tel1,tel2,telContacto,email,fechaAlta,foto,cuenta_corriente,"
-    				+ "otras_observaciones,proteccion_de_datos) VALUES("
+    				+ "otras_observaciones,proteccion_de_datos,fechaBaja,motivoBaja) VALUES("
             		+opNum.getSelectionModel().getSelectedItem()
             		+",'"+textDNI.getText()+"','"+opPensionista.isSelected()+"','"+textNombre.getText()
             		+"','"+textApellido.getText()+"','"+ textNacimiento.getValue() +"','"+ opTipo.getSelectionModel().getSelectedItem()
             		+"','"+opSexo.getSelectionModel().getSelectedItem()+
             		"','"+textDireccion.getText()+"','"+textTel1.getText()+
             		"','"+textTel2.getText()+"','"+textTelEm.getText()
-            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"')";
+            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"','','')";
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
             stmt.close();    	

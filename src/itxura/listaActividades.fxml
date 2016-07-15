@@ -23,15 +23,15 @@
     <Button fx:id="btnElimActi" disable="true" layoutX="751.0" layoutY="150.0" mnemonicParsing="false" onAction="#eliminarActividad" prefHeight="97.0" prefWidth="113.0" text="" />
     <Button fx:id="btnAtras" layoutX="726.0" layoutY="481.0" mnemonicParsing="false" onAction="#atras" prefHeight="75.0" prefWidth="92.0" text="" />
     <Label layoutX="43.0" layoutY="112.0" text="Ordenar" />
-    <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0">
+    <ChoiceBox fx:id="btnOrderBy" layoutX="112.0" layoutY="112.0" prefWidth="237.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
-           <String fx:value="Socio-recreativa / gizarte-jolasa" />
+          <String fx:value="Socio-recreativa / gizarte-jolasa" />
           <String fx:value="Cultural / Kulturala" />
           <String fx:value="Preventiva / Prebentziozkoa" />
-           <String fx:value="Socio-recreativa / gizarte-jolasa" />
+          <String fx:value="Socio-recreativa / gizarte-jolasa" />
           <String fx:value="Alfabetico / Alfabetiko" />
-           <String fx:value="Fecha más reciente / Data berriena" />
+          <String fx:value="Fecha más reciente / Data berriena" />
           <String fx:value="Fecha menos reciente / Data zaharrena" />
         </FXCollections>
       </items>
@@ -58,8 +58,8 @@
     </Label>
     <Label font="$x1" layoutX="695.0" layoutY="283.0" text="Ver actividad" />
     <Label font="$x1" layoutX="698.0" layoutY="409.0" text="Ekintza ikusi" textFill="$x3" />
-    <TextField fx:id="textBuscar" layoutX="343.0" layoutY="109.0" prefWidth="200.0" text="Buscar ..." />
-    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="293.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+    <TextField fx:id="textBuscar" layoutX="408.0" layoutY="109.0" prefWidth="135.0" text="Buscar ..." />
+    <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="362.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@lupa.png" />
       </image>

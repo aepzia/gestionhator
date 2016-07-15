@@ -14,7 +14,8 @@ public class tercerosGUI extends Application {
 	
 	@FXML Button btnMonitor;
 	@FXML Button btnCesionario;
-	
+	@FXML Button btnAtras;
+
 	private static Stage pStage;
 	
 	@FXML public void verMonitores(){
@@ -23,6 +24,10 @@ public class tercerosGUI extends Application {
 	}
 	@FXML public void verCesionarios(){
 		listaCesionariosGUI w = new listaCesionariosGUI();
+		w.start(getPrimaryStage());
+	}
+	@FXML public void atras(){
+		menuPrincipalGUI w = new menuPrincipalGUI();
 		w.start(getPrimaryStage());
 	}
 	public static Stage getPrimaryStage() {
