@@ -43,6 +43,7 @@ public class nuevoSocioGUI extends Application {
 	@FXML public TextField textTel2;
 	@FXML public TextArea textDireccion;
 	@FXML public DatePicker textNacimiento;
+	@FXML public DatePicker textAlta;
 	@FXML public TextField textDNI;
 	@FXML public TextField textEmail;
 	@FXML public TextField textTelEm;
