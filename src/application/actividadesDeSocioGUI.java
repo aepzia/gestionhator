@@ -10,6 +10,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.Optional;
+
 import javafx.scene.control.ListCell;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -24,6 +26,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -59,24 +62,34 @@ public class actividadesDeSocioGUI extends Application {
 		w.start(getPrimaryStage());
 	}
 	@FXML private void eliminarActividad(){
-		try {
-			Class.forName("org.h2.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
-			Statement stmt = conn.createStatement();
-			String sql = "DELETE FROM socioActividad  WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
-			System.out.println(sql);
-			stmt.executeUpdate(sql);
-			listPagos.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
-			listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
+		TextInputDialog dialog = new TextInputDialog(listActividad.getSelectionModel().getSelectedItem().getPrecio());
+		dialog.setTitle("Despuntar socio de la actividad");
+		dialog.setHeaderText("Despuntar socio de la actividad");
+		dialog.setContentText("Dinero devuelto:");
+		Optional<String> result = dialog.showAndWait();
+		if (result.isPresent()){
+		    try {
+				//TODO result.get() -> libro diario
+		    	//TODO inprimir devolucion
+				Class.forName("org.h2.Driver");
+				Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
+				Statement stmt = conn.createStatement();
+				String sql = "DELETE FROM socioActividad  WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
+				System.out.println(sql);
+				stmt.executeUpdate(sql);
+				listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
 
-			conn.close();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+				conn.close();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+		}
+	
+		
 	}
 	@FXML private void eguneratu(){
 		try {
