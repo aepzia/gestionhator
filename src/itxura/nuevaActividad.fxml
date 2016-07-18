@@ -26,6 +26,8 @@
           <String fx:value="Socio-recreativa / gizarte-jolasa" />
           <String fx:value="Cultural / Kulturala" />
           <String fx:value="Preventiva / Prebentziozkoa" />
+         <String fx:value="Otros / Bestelakoak" />
+          
         </FXCollections>
       </items>
     </ChoiceBox>
