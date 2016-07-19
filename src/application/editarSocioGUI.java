@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
@@ -24,12 +26,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -64,13 +68,16 @@ public class editarSocioGUI extends Application {
 	private static String imgPath;
 	private static String pdfPath;
 	private static Stage pStage;
-
+	private static Socio bazkidea; 
+	
 	@FXML private void atras(){
+		System.out.println("ipfuauu");
 		verSocioGUI w = new verSocioGUI();
 		w.start(getPrimaryStage());
 	}
 	@FXML private void guardar(){
 		String currentData = "";
+		boolean errorea= false;
 		try
         {
 			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
@@ -80,17 +87,15 @@ public class editarSocioGUI extends Application {
     		Connection conn = DriverManager.getConnection("jdbc:hsqldb://C:/Users/standar/Desktop/base.odb");
     		Statement stmt = conn.createStatement();
     		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
-    		/*String sql = "INSERT INTO socio (nSocio,DNI,pensionista,nombre,apellido,fechaNacimiento,tpSocio,"
-    				+ "sexo,direccion,tel1,tel2,telContacto,email,fechaAlta,foto,cuenta_corriente,"
-    				+ "otras_observaciones,proteccion_de_datos) VALUES("
+    		String sql = "INSERT socio SET nSocio='"
             		+opNum.getSelectionModel().getSelectedItem()
-            		+",'"+textDNI.getText()+"','"+opPensionista.isSelected()+"','"+textNombre.getText()
-            		+"','"+textApellido.getText()+"','"+ textNacimiento.getValue() +"','"+ opTipo.getSelectionModel().getSelectedItem()
-            		+"','"+opSexo.getSelectionModel().getSelectedItem()+
-            		"','"+textDireccion.getText()+"','"+textTel1.getText()+
-            		"','"+textTel2.getText()+"','"+textTelEm.getText()
-            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"')";*/
-    		String sql="update...";
+            		+"',pensionista='"+opPensionista.isSelected()+"',nombre='"+textNombre.getText()
+            		+"',apellido='"+textApellido.getText()+"',fechaNacimiento='"+ textNacimiento.getValue() +"',tpSocio='"+ opTipo.getSelectionModel().getSelectedItem()
+            		+"',sexo='"+opSexo.getSelectionModel().getSelectedItem()+
+            		"',direccion='"+textDireccion.getText()+"',tel1='"+textTel1.getText()+
+            		"',tel2='"+textTel2.getText()+"',telContacto='"+textTelEm.getText()
+            		+"',email='"+textEmail.getText()+"',foto'"+imgPath+"',cuenta_corriente='"+banco+"',otras_observaciones='"+textOtros.getText()+"',proteccion_de_datos='"+pdfPath+"' where DNI='"+bazkidea.getDNI()+"'";
+    		
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
             stmt.close();    	
@@ -100,14 +105,31 @@ public class editarSocioGUI extends Application {
 		catch ( Exception e ){
 			e.printStackTrace();
 			if (e instanceof NullPointerException){
-				//TODO sartutako datu hutsak tratatu
-			}
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Information Dialog");
+				alert.setHeaderText("Error");
+				alert.setContentText("Rellena los campos onligatorios");
+				errorea = true;
+				alert.showAndWait();			}
 			if(e instanceof HsqlException){
-				//TODO DNI errepikatua
-			}
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Information Dialog");
+				alert.setHeaderText("Error");
+				alert.setContentText("Ese DNI ya existe");
+				errorea = true;
+				alert.showAndWait();			
+				}
         }		
-
-		System.out.println("gorde da");
+		if(!errorea){
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Information Dialog");
+			alert.setHeaderText("Bien!");
+			alert.setContentText("El socio se ha guardado correctamente");
+			errorea = true;
+			alert.showAndWait();
+			listaSociosGUI w = new listaSociosGUI();
+			w.start(getPrimaryStage());
+		}
 	}	
 	
 	@FXML private void examinarFoto(){
@@ -186,7 +208,7 @@ public class editarSocioGUI extends Application {
 			try {
 				setPrimaryStage(primaryStage);
 
-				page = FXMLLoader.load(getClass().getResource("../itxura/nuevoSocio.fxml"));
+				page = FXMLLoader.load(getClass().getResource("../itxura/editarSocio.fxml"));
 				Scene scene = new Scene(page);
 		        scene.getStylesheets().add(getClass().getResource("../itxura/style.css").toExternalForm());
 					               
@@ -205,7 +227,29 @@ public class editarSocioGUI extends Application {
     	opNum.setItems(FXCollections.observableArrayList(
     		    Controler.socioKop)
     		);
-    		opPensionista.setSelected(false);
+    	bazkidea = Controler.autatutakoBazkidea;
+    	System.out.println(bazkidea);
+    	textNombre.setText(bazkidea.getIzena());
+    	textApellido.setText(bazkidea.getAbizena());
+    	textDNI.setText(bazkidea.getDNI());
+    	//text.setText(bazkidea.getTpSocio());
+    	//textSexo.setText(bazkidea.getSexo());
+    	//textNum.setText(bazkidea.getnSocio());
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate date = LocalDate.parse(bazkidea.getFechaAlta(), formatter);
+    	//textAlta.setValue(date);
+    	textEmail.setText(bazkidea.getEmail());
+    	opPensionista.setSelected(bazkidea.isPensionista());
+    	textNacimiento.setValue(LocalDate.parse(bazkidea.getFechaAlta(), formatter));
+    	textTel1.setText(bazkidea.getTel1());
+    	textTel2.setText(bazkidea.getTel2());
+    	//textTelEmergencia.setText(bazkidea.getTelEmergencia());
+    	//textBanco.setText(bazkidea.getCuentaCorriente());
+    	textDireccion.setText(bazkidea.getHelbidea());
+    	textOtros.setText(bazkidea.getComentarios());
+    	if(!bazkidea.getFoto().equals("null")){
+			imgFoto.setImage((new Image(bazkidea.getFoto())));		
+		}
     }
 }
 
