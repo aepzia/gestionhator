@@ -26,6 +26,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
@@ -74,6 +76,7 @@ public class nuevoSocioGUI extends Application {
 	}
 	@FXML private void guardar(){
 		String currentData = "";
+		boolean errorea= false;
 		try
         {
 			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
@@ -102,14 +105,31 @@ public class nuevoSocioGUI extends Application {
 		catch ( Exception e ){
 			e.printStackTrace();
 			if (e instanceof NullPointerException){
-				//TODO sartutako datu hutsak tratatu
-			}
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Information Dialog");
+				alert.setHeaderText("Error");
+				alert.setContentText("Rellena los campos onligatorios");
+				errorea = true;
+				alert.showAndWait();			}
 			if(e instanceof HsqlException){
-				//TODO DNI errepikatua
-			}
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Information Dialog");
+				alert.setHeaderText("Error");
+				alert.setContentText("Ese DNI ya existe");
+				errorea = true;
+				alert.showAndWait();			
+				}
         }		
-
-		System.out.println("gorde da");
+		if(!errorea){
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Information Dialog");
+			alert.setHeaderText("Bien!");
+			alert.setContentText("El socio se ha guardado correctamente");
+			errorea = true;
+			alert.showAndWait();
+			listaSociosGUI w = new listaSociosGUI();
+			w.start(getPrimaryStage());
+		}
 	}	
 	
 	@FXML private void examinarFoto(){
