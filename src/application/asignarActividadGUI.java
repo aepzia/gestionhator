@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -15,7 +16,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -43,21 +48,49 @@ public class asignarActividadGUI extends Application {
 		btnGuardar.setDisable(false);
 	}
 	@FXML private void gorde(){
-		try {
-			Class.forName("org.h2.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
-				Statement stmt = conn.createStatement();
-				String sql = "INSERT INTO socioActividad VALUES ('"+aukera.getId()+"','"+bazkidea.getDNI()+"','"+chPagado.isSelected()+"')";
-				System.out.println(sql);
-				stmt.executeUpdate(sql);
-				conn.close();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Asignar actividad a socio");
+		alert.setHeaderText("¿Ha pagado el socio la Actividad?");
+		alert.setContentText("Elige una opcion.");
+
+		ButtonType buttonTypeSi = new ButtonType("Si");
+		ButtonType buttonTypeNo = new ButtonType("No");
+		ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonData.CANCEL_CLOSE);
+
+		alert.getButtonTypes().setAll(buttonTypeSi, buttonTypeNo, buttonTypeCancel);
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == buttonTypeCancel){
+			
+		} else{
+			Boolean pagatua;
+			if (result.get() == buttonTypeSi) {
+				 pagatua = true;
+			}else {
+				 pagatua = false;
+			}
+			try {
+				Class.forName("org.h2.Driver");
+				 Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
+					Statement stmt = conn.createStatement();
+					String sql = "INSERT INTO socioActividad VALUES ('"+aukera.getId()+"','"+bazkidea.getDNI()+"','"+pagatua+"')";
+					System.out.println(sql);
+					stmt.executeUpdate(sql);
+					
+					listActividades.getItems().remove(listActividades.getSelectionModel().getSelectedIndex());	
+					
+					//listActividades.getItems().remove(listActividades.getSelectionModel().getSelectedIndex());	
+					conn.close();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
+			
        
 	}
 	@FXML private void atras(){

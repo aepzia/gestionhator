@@ -77,7 +77,8 @@ public class actividadesDeSocioGUI extends Application {
 				String sql = "DELETE FROM socioActividad  WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
 				System.out.println(sql);
 				stmt.executeUpdate(sql);
-				listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());
+
+				listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());	
 
 				conn.close();
 			} catch (ClassNotFoundException e) {
@@ -228,6 +229,7 @@ public class actividadesDeSocioGUI extends Application {
         }
         listActividad.setItems(subentries);
     }
+    
     static class ColorRectCell extends ListCell<Actividad> {
         int i = 0;
     	@Override
@@ -235,7 +237,7 @@ public class actividadesDeSocioGUI extends Application {
         public void updateItem(Actividad item, boolean empty) {
             super.updateItem(item, empty);
  
-
+            
             Text rect = new Text();
             if (item != null) {
             	if (item.pagatua=="No / Ez")

@@ -35,27 +35,19 @@
       </image>
     </ImageView>
     <TextArea fx:id="textInformacion" layoutX="50.0" layoutY="409.0" prefHeight="93.0" prefWidth="500.0" wrapText="true" />
-    <CheckBox fx:id="chPagado" layoutX="587.0" layoutY="121.0" mnemonicParsing="false" text="" />
-    <ImageView fitHeight="64.0" fitWidth="85.33333129882813" layoutX="596.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-        <Image url="file:/C:/Users/standar/git/gestionhator/src/itxura/Pagado.png" />
-      </image>
-    </ImageView>
-    <Label layoutX="619.0" layoutY="109.0" text="Pagado">
+    <Button fx:id="btnGuardar" layoutX="588.0" layoutY="110.0" mnemonicParsing="false" onAction="#gorde" prefHeight="100.0" prefWidth="106.0" text="" />
+    <Label layoutX="611.0" layoutY="90.0" text="Asignar">
       <font>
         <Font size="15.0" fx:id="x1" />
       </font>
     </Label>
-    <Label font="$x1" layoutX="619.0" layoutY="129.0" text="Pagatua" textFill="#bfbfbf" />
-    <Button fx:id="btnGuardar" layoutX="587.0" layoutY="206.0" mnemonicParsing="false" onAction="#gorde" prefHeight="100.0" prefWidth="106.0" text="" />
-    <Label font="$x1" layoutX="610.0" layoutY="186.0" text="Asignar" />
-    <Label font="$x1" layoutX="616.0" layoutY="306.0" text="Ezarri">
+    <Label font="$x1" layoutX="617.0" layoutY="210.0" text="Ezarri">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x2" />
       </textFill>
     </Label>
-    <Button fx:id="btnAtras" layoutX="587.0" layoutY="359.0" mnemonicParsing="false" onAction="#atras" prefHeight="100.0" prefWidth="106.0" text="" />
-    <Label font="$x1" layoutX="616.0" layoutY="349.0" text="Atrás" />
-    <Label font="$x1" layoutX="616.0" layoutY="449.0" text="Atzrera" textFill="$x2" />
+    <Button fx:id="btnAtras" layoutX="591.0" layoutY="289.0" mnemonicParsing="false" onAction="#atras" prefHeight="100.0" prefWidth="106.0" text="" />
+    <Label font="$x1" layoutX="620.0" layoutY="279.0" text="Atrás" />
+    <Label font="$x1" layoutX="620.0" layoutY="379.0" text="Atzrera" textFill="$x2" />
   </children>
 </AnchorPane>
