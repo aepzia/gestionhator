@@ -10,7 +10,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="932.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.actividadesDeSocioGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="932.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.actividadesDeSocioGUI">
   <children>
     <TextField id="textNombreApellido" fx:id="textAsociacion" layoutX="43.0" layoutY="37.0" prefWidth="265.0" />
     <Label contentDisplay="LEFT" layoutX="43.0" layoutY="73.0" prefHeight="39.0" prefWidth="156.0" text="Lista de actividades">
@@ -35,7 +35,7 @@
         </FXCollections>
       </items>
     </ChoiceBox>
-    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="465.0" prefHeight="131.0" prefWidth="622.0" wrapText="true" />
+    <TextArea fx:id="textInformacion" layoutX="43.0" layoutY="511.0" prefHeight="131.0" prefWidth="622.0" wrapText="true" />
     <Label layoutX="797.0" layoutY="465.0" text="Atrás">
       <font>
         <Font size="15.0" fx:id="x1" />
@@ -64,5 +64,8 @@
     <Label font="$x1" layoutX="705.0" layoutY="297.0" text="Pagar" />
     <Label font="$x1" layoutX="695.0" layoutY="405.0" text="Ordaindu" textFill="#bfbfbf" />
     <ListView id="listSocios" fx:id="listActividad" layoutX="47.0" layoutY="153.0" onMouseClicked="#informazioaJarri" prefHeight="289.0" prefWidth="496.0" />
+    <Label blendMode="SRC_OVER" layoutX="47.0" layoutY="465.0" prefWidth="25.000099999997474" style="-fx-background-color: RED&#10;" text="" textFill="#cc0000" />
+    <Label layoutX="84.0" layoutY="457.0" text="Las actividades pendientes de pago aparecen en rojo" />
+    <Label layoutX="84.0" layoutY="477.0" text="Pagatzeko dauden ekintzak gorriz edierazten dira" textFill="$x2" />
   </children>
 </AnchorPane>
