@@ -13,30 +13,30 @@
   <children>
     <TextField fx:id="textNombre" editable="false" focusTraversable="false" layoutX="130.0" layoutY="75.0" opacity="1.0" prefWidth="200.0" visible="true" />
     <TextField fx:id="textCIF" focusTraversable="false" layoutX="130.0" layoutY="128.0" prefWidth="118.0" />
-    <TextField fx:id="textTel1" editable="false" focusTraversable="false" layoutX="205.0" layoutY="262.0" prefWidth="217.0" styleClass="notEditable" />
-    <TextField fx:id="textTel2" editable="false" focusTraversable="false" layoutX="205.0" layoutY="299.0" prefWidth="217.0" styleClass="notEditable" />
-    <TextField fx:id="textBanco1" editable="false" focusTraversable="false" layoutX="205.0" layoutY="365.0" prefWidth="37.0" styleClass="notEditable" />
-    <TextField fx:id="textBanco2" editable="false" focusTraversable="false" layoutX="253.0" layoutY="365.0" prefWidth="37.0" styleClass="notEditable" />
-    <TextField fx:id="textBanco3" editable="false" focusTraversable="false" layoutX="302.0" layoutY="365.0" prefWidth="24.0" styleClass="notEditable" />
-    <TextField fx:id="textBanco4" editable="false" focusTraversable="false" layoutX="334.0" layoutY="365.0" prefWidth="88.0" styleClass="notEditable" />
-    <TextField fx:id="textPresi" editable="false" focusTraversable="false" layoutX="190.0" layoutY="435.0" prefWidth="231.666748046875" styleClass="notEditable" />
-    <TextArea fx:id="textDireccion" disable="false" editable="false" focusTraversable="false" layoutX="662.0" layoutY="247.0" opacity="1.0" prefHeight="106.0" prefWidth="233.0" styleClass="notEditable" text="" visible="true" wrapText="false" />
-    <TextField fx:id="textNumeracion" editable="false" focusTraversable="false" layoutX="755.0" layoutY="428.0" prefWidth="162.0" styleClass="notEditable" />
-    <ImageView fx:id="imgLogo" fitHeight="200.0" fitWidth="200.0" layoutX="507.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+    <TextField fx:id="textTel1" editable="false" focusTraversable="false" layoutX="204.0" layoutY="225.0" prefWidth="217.0" styleClass="notEditable" />
+    <TextField fx:id="textTel2" editable="false" focusTraversable="false" layoutX="204.0" layoutY="262.0" prefWidth="217.0" styleClass="notEditable" />
+    <TextField fx:id="textBanco1" editable="false" focusTraversable="false" layoutX="204.0" layoutY="328.0" prefWidth="37.0" styleClass="notEditable" />
+    <TextField fx:id="textBanco2" editable="false" focusTraversable="false" layoutX="252.0" layoutY="328.0" prefWidth="37.0" styleClass="notEditable" />
+    <TextField fx:id="textBanco3" editable="false" focusTraversable="false" layoutX="301.0" layoutY="328.0" prefWidth="24.0" styleClass="notEditable" />
+    <TextField fx:id="textBanco4" editable="false" focusTraversable="false" layoutX="333.0" layoutY="328.0" prefWidth="88.0" styleClass="notEditable" />
+    <TextField fx:id="textPresi" editable="false" focusTraversable="false" layoutX="189.0" layoutY="398.0" prefWidth="231.666748046875" styleClass="notEditable" />
+    <TextArea fx:id="textDireccion" disable="false" editable="false" focusTraversable="false" layoutX="564.0" layoutY="238.0" opacity="1.0" prefHeight="42.0" prefWidth="109.0" styleClass="notEditable" text="" visible="true" wrapText="false" />
+    <TextField fx:id="textNumeracion" editable="false" focusTraversable="false" layoutX="682.0" layoutY="419.0" prefWidth="162.0" styleClass="notEditable" />
+    <ImageView fx:id="imgLogo" fitHeight="153.0" fitWidth="153.0" layoutX="507.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@perfil.jpg" />
       </image>
     </ImageView>
     <Button id="btnEditarAsociacion" fx:id="btnEditar" layoutX="112.0" layoutY="506.0" mnemonicParsing="false" onAction="#editar" prefHeight="85.0" prefWidth="116.0" text="" underline="false" />
-    <Label layoutX="44.0" layoutY="423.0" prefHeight="21.999908447265625" text="Presidente">
+    <Label layoutX="43.0" layoutY="386.0" prefHeight="21.999908447265625" text="Presidente">
       <font>
         <Font size="20.0" fx:id="x1" />
       </font>
     </Label>
-    <Label font="$x1" layoutX="530.0" layoutY="249.0" text="Dirección" />
-    <Label font="$x1" layoutX="45.0" layoutY="257.0" text="Tel.:" />
-    <Label font="$x1" layoutX="530.0" layoutY="405.0" text="Numeración de socios" />
-    <Label font="$x1" layoutX="43.0" layoutY="351.0" text="Cuenta corriente" />
+    <Label font="$x1" layoutX="455.0" layoutY="227.0" text="Dirección" />
+    <Label font="$x1" layoutX="44.0" layoutY="220.0" text="Tel.:" />
+    <Label font="$x1" layoutX="457.0" layoutY="396.0" text="Numeración de socios" />
+    <Label font="$x1" layoutX="42.0" layoutY="314.0" text="Cuenta corriente" />
     <Button fx:id="btnAtras" layoutX="723.0" layoutY="503.0" mnemonicParsing="false" onAction="#atras" prefHeight="78.0" prefWidth="93.0" text="" />
     <Label font="$x1" layoutX="44.0" layoutY="114.0" prefWidth="68.0" text="CIF" />
     <Label font="$x1" layoutX="44.0" layoutY="132.0" prefWidth="68.0" text="IFK">
@@ -44,10 +44,10 @@
         <Color blue="0.750" green="0.750" red="0.750" fx:id="x2" />
       </textFill>
     </Label>
-    <Label font="$x1" layoutX="45.0" layoutY="374.0" text="Kontu korrontea" textFill="$x2" />
-    <Label font="$x1" layoutX="532.0" layoutY="271.0" text="Helbidea" textFill="$x2" />
-    <Label font="$x1" layoutX="43.0" layoutY="439.0" text="Zuzendaria" textFill="$x2" />
-    <Label font="$x1" layoutX="530.0" layoutY="428.0" text="Bazkide numerazioa" textFill="$x2" />
+    <Label font="$x1" layoutX="44.0" layoutY="337.0" text="Kontu korrontea" textFill="$x2" />
+    <Label font="$x1" layoutX="457.0" layoutY="249.0" text="Helbidea" textFill="$x2" />
+    <Label font="$x1" layoutX="42.0" layoutY="402.0" text="Zuzendaria" textFill="$x2" />
+    <Label font="$x1" layoutX="457.0" layoutY="419.0" text="Bazkide numerazioa" textFill="$x2" />
     <Label font="$x1" layoutX="44.0" layoutY="59.0" text="Nombre" />
     <Label font="$x1" layoutX="45.0" layoutY="83.0" prefWidth="60.0" text="Izena" textFill="$x2" />
     <Label layoutX="751.0" layoutY="487.0" prefWidth="37.0" text="Atras">
@@ -58,5 +58,18 @@
     <Label font="$x3" layoutX="751.0" layoutY="581.0" text="Atzera" textFill="$x2" />
     <Label font="$x3" layoutX="141.0" layoutY="493.0" prefWidth="60.0" text="Editar" />
     <Label font="$x3" layoutX="141.0" layoutY="587.0" text="Editatu" textFill="#bfbfbf" />
+    <Label font="$x1" layoutX="457.0" layoutY="310.0" text="C.P" />
+    <Label font="$x1" layoutX="457.0" layoutY="334.0" text="P.K">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
+      </textFill>
+    </Label>
+    <TextField fx:id="textCP" layoutX="564.0" layoutY="326.0" prefWidth="74.0" />
+    <Label font="$x1" layoutX="733.0" layoutY="308.0" text="Localidad" />
+    <Label font="$x1" layoutX="733.0" layoutY="332.0" text="Herria" textFill="$x4" />
+    <TextField fx:id="textHerri" layoutX="826.0" layoutY="324.0" prefWidth="124.0" />
+    <Label font="$x1" layoutX="733.0" layoutY="224.0" text="Prov." />
+    <Label font="$x1" layoutX="733.0" layoutY="248.0" text="Probintzia" textFill="$x4" />
+    <TextField fx:id="textProv" layoutX="826.0" layoutY="240.0" prefWidth="123.9998779296875" />
   </children>
 </AnchorPane>

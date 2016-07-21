@@ -31,6 +31,9 @@ public class datosAsociacionGUI extends Application{
 	@FXML private TextField textNumeracion;
 	@FXML private ImageView imgLogo;
 	@FXML private TextField textCIF;
+	@FXML TextField textCP;
+	@FXML TextField textHerri;
+	@FXML TextField textProv;
 
 	private static Stage pStage;
 
@@ -103,6 +106,9 @@ public class datosAsociacionGUI extends Application{
                 	textBanco4.setText(banc[3]);
                 	textNumeracion.setText(rs.getObject("numeracion_de_socios").toString());
                 	textCIF.setText(rs.getObject("CIF").toString());
+                	textCP.setText(rs.getObject("cp").toString());
+                	textHerri.setText(rs.getObject("localidad").toString());
+                	textProv.setText(rs.getObject("provincia").toString());
                 	/*ResultSet rs2 = stmt.executeQuery("SELECT nombre, apellido FROM socio WHERE DNI='"+rs.getObject("presidente")+"'");
                 	while ( rs2.next() )
                     {

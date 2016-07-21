@@ -66,7 +66,7 @@ public class datuBasea {
 	            		+ " cuenta_corriente varchar(50),"
 	            		+ " numeracion_de_socios varchar(50),"
 	            		+ " CIF varchar(50))");
-	            stmt.executeUpdate("INSERT INTO asociacion  VALUES ('1','nombre','tel1','tel2','presidente','logo','direccion','cuenta corriente 1 2','numeracion_de_socios','CIF')");
+	            //stmt.executeUpdate("INSERT INTO asociacion  VALUES ('1','nombre','tel1','tel2','presidente','logo','direccion','cuenta corriente 1 2','numeracion_de_socios','CIF')");
 	            stmt.executeUpdate( "CREATE TABLE socioActividad ( "
 	            		+ " actividadId varchar(50),"
 	            		+ " socioApuntado varchar(50),"

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="915.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.editarAsociacionGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="987.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.editarAsociacionGUI">
   <children>
     <TextField fx:id="textNombre" layoutX="162.0" layoutY="56.0" prefWidth="200.0" />
     <TextField fx:id="textCIF" layoutX="162.0" layoutY="103.0" prefWidth="168.0" text="" />
@@ -20,20 +20,20 @@
     <TextField fx:id="textBanco2" layoutX="233.0" layoutY="294.0" prefWidth="37.0" />
     <TextField fx:id="textBanco3" layoutX="274.0" layoutY="294.0" prefWidth="24.0" />
     <TextField fx:id="textBanco4" layoutX="305.0" layoutY="294.0" prefWidth="88.0" />
-    <TextArea fx:id="textDireccion" layoutX="627.0" layoutY="242.0" prefHeight="81.0" prefWidth="265.0" wrapText="true" />
+    <TextArea fx:id="textDireccion" layoutX="528.0" layoutY="210.0" prefHeight="40.0" prefWidth="145.0" wrapText="true" />
     <TextField fx:id="textPresi" layoutX="190.0" layoutY="365.0" prefWidth="200.0" />
-    <Button fx:id="btnAtras" layoutX="641.0" layoutY="453.0" minHeight="43.0" mnemonicParsing="false" onAction="#atras" prefHeight="96.0" prefWidth="101.99990000000253" text="" />
-    <Button fx:id="btnGuardar" layoutX="106.0" layoutY="442.0" mnemonicParsing="false" onAction="#guardar" prefHeight="107.0" prefWidth="112.0" text="" underline="false" />
+    <Button fx:id="btnAtras" layoutX="699.0" layoutY="468.0" minHeight="43.0" mnemonicParsing="false" onAction="#atras" prefHeight="96.0" prefWidth="101.99990000000253" text="" />
+    <Button fx:id="btnGuardar" layoutX="110.0" layoutY="477.0" mnemonicParsing="false" onAction="#guardar" prefHeight="107.0" prefWidth="112.0" text="" underline="false" />
     <Label layoutX="27.0" layoutY="355.0" prefHeight="21.999908447265625" text="Presitende">
       <font>
         <Font size="20.0" fx:id="x1" />
       </font>
     </Label>
-    <Label font="$x1" layoutX="479.0" layoutY="242.0" text="Dirección" />
+    <Label font="$x1" layoutX="421.0" layoutY="204.0" text="Dirección" />
     <Label font="$x1" layoutX="27.0" layoutY="197.0" text="Tel.:" />
-    <Label font="$x1" layoutX="479.0" layoutY="355.0" text="Numeracion de socios" />
+    <Label font="$x1" layoutX="419.0" layoutY="346.0" text="Numeracion de socios" />
     <Label font="$x1" layoutX="27.0" layoutY="280.0" text="Cuenta corriente" />
-    <ChoiceBox fx:id="textNumeracion" layoutX="720.0" layoutY="358.0" prefWidth="172.0">
+    <ChoiceBox fx:id="textNumeracion" layoutX="635.0" layoutY="363.0" prefWidth="172.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Sumatorio" />
@@ -41,8 +41,7 @@
         </FXCollections>
       </items>
     </ChoiceBox>
-    <Button id="btnExaminarFoto" fx:id="btnExaminar" layoutX="709.0" layoutY="89.0" mnemonicParsing="false" onAction="#examinar" prefHeight="107.0" prefWidth="129.0" text="" />
-    <Label fx:id="mezua" layoutX="73.0" layoutY="415.0" prefWidth="233.0" text="" />
+    <Button id="btnExaminarFoto" fx:id="btnExaminar" layoutX="685.0" layoutY="55.0" mnemonicParsing="false" onAction="#examinar" prefHeight="107.0" prefWidth="129.0" text="" />
     <Label font="$x1" layoutX="25.0" layoutY="92.0" text="CIF" />
     <Label font="$x1" layoutX="25.0" layoutY="40.0" text="Nombre" />
     <Label font="$x1" layoutX="28.0" layoutY="376.0" text="Zuzendaria">
@@ -58,21 +57,30 @@
       </image>
     </ImageView>
     <Label font="$x1" layoutX="25.0" layoutY="299.0" text="Kontu korrontea" textFill="$x2" />
-    <Label font="$x1" layoutX="479.0" layoutY="266.0" text="Helbidea" textFill="$x2" />
-    <Label font="$x1" layoutX="479.0" layoutY="379.0" text="Bazkide numerazioa" textFill="$x2" />
-    <Label layoutX="126.0" layoutY="427.0" text="Guardar">
+    <Label font="$x1" layoutX="421.0" layoutY="228.0" text="Helbidea" textFill="$x2" />
+    <Label font="$x1" layoutX="419.0" layoutY="370.0" text="Bazkide numerazioa" textFill="$x2" />
+    <Label layoutX="130.0" layoutY="462.0" text="Guardar">
       <font>
         <Font size="15.0" fx:id="x3" />
       </font>
     </Label>
-    <Label font="$x3" layoutX="126.0" layoutY="549.0" text="Gorde" textFill="#bfbfbf" />
-    <Label font="$x3" layoutX="675.0" layoutY="437.0" text="Atras" />
-    <Label font="$x3" layoutX="672.0" layoutY="544.0" text="Atzera">
+    <Label font="$x3" layoutX="130.0" layoutY="584.0" text="Gorde">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x4" />
       </textFill>
     </Label>
-    <Label font="$x3" layoutX="730.0" layoutY="78.0" text="Buscar foto" />
-    <Label font="$x3" layoutX="730.0" layoutY="199.0" text="Bilatu argazkia" textFill="$x4" />
+    <Label font="$x3" layoutX="733.0" layoutY="452.0" text="Atras" />
+    <Label font="$x3" layoutX="730.0" layoutY="559.0" text="Atzera" textFill="$x2" />
+    <Label font="$x3" layoutX="706.0" layoutY="44.0" text="Buscar foto" />
+    <Label font="$x3" layoutX="706.0" layoutY="165.0" text="Bilatu argazkia" textFill="$x2" />
+    <Label font="$x1" layoutX="421.0" layoutY="263.0" text="C.P" />
+    <Label font="$x1" layoutX="421.0" layoutY="287.0" text="P.K" textFill="$x4" />
+    <TextField fx:id="textCP" layoutX="528.0" layoutY="279.0" prefWidth="74.0" />
+    <Label font="$x1" layoutX="697.0" layoutY="261.0" text="Localidad" />
+    <Label font="$x1" layoutX="697.0" layoutY="285.0" text="Herria" textFill="$x4" />
+    <TextField fx:id="textHerri" layoutX="790.0" layoutY="277.0" prefWidth="124.0" />
+    <Label font="$x1" layoutX="697.0" layoutY="208.0" text="Prov." />
+    <Label font="$x1" layoutX="697.0" layoutY="232.0" text="Probintzia" textFill="$x4" />
+    <TextField fx:id="textProv" layoutX="790.0" layoutY="224.0" prefWidth="123.9998779296875" />
   </children>
 </AnchorPane>

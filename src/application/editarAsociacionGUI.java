@@ -42,6 +42,9 @@ public class editarAsociacionGUI extends Application {
 	@FXML private ImageView imgLogo;
 	@FXML private Label mezua; 
 	@FXML private TextField textCIF;
+	@FXML TextField textCP;
+	@FXML TextField textHerri;
+	@FXML TextField textProv;
 	
 	private static String imgPath;
 	private static Stage pStage;
@@ -60,7 +63,8 @@ public class editarAsociacionGUI extends Application {
                     //TODO +"presidente='"
                     + "', logo='"+imgPath+"', direccion='"+textDireccion.getText()+"', cuenta_corriente='" +
                     textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
-                    "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"' WHERE id='1'"); //TODO... bete
+                    "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"' "
+                    		+ "cp='"+textCP.getText()+"', localidad='"+textHerri.getText()+"', provincia='"+textProv+"' WHERE id='1'"); //TODO... bete
                 	
         } catch ( Exception e )
         {

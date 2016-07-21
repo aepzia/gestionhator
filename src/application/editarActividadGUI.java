@@ -34,7 +34,8 @@ public class editarActividadGUI extends Application {
 	@FXML DatePicker hasData;
 	@FXML DatePicker bukData;
 	@FXML TextField textNombre;
-	
+
+
 	private static Stage pStage;
 	private static Actividad aukera;
 	@FXML private void atras(){
@@ -58,7 +59,7 @@ public class editarActividadGUI extends Application {
             		+"',tpActividad='"+btnTipo.getSelectionModel().getSelectedItem()+"',monitorDNI='"+btnBegiralea.getSelectionModel().getSelectedItem()+"',fechaIni='"+hasData.getValue()
             		+"',fechaFin='"+bukData.getValue()+"',horaIni='"+horaIni +"',horaFin='"+horaFin
             		+"',nombre='"+textNombre.getText()+
-            		"',numero_de_plazas='"+textPlazaKop.getText()+"',precio='"+textPrezioa.getText() + "WHERE id='"+aukera.getId()+"'";
+            		"',numero_de_plazas='"+textPlazaKop.getText()+"',precio='"+textPrezioa.getText() + "' WHERE id='"+aukera.getId()+"'";
     		System.out.println(bukData.getValue());
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
