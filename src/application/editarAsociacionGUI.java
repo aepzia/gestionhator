@@ -54,20 +54,22 @@ public class editarAsociacionGUI extends Application {
 		preWindow.start(getPrimaryStage());
 	}
 	@FXML private void guardar(){
+		boolean arazoa=false;
 		try
         {
 			Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
-            stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"', tel1='"+textTel1.getText()+"', tel2='"+textTel2.getText()
+            stmt.executeUpdate("Insert into asociacion ('"+textNombre.getText()+"', '"+textTel1.getText()+"', '"+textTel2.getText()
                     //TODO +"presidente='"
-                    + "', logo='"+imgPath+"', direccion='"+textDireccion.getText()+"', cuenta_corriente='" +
+                    + "', '"+imgPath+"', '"+textDireccion.getText()+"', '"+textCP.getText()+"', '"+textHerri.getText()+"', '"+textProv+"','" +
                     textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
-                    "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"' "
-                    		+ "cp='"+textCP.getText()+"', localidad='"+textHerri.getText()+"', provincia='"+textProv+"' WHERE id='1'"); //TODO... bete
+                    "', '"+textNumeracion.getSelectionModel().getSelectedItem()+"' "
+                    		+ ",'"+textCIF+"')"); //TODO... bete
                 	
         } catch ( Exception e )
         {
+        	arazoa = true;
 			e.printStackTrace();
         }
 		System.out.println("Gorde da");

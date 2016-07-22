@@ -53,7 +53,6 @@ public class datuBasea {
 	            		+ " numero_disponibles varchar(50),"
 	            		+ " precio varchar(50))");
 	            stmt.executeUpdate( "CREATE TABLE asociacion ( "
-	            		+ " id  varchar(50)NOT NULL PRIMARY KEY,"
 	            		+ " izena varchar(50),"
 	            		+ " tel1 varchar(50),"
 	            		+ " tel2 varchar(50),"
