@@ -15,6 +15,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -60,19 +62,34 @@ public class editarAsociacionGUI extends Application {
 			Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
-            stmt.executeUpdate("Insert into asociacion ('"+textNombre.getText()+"', '"+textTel1.getText()+"', '"+textTel2.getText()
-                    //TODO +"presidente='"
-                    + "', '"+imgPath+"', '"+textDireccion.getText()+"', '"+textCP.getText()+"', '"+textHerri.getText()+"', '"+textProv+"','" +
-                    textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
-                    "', '"+textNumeracion.getSelectionModel().getSelectedItem()+"' "
-                    		+ ",'"+textCIF+"')"); //TODO... bete
+    		stmt.executeUpdate("UPDATE asociacion SET izena='"+textNombre.getText()+"', tel1='"+textTel1.getText()+"', tel2='"+textTel2.getText()
+            //TODO +"presidente='"
+            + "', logo='"+imgPath+"', direccion='"+textDireccion.getText()+"', cuenta_corriente='" +
+            textBanco1.getText() + " "+textBanco2.getText()+" "+textBanco3.getText()+" "+textBanco4.getText()+
+            "', numeracion_de_socios='"+textNumeracion.getSelectionModel().getSelectedItem()+"',"
++ "cp='"+textCP.getText()+"', localidad='"+textHerri.getText()+"', provincia='"+textProv.getText()+"' WHERE id='1'"); 
                 	
         } catch ( Exception e )
         {
         	arazoa = true;
 			e.printStackTrace();
         }
-		System.out.println("Gorde da");
+		if(!arazoa){
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Aviso");
+			alert.setHeaderText("Los datos han sido bien guardados");
+			alert.setContentText("Datuak ondo gorde dira");
+			alert.showAndWait();
+			datosAsociacionGUI preWindow = new datosAsociacionGUI();
+			preWindow.start(getPrimaryStage());
+		}else{
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error");
+			alert.setHeaderText("Ha habido un error, vulve a intentarlo	");
+			alert.setContentText("Errore bat egon da, mesedez saiatu berriro");
+
+			alert.showAndWait();
+		}
 		
 	}
 	@FXML private void examinar(){

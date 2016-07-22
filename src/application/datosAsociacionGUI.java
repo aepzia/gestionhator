@@ -87,9 +87,10 @@ public class datosAsociacionGUI extends Application{
         		Statement stmt = conn.createStatement();
 
                 ResultSet rs = stmt.executeQuery("SELECT * FROM asociacion");
-           
+                System.out.println("ifiehu");
                 while ( rs.next() )
                 {
+                	System.out.println(rs.getObject("id").toString());
                 	textNombre.setText(rs.getObject("izena").toString());
                 	textTel1.setText(rs.getObject("tel1").toString());
                 	textTel2.setText(rs.getObject("tel2").toString());

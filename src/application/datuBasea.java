@@ -53,19 +53,20 @@ public class datuBasea {
 	            		+ " numero_disponibles varchar(50),"
 	            		+ " precio varchar(50))");
 	            stmt.executeUpdate( "CREATE TABLE asociacion ( "
+	            		+ " id  varchar(50)NOT NULL PRIMARY KEY,"
 	            		+ " izena varchar(50),"
 	            		+ " tel1 varchar(50),"
 	            		+ " tel2 varchar(50),"
 	            		+ " presidente varchar(50),"
 	            		+ " logo varchar(2000),"
-	            		+ " direccion varchar(50) NOT NULL,"
-	            		+ " cp varchar(50) NOT NULL,"
-	            		+ " localidad varchar(50) NOT NULL,"
-	            		+ " provincia varchar(50) NOT NULL,"
+	            		+ " direccion varchar(50),"
+	            		+ " cp varchar(50),"
+	            		+ " localidad varchar(50),"
+	            		+ " provincia varchar(50),"
 	            		+ " cuenta_corriente varchar(50),"
 	            		+ " numeracion_de_socios varchar(50),"
 	            		+ " CIF varchar(50))");
-	            //stmt.executeUpdate("INSERT INTO asociacion  VALUES ('1','nombre','tel1','tel2','presidente','logo','direccion','cuenta corriente 1 2','numeracion_de_socios','CIF')");
+	            stmt.executeUpdate("INSERT INTO asociacion  (id) VALUES ('1')");
 	            stmt.executeUpdate( "CREATE TABLE socioActividad ( "
 	            		+ " actividadId varchar(50),"
 	            		+ " socioApuntado varchar(50),"
