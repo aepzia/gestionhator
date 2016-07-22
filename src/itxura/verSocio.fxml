@@ -20,15 +20,15 @@
     <TextField fx:id="textTel1" layoutX="320.0" layoutY="392.0" prefWidth="200.0" />
     <TextField fx:id="textTel2" layoutX="320.0" layoutY="417.0" prefWidth="200.0" />
     <TextField fx:id="textBtype" layoutX="198.0" layoutY="170.0" prefWidth="113.0" />
-    <TextArea fx:id="textDireccion" layoutX="797.0" layoutY="321.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <TextArea fx:id="textDireccion" layoutX="639.0" layoutY="251.0" prefHeight="39.0" prefWidth="145.0" wrapText="true" />
     <TextField fx:id="textAlta" layoutX="320.0" layoutY="341.0" prefWidth="200.0" />
-    <TextField fx:id="textSexo" layoutX="692.0" layoutY="56.0" prefWidth="26.0" />
-    <TextField fx:id="textEmail" layoutX="695.0" layoutY="187.0" prefWidth="200.0" />
-    <TextArea fx:id="textOtros" layoutX="797.0" layoutY="397.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
-    <TextField fx:id="textNum" layoutX="695.0" layoutY="123.0" prefWidth="71.0" />
+    <TextField fx:id="textSexo" layoutX="631.0" layoutY="51.0" prefWidth="26.0" />
+    <TextField fx:id="textEmail" layoutX="636.0" layoutY="154.0" prefWidth="200.0" />
+    <TextArea fx:id="textOtros" layoutX="733.0" layoutY="397.0" prefHeight="63.0" prefWidth="200.0" wrapText="true" />
+    <TextField fx:id="textNum" layoutX="636.0" layoutY="106.0" prefWidth="71.0" />
     <TextField fx:id="textTelEmergencia" layoutX="320.0" layoutY="471.0" prefWidth="200.0" />
     <CheckBox fx:id="opPensionista" layoutX="187.0" layoutY="215.0" prefWidth="26.0" />
-    <TextField fx:id="textBanco" layoutX="797.0" layoutY="281.0" prefWidth="200.0" />
+    <TextField fx:id="textBanco" layoutX="738.0" layoutY="210.0" prefWidth="200.0" />
     <ImageView fx:id="imgFoto" fitHeight="212.0" fitWidth="212.0" layoutX="320.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@perfil.jpg" />
@@ -39,7 +39,7 @@
         <Font size="20.0" fx:id="x2" />
       </font>
     </Label>
-    <Label font="$x2" layoutX="612.0" layoutY="310.0" text="Dirección" />
+    <Label font="$x2" layoutX="551.0" layoutY="246.0" text="Dirección" />
     <Button id="btnFicha" fx:id="btnInprimirFicha" layoutX="120.0" layoutY="561.0" mnemonicParsing="false" onAction="#printFicha" prefHeight="55.0" prefWidth="85.0" text="" />
     <Button id="btnActividadesSocio" fx:id="btnActividades" layoutX="539.0" layoutY="560.0" mnemonicParsing="false" onAction="#verActividadesSocio" prefHeight="63.0" prefWidth="83.0" text="" />
     <Button fx:id="btnAtras" layoutX="957.0" layoutY="560.0" mnemonicParsing="false" onAction="#atras" prefHeight="63.0" prefWidth="79.0" text="" />
@@ -51,15 +51,15 @@
         <Color blue="0.750" green="0.750" red="0.750" fx:id="x1" />
       </textFill>
     </Label>
-    <Label font="$x2" layoutX="610.0" layoutY="40.0" text="Sexo" />
+    <Label font="$x2" layoutX="549.0" layoutY="35.0" text="Sexo" />
     <Label font="$x2" layoutX="56.0" layoutY="103.0" text="DNI" />
-    <Label font="$x2" layoutX="610.0" layoutY="184.0" text="e-mail" textFill="BLACK" />
-    <Label font="$x2" layoutX="610.0" layoutY="111.0" text="Nº" />
+    <Label font="$x2" layoutX="551.0" layoutY="151.0" text="e-mail" textFill="BLACK" />
+    <Label font="$x2" layoutX="551.0" layoutY="94.0" text="Nº" />
     <Label font="$x2" layoutX="54.0" layoutY="209.0" text="Pensionista" />
     <Label font="$x2" layoutX="53.0" layoutY="453.0" text="Tel. de emergencia" />
-    <Label font="$x2" layoutX="610.0" layoutY="391.0" text="Otras observaciones" />
-    <Label font="$x2" layoutX="611.0" layoutY="458.0" prefHeight="39.0" prefWidth="219.0" text="Proteccion de datos" />
-    <Button fx:id="btnVerLOPD" alignment="CENTER" cancelButton="false" defaultButton="false" layoutX="828.0" layoutY="476.0" minHeight="21.999900000002526" mnemonicParsing="false" onAction="#verLOPD" prefHeight="63.0" prefWidth="52.0" style="" text="" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" wrapText="true">
+    <Label font="$x2" layoutX="546.0" layoutY="391.0" text="Otras observaciones" />
+    <Label font="$x2" layoutX="547.0" layoutY="458.0" prefHeight="39.0" prefWidth="219.0" text="Proteccion de datos" />
+    <Button fx:id="btnVerLOPD" alignment="CENTER" cancelButton="false" defaultButton="false" layoutX="764.0" layoutY="476.0" minHeight="21.999900000002526" mnemonicParsing="false" onAction="#verLOPD" prefHeight="63.0" prefWidth="52.0" style="" text="" textAlignment="CENTER" textFill="BLACK" textOverrun="ELLIPSIS" wrapText="true">
       <font>
         <Font size="12.0" />
       </font>
@@ -67,25 +67,25 @@
         <URL value="@style.css" />
       </stylesheets>
     </Button>
-    <Label font="$x2" layoutX="610.0" layoutY="262.0" text="Cuenta corriente" />
+    <Label font="$x2" layoutX="551.0" layoutY="191.0" text="Cuenta corriente" />
     <Label font="$x2" layoutX="56.0" layoutY="157.0" text="Tipo de socio" />
     <Label font="$x2" layoutX="54.0" layoutY="229.0" text="Pentsioduna" textFill="$x1" />
     <Label font="$x2" layoutX="56.0" layoutY="125.0" text="NAN" textFill="$x1" />
-    <Label font="$x2" layoutX="609.0" layoutY="61.0" prefWidth="52.0" text="Sexu" textFill="$x1" />
-    <Label font="$x2" layoutX="610.0" layoutY="127.0" text="Znbk." textFill="$x1" />
+    <Label font="$x2" layoutX="548.0" layoutY="56.0" prefWidth="52.0" text="Sexu" textFill="$x1" />
+    <Label font="$x2" layoutX="551.0" layoutY="110.0" text="Znbk." textFill="$x1" />
     <Label font="$x2" layoutX="51.0" layoutY="293.0" text="Jaioteguna" textFill="$x1" />
     <Label font="$x2" layoutX="54.0" layoutY="352.0" text="Izen ematea" textFill="$x1" />
     <Label font="$x2" layoutX="54.0" layoutY="480.0" text="Larrialdietarako telefonoa" textFill="$x1" />
-    <Label font="$x2" layoutX="612.0" layoutY="278.0" text="Kontu korrontea" textFill="$x1" />
-    <Label font="$x2" layoutX="612.0" layoutY="328.0" text="Helbidea" textFill="$x1" />
-    <Label font="$x2" layoutX="609.0" layoutY="407.0" text="Bestelako iruzkinak" textFill="$x1" />
-    <Label font="$x2" layoutX="610.0" layoutY="487.0" text="Datuen babesa" textFill="$x1" />
-    <Label layoutX="839.0" layoutY="464.0" text="Ver">
+    <Label font="$x2" layoutX="553.0" layoutY="207.0" text="Kontu korrontea" textFill="$x1" />
+    <Label font="$x2" layoutX="551.0" layoutY="264.0" text="Helbidea" textFill="$x1" />
+    <Label font="$x2" layoutX="545.0" layoutY="407.0" text="Bestelako iruzkinak" textFill="$x1" />
+    <Label font="$x2" layoutX="546.0" layoutY="487.0" text="Datuen babesa" textFill="$x1" />
+    <Label layoutX="775.0" layoutY="464.0" text="Ver">
       <font>
         <Font size="15.0" fx:id="x3" />
       </font>
     </Label>
-    <Label font="$x3" layoutX="839.0" layoutY="533.0" prefHeight="22.0" text="Ikusi">
+    <Label font="$x3" layoutX="775.0" layoutY="533.0" prefHeight="22.0" text="Ikusi">
       <textFill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x5" />
       </textFill>
@@ -98,5 +98,14 @@
     <Label font="$x3" layoutX="350.0" layoutY="630.0" prefHeight="22.0" text="Editatu" textFill="$x5" />
     <Label font="$x3" layoutX="539.0" layoutY="540.0" text="Actividades" />
     <Label font="$x3" layoutX="556.0" layoutY="623.0" prefHeight="22.0" text="Ekintzak" textFill="$x5" />
+    <Label font="$x2" layoutX="551.0" layoutY="310.0" text="C.P" />
+    <Label font="$x2" layoutX="550.0" layoutY="335.0" text="P.K" textFill="$x5" />
+    <TextField fx:id="textCP" layoutX="664.0" layoutY="325.0" prefWidth="74.0" />
+    <Label font="$x2" layoutX="790.0" layoutY="313.0" text="Localidad" />
+    <Label font="$x2" layoutX="790.0" layoutY="337.0" text="Herria" textFill="$x5" />
+    <TextField fx:id="textHerri" layoutX="895.0" layoutY="329.0" prefWidth="124.0" />
+    <Label font="$x2" layoutX="792.0" layoutY="250.0" text="Prov." />
+    <Label font="$x2" layoutX="792.0" layoutY="269.0" text="Probintzia" textFill="$x5" />
+    <TextField fx:id="textProv" layoutX="895.0" layoutY="260.0" prefWidth="123.9998779296875" />
   </children>
 </AnchorPane>

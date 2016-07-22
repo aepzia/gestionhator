@@ -64,6 +64,9 @@ public class editarSocioGUI extends Application {
 	@FXML public Button btnVer;
 	@FXML public Button btnAtras;
 	@FXML public Button btnGuardar;
+	@FXML TextField textCP;
+	@FXML TextField textHerri;
+	@FXML TextField textProv;
 	
 	private static String imgPath;
 	private static String pdfPath;
@@ -94,7 +97,7 @@ public class editarSocioGUI extends Application {
             		+"',sexo='"+opSexo.getSelectionModel().getSelectedItem()+
             		"',direccion='"+textDireccion.getText()+"',tel1='"+textTel1.getText()+
             		"',tel2='"+textTel2.getText()+"',telContacto='"+textTelEm.getText()
-            		+"',email='"+textEmail.getText()+"',foto'"+imgPath+"',cuenta_corriente='"+banco+"',otras_observaciones='"+textOtros.getText()+"',proteccion_de_datos='"+pdfPath+"' where DNI='"+bazkidea.getDNI()+"'";
+            		+"',email='"+textEmail.getText()+"',foto'"+imgPath+"',cuenta_corriente='"+banco+"',otras_observaciones='"+textOtros.getText()+"',proteccion_de_datos='"+pdfPath+",cp='"+textCP.getText()+"', localidad='"+textHerri.getText()+"', provincia='"+textProv.getText()+"' where DNI='"+bazkidea.getDNI()+"'";
     		
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
@@ -247,6 +250,9 @@ public class editarSocioGUI extends Application {
     	//textBanco.setText(bazkidea.getCuentaCorriente());
     	textDireccion.setText(bazkidea.getHelbidea());
     	textOtros.setText(bazkidea.getComentarios());
+    	textCP.setText(bazkidea.getCp());
+    	textProv.setText(bazkidea.getProvincia());
+    	textHerri.setText(bazkidea.getLocalidad());
     	if(!bazkidea.getFoto().equals("null")){
 			imgFoto.setImage((new Image(bazkidea.getFoto())));		
 		}

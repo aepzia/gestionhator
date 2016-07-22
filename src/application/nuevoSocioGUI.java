@@ -65,6 +65,9 @@ public class nuevoSocioGUI extends Application {
 	@FXML public Button btnVer;
 	@FXML public Button btnAtras;
 	@FXML public Button btnGuardar;
+	@FXML TextField textCP;
+	@FXML TextField textHerri;
+	@FXML TextField textProv;
 	
 	private static String imgPath;
 	private static String pdfPath;
@@ -95,7 +98,7 @@ public class nuevoSocioGUI extends Application {
             		+"','"+opSexo.getSelectionModel().getSelectedItem()+
             		"','"+textDireccion.getText()+"','"+textTel1.getText()+
             		"','"+textTel2.getText()+"','"+textTelEm.getText()
-            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"','','')";
+            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"','','','"+textCP.getText()+"', '"+textHerri.getText()+"', '"+textProv.getText()+"')";
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
             stmt.close();    	

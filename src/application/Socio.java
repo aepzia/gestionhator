@@ -33,6 +33,9 @@ public class Socio implements Comparator {
 	private String motivoBaja;
 	private String comentarios;
 	private String LOPD;
+	private String cp;
+	private String localidad;
+	private String provincia;
 
 	public List<String> actividades;
 	public List<Boolean> pagos;
@@ -60,6 +63,9 @@ public class Socio implements Comparator {
 		setLOPD(rs.getObject("proteccion_de_datos").toString());
 		setFechaBaja(rs.getObject("fechaBaja").toString());
 		setMotivoBaja(rs.getObject("motivoBaja").toString());
+		setCp(rs.getObject("cp").toString());
+		setLocalidad(rs.getObject("localidad").toString());
+		setProvincia(rs.getObject("provincia").toString());
 	}
 	@Override
 	public String toString(){
@@ -218,6 +224,24 @@ public class Socio implements Comparator {
 	public int compare(Object arg0, Object arg1) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	public String getCp() {
+		return cp;
+	}
+	public void setCp(String cp) {
+		this.cp = cp;
+	}
+	public String getLocalidad() {
+		return localidad;
+	}
+	public void setLocalidad(String localidad) {
+		this.localidad = localidad;
+	}
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
 	}
 		
 }

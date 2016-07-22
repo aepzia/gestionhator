@@ -47,7 +47,9 @@ public class verSocioGUI extends Application {
     @FXML public Button btnActividades;
     @FXML public Button btnExaminarFoto;
     @FXML public Button btnExaminarLOPD;
-
+    @FXML TextField textCP;
+	@FXML TextField textHerri;
+	@FXML TextField textProv;
 
 	private static Stage pStage;
     private static Socio bazkidea;
@@ -134,9 +136,13 @@ public class verSocioGUI extends Application {
     	textBanco.setText(bazkidea.getCuentaCorriente());
     	textDireccion.setText(bazkidea.getHelbidea());
     	textOtros.setText(bazkidea.getComentarios());
+    	textCP.setText(bazkidea.getCp());
+    	textProv.setText(bazkidea.getProvincia());
+    	textHerri.setText(bazkidea.getLocalidad());
     	if(!bazkidea.getFoto().equals("null")){
 			imgFoto.setImage((new Image(bazkidea.getFoto())));		
 		}
+    	
     	
     	
     	
