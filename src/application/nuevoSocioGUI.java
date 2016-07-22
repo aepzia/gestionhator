@@ -78,35 +78,32 @@ public class nuevoSocioGUI extends Application {
 		w.start(getPrimaryStage());
 	}
 	@FXML private void guardar(){
-		String currentData = "";
+	
 		boolean errorea= false;
 		try
         {
-			SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
-			Date fecha = new Date();
-			currentData =formatoDeFecha.format(fecha);
 			Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
     		String banco = textBanco1.getText()+"_"+textBanco2.getText()+"_"+textBanco3.getText()+"_"+textBanco4.getText();
     		String sql = "INSERT INTO socio (nSocio,DNI,pensionista,nombre,apellido,fechaNacimiento,tpSocio,"
     				+ "sexo,direccion,tel1,tel2,telContacto,email,fechaAlta,foto,cuenta_corriente,"
-    				+ "otras_observaciones,proteccion_de_datos,fechaBaja,motivoBaja) VALUES("
+    				+ "otras_observaciones,proteccion_de_datos,fechaBaja,motivoBaja,cp,localidad,provincia) VALUES("
             		+opNum.getSelectionModel().getSelectedItem()
             		+",'"+textDNI.getText()+"','"+opPensionista.isSelected()+"','"+textNombre.getText()
             		+"','"+textApellido.getText()+"','"+ textNacimiento.getValue() +"','"+ opTipo.getSelectionModel().getSelectedItem()
             		+"','"+opSexo.getSelectionModel().getSelectedItem()+
             		"','"+textDireccion.getText()+"','"+textTel1.getText()+
             		"','"+textTel2.getText()+"','"+textTelEm.getText()
-            		+"','"+textEmail.getText()+"','"+currentData+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"','','','"+textCP.getText()+"', '"+textHerri.getText()+"', '"+textProv.getText()+"')";
-    		System.out.println(sql);
+            		+"','"+textEmail.getText()+"','"+textNacimiento.getValue()+"','"+imgPath+"','"+banco+"','"+textOtros.getText()+"','"+pdfPath+"','','','"+textCP.getText()+"','"+textHerri.getText()+"','"+textProv.getText()+"')";
+System.out.println(sql);
     		stmt.executeUpdate(sql);
             stmt.close();    	
             conn.close();
         
         } 
 		catch ( Exception e ){
-			e.printStackTrace();
+			//e.printStackTrace();
 			if (e instanceof NullPointerException){
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setTitle("Information Dialog");

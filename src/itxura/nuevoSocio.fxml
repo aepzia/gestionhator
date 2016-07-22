@@ -134,7 +134,7 @@
     <TextField fx:id="textCP" layoutX="738.0" layoutY="449.0" prefWidth="74.0" />
     <Label font="$x1" layoutX="894.0" layoutY="435.0" text="Localidad" />
     <Label font="$x1" layoutX="894.0" layoutY="459.0" text="Herria" textFill="$x4" />
-    <TextField id="textHerri" fx:id="textHerria" layoutX="999.0" layoutY="451.0" prefWidth="124.0" />
+    <TextField fx:id="textHerri" layoutX="999.0" layoutY="451.0" prefWidth="124.0" />
     <Label font="$x1" layoutX="896.0" layoutY="367.0" text="Prov." />
     <Label font="$x1" layoutX="896.0" layoutY="391.0" text="Probintzia" textFill="$x4" />
     <TextField fx:id="textProv" layoutX="999.0" layoutY="382.0" prefWidth="123.9998779296875" />

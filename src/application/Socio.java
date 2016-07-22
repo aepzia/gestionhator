@@ -69,9 +69,10 @@ public class Socio implements Comparator {
 	}
 	@Override
 	public String toString(){
-		String[] fecha = getFechaNacimiento().split("/");
+		String[] fecha = getFechaNacimiento().split("-");
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-		int añoNacimiento = 0;
+		//System.out.println(fecha[2]);
+		int añoNacimiento = Integer.parseInt(fecha[0]);
 		int edad = currentYear -añoNacimiento;
 		return getnSocio() + " " + getIzena()+" "+ getAbizena()+" "+getFechaAlta()+" "+edad+" años/urte";
 	}
