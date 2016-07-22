@@ -78,7 +78,9 @@ public class Socio implements Comparator {
 	}
 	public String lortuInformazioa(){
 		return getIzena()+" "+getAbizena()+"\n"+"NAN/DNI: " +getDNI()+"\n"+"Znb/Nº " +
-	getnSocio()+"\n"+"Tel.: "+getTel1()+" " + getTel2();
+	getnSocio()+"\n"+"Tel.: "+getTel1()+" " + getTel2()+
+	"\nAltako data / Fecha de Alta: "+getFechaAlta()+
+	"\nJaiotze data / Fecha de Nacimiento: "+getFechaNacimiento();
 	}
 	
 	
