@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Optional;
 
+import application.actividadesDeSocioGUI.ColorRectCell;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -22,11 +23,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 public class asignarActividadGUI extends Application {
 	
@@ -76,10 +81,10 @@ public class asignarActividadGUI extends Application {
 					String sql = "INSERT INTO socioActividad VALUES ('"+aukera.getId()+"','"+bazkidea.getDNI()+"','"+pagatua+"')";
 					System.out.println(sql);
 					stmt.executeUpdate(sql);
-					
+					int plazas = Integer.parseInt(aukera.getNumeroDisponibles())-1;
+					sql = "update actividad set numero_disponibles='"+plazas+"' where id='"+aukera.getId()+"'";
 					listActividades.getItems().remove(listActividades.getSelectionModel().getSelectedIndex());	
 					
-					//listActividades.getItems().remove(listActividades.getSelectionModel().getSelectedIndex());	
 					conn.close();
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -148,7 +153,14 @@ public class asignarActividadGUI extends Application {
 	    	    	handleSearchByKey(oldValue, (String)newValue);
 	    	    }
 	    	});
-	    	
+	    	listActividades.setCellFactory(new Callback<ListView<Actividad>, 
+	                ListCell<Actividad>>() {
+	                    @Override 
+	                    public ListCell<Actividad> call(ListView<Actividad> list) {
+	                        return new ColorRectCell();
+	                    }
+	                }
+	            );
 	    }
 	    public void handleSearchByKey(String oldVal, String newVal) {
 	        // If the number of characters in the text box is less than last time
@@ -183,5 +195,22 @@ public class asignarActividadGUI extends Application {
 	        }
 	        listActividades.setItems(subentries);
 	    }
-
+	    
+	    static class ColorRectCell extends ListCell<Actividad> {
+	        int i = 0;
+	    	@Override
+	        
+	        public void updateItem(Actividad item, boolean empty) {
+	            super.updateItem(item, empty);
+	 
+	            
+	            Text rect = new Text();
+	            if (item != null) {
+	            	if (Integer.parseInt(item.getNumeroDisponibles())<=0)
+	                rect.setFill(Color.web("Yellow"));
+	                rect.setText(item.toString());
+	                setGraphic(rect);
+	            }
+	        }
+	    }
 }

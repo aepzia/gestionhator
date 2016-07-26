@@ -73,22 +73,21 @@ public class nuevaActividadGUI extends Application {
 		String currentData = "";
 		try
         {
-			String horaIni = hasiOr.getSelectionModel().getSelectedItem()+":"+ hasiMin.getSelectionModel().getSelectedItem();
-			String horaFin = bukOr.getSelectionModel().getSelectedItem()+":"+ bukMin.getSelectionModel().getSelectedItem();
+			//String horaIni = hasiOr.getSelectionModel().getSelectedItem()+":"+ hasiMin.getSelectionModel().getSelectedItem();
+			//String horaFin = bukOr.getSelectionModel().getSelectedItem()+":"+ bukMin.getSelectionModel().getSelectedItem();
 			Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
     		Statement stmt = conn.createStatement();
     		int id = Controler.actiKop +1;
     		//TODO monitore clasea sortzean, onen DNIa gordeko da.
-    		String sql = "INSERT INTO actividad (id,tpActividad,monitorDNI,fechaIni,fechaFin,horaIni,horaFin,nombre,numero_de_plazas,precio)"
+    		String sql = "INSERT INTO actividad (id,tpActividad,nombre,numero_de_plazas,precio,numero_disponibles)"
     				+ "VALUES('"
             		+ id
-            		+"','"+btnTipoActi.getSelectionModel().getSelectedItem()+"','"+btnBegiralea.getSelectionModel().getSelectedItem()+"','"+hasData.getValue()
-            		+"','"+bukData.getValue()+"','"+horaIni +"','"+horaFin
+            		+"','"+btnTipoActi.getSelectionModel().getSelectedItem()
             		+"','"+textNombre.getText()+
-            		"','"+textPlazaKop.getText()+"','"+textPrezioa.getText()+
+            		"','"+textPlazaKop.getText()+"','"+textPrezioa.getText()+"','"+textPlazaKop.getText()+
             		"')";
-    		System.out.println(bukData.getValue());
+    		//System.out.println(bukData.getValue());
     		System.out.println(sql);
     		stmt.executeUpdate(sql);
             stmt.close();    	
