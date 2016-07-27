@@ -83,6 +83,7 @@ public class asignarActividadGUI extends Application {
 					stmt.executeUpdate(sql);
 					int plazas = Integer.parseInt(aukera.getNumeroDisponibles())-1;
 					sql = "update actividad set numero_disponibles='"+plazas+"' where id='"+aukera.getId()+"'";
+					stmt.executeUpdate(sql);
 					listActividades.getItems().remove(listActividades.getSelectionModel().getSelectedIndex());	
 					
 					conn.close();

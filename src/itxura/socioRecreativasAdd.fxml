@@ -9,69 +9,20 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.9998779296875" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevaActividadGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.9998779296875" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevaActividadGUI">
   <children>
-    <Label layoutX="59.0" layoutY="41.0" text="Bukatze data">
+    <Label layoutX="63.0" layoutY="41.0" text="Lekua">
       <font>
         <Font size="20.0" fx:id="x2" />
       </font>
       <textFill>
-        <Color blue="0.625" green="0.625" red="0.625" fx:id="x1" />
-      </textFill>
-    </Label>
-    <Label font="$x2" layoutX="59.0" layoutY="25.0" text="Fecha de finalización" />
-    <DatePicker fx:id="bukData" layoutX="276.0" layoutY="31.0" prefHeight="21.0" prefWidth="200.0" />
-    <Label font="$x2" layoutX="503.0" layoutY="42.0" text="Ordua" textFill="$x1" />
-    <Label font="$x2" layoutX="503.0" layoutY="26.0" text="Hora" />
-    <ChoiceBox fx:id="bukOr" layoutX="567.0" layoutY="40.0" prefWidth="65.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="00" />
-          <String fx:value="01" />
-          <String fx:value="02" />
-          <String fx:value="03" />
-          <String fx:value="04" />
-          <String fx:value="05" />
-          <String fx:value="06" />
-          <String fx:value="07" />
-          <String fx:value="08" />
-          <String fx:value="09" />
-          <String fx:value="10" />
-          <String fx:value="11" />
-          <String fx:value="12" />
-          <String fx:value="13" />
-          <String fx:value="14" />
-          <String fx:value="15" />
-          <String fx:value="16" />
-          <String fx:value="17" />
-          <String fx:value="18" />
-          <String fx:value="19" />
-          <String fx:value="20" />
-          <String fx:value="21" />
-          <String fx:value="22" />
-          <String fx:value="23" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <ChoiceBox fx:id="bukMin" layoutX="646.0" layoutY="40.0" prefWidth="65.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="00" />
-          <String fx:value="15" />
-          <String fx:value="30" />
-          <String fx:value="45" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <Label font="$x2" layoutX="61.0" layoutY="104.0" text="Lekua">
-      <textFill>
         <Color blue="0.624" green="0.624" red="0.624" fx:id="x4" />
       </textFill>
     </Label>
-    <Label font="$x2" layoutX="60.0" layoutY="86.0" text="Lugar" />
-    <TextField id="textPlazaKop" fx:id="textLugar" layoutX="278.0" layoutY="100.0" prefWidth="200.0" />
-    <Label font="$x2" layoutX="59.0" layoutY="160.0" text="Sartzen da:" textFill="$x4" />
-    <Label font="$x2" layoutX="60.0" layoutY="142.0" text="Incluye:" />
-    <TextArea fx:id="textIncluye" layoutX="276.0" layoutY="143.0" prefHeight="62.0" prefWidth="303.0" wrapText="true" />
+    <Label font="$x2" layoutX="62.0" layoutY="23.0" text="Lugar" />
+    <TextField id="textPlazaKop" fx:id="textLugar" layoutX="280.0" layoutY="37.0" prefWidth="200.0" />
+    <Label font="$x2" layoutX="61.0" layoutY="97.0" text="Sartzen da:" textFill="$x4" />
+    <Label font="$x2" layoutX="62.0" layoutY="79.0" text="Incluye:" />
+    <TextArea fx:id="textIncluye" layoutX="278.0" layoutY="80.0" prefHeight="62.0" prefWidth="303.0" wrapText="true" />
   </children>
 </AnchorPane>

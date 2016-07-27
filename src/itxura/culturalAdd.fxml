@@ -9,72 +9,23 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet style.css?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.9998779296875" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevaActividadGUI">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.9998779296875" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.nuevaActividadGUI">
   <children>
-    <Label layoutX="50.0" layoutY="59.0" text="Bukatze data">
+    <Label layoutX="46.0" layoutY="49.0" text="Lekua">
       <font>
         <Font size="20.0" fx:id="x2" />
       </font>
       <textFill>
-        <Color blue="0.625" green="0.625" red="0.625" fx:id="x1" />
-      </textFill>
-    </Label>
-    <Label font="$x2" layoutX="50.0" layoutY="43.0" text="Fecha de finalización" />
-    <DatePicker fx:id="bukData" layoutX="263.0" layoutY="55.0" prefHeight="21.0" prefWidth="200.0" />
-    <Label font="$x2" layoutX="494.0" layoutY="60.0" text="Ordua" textFill="$x1" />
-    <Label font="$x2" layoutX="494.0" layoutY="44.0" text="Hora" />
-    <ChoiceBox fx:id="bukOr" layoutX="558.0" layoutY="58.0" prefWidth="65.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="00" />
-          <String fx:value="01" />
-          <String fx:value="02" />
-          <String fx:value="03" />
-          <String fx:value="04" />
-          <String fx:value="05" />
-          <String fx:value="06" />
-          <String fx:value="07" />
-          <String fx:value="08" />
-          <String fx:value="09" />
-          <String fx:value="10" />
-          <String fx:value="11" />
-          <String fx:value="12" />
-          <String fx:value="13" />
-          <String fx:value="14" />
-          <String fx:value="15" />
-          <String fx:value="16" />
-          <String fx:value="17" />
-          <String fx:value="18" />
-          <String fx:value="19" />
-          <String fx:value="20" />
-          <String fx:value="21" />
-          <String fx:value="22" />
-          <String fx:value="23" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <ChoiceBox fx:id="bukMin" layoutX="637.0" layoutY="58.0" prefWidth="65.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="00" />
-          <String fx:value="15" />
-          <String fx:value="30" />
-          <String fx:value="45" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <Label font="$x2" layoutX="52.0" layoutY="122.0" text="Lekua">
-      <textFill>
         <Color blue="0.624" green="0.624" red="0.624" fx:id="x4" />
       </textFill>
     </Label>
-    <Label font="$x2" layoutX="51.0" layoutY="104.0" text="Lugar" />
-    <TextField id="textPlazaKop" layoutX="269.0" layoutY="118.0" prefWidth="200.0" />
-    <Label font="$x2" layoutX="52.0" layoutY="182.0" text="Autobusak" textFill="$x4" />
-    <Label font="$x2" layoutX="52.0" layoutY="164.0" prefWidth="94.99990844726562" text="Autobuses" />
-    <TextField id="textPlazaKop" layoutX="230.0" layoutY="180.0" prefWidth="65.0" />
-    <Label font="$x2" layoutX="316.0" layoutY="184.0" text="Autobus bakoitzeko plaza kopurua" textFill="$x4" />
-    <Label font="$x2" layoutX="316.0" layoutY="166.0" prefWidth="169.0" text="Plazas por autobus" />
-    <TextField id="textPlazaKop" layoutX="637.0" layoutY="173.0" prefWidth="65.0" />
+    <Label font="$x2" layoutX="45.0" layoutY="31.0" text="Lugar" />
+    <TextField fx:id="textLugar" layoutX="263.0" layoutY="45.0" prefWidth="200.0" />
+    <Label font="$x2" layoutX="46.0" layoutY="109.0" text="Autobusak" textFill="$x4" />
+    <Label font="$x2" layoutX="46.0" layoutY="91.0" prefWidth="94.99990844726562" text="Autobuses" />
+    <TextField fx:id="textNAuto" layoutX="224.0" layoutY="107.0" prefWidth="65.0" />
+    <Label font="$x2" layoutX="310.0" layoutY="111.0" text="Autobus bakoitzeko plaza kopurua" textFill="$x4" />
+    <Label font="$x2" layoutX="310.0" layoutY="93.0" prefWidth="169.0" text="Plazas por autobus" />
+    <TextField fx:id="textPAuto" layoutX="631.0" layoutY="100.0" prefWidth="65.0" />
   </children>
 </AnchorPane>

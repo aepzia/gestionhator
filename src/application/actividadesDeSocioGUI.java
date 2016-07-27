@@ -77,7 +77,9 @@ public class actividadesDeSocioGUI extends Application {
 				String sql = "DELETE FROM socioActividad  WHERE actividadId='"+aukera.getId()+"' AND socioApuntado='"+bazkidea.getDNI()+"'";
 				System.out.println(sql);
 				stmt.executeUpdate(sql);
-
+				int plazas = Integer.parseInt(aukera.getNumeroDisponibles())+1;
+				sql = "update actividad set numero_disponibles='"+plazas+"' where id='"+aukera.getId()+"'";
+				stmt.executeUpdate(sql);
 				listActividad.getItems().remove(listActividad.getSelectionModel().getSelectedIndex());	
 
 				conn.close();

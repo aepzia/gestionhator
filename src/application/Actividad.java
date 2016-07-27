@@ -38,14 +38,11 @@ public class Actividad {
 			id = rs.getObject("Id").toString();
 			tpActivididad = rs.getObject("tpActividad").toString();
 			fechaIni = rs.getObject("fechaIni").toString();
-			monitorDNI = rs.getObject("monitorDNI").toString();
-			fechaFin = rs.getObject("fechaFin").toString();
 			setHoraIni(rs.getObject("horaIni").toString());
-			setHoraFin(rs.getObject("horaFin").toString());
 			Nombre = rs.getObject("nombre").toString();
-			setHoraIni(rs.getObject("horaIni").toString());
 			numeroPlazas = rs.getObject("numero_de_plazas").toString();
 			numeroDisponibles = (rs.getObject("numero_disponibles").toString());
+			Precio = rs.getObject("precio").toString();
 			
 			if(tpActivididad == "Preventiva / Prebentziozkoa"){
 				monitorDNI = rs.getObject("monitorDNI").toString();
@@ -58,7 +55,7 @@ public class Actividad {
 				setViernes(rs.getBoolean("viernes"));
 				setSabado(rs.getBoolean("sabado"));
 				setDomingo(rs.getBoolean("domingo"));
-			}else if(tpActivididad == "Soocio-recreativa / gizarte-jolasa"){
+			}else if(tpActivididad == "Socio-recreativa / gizarte-jolasa"){
 				setFechaFin(rs.getObject("fechaFin").toString());
 				setHoraFin(rs.getObject("horaFin").toString());
 				setLugar(rs.getObject("lugar").toString());
@@ -72,7 +69,7 @@ public class Actividad {
 			}
 			
 
-			Precio = rs.getObject("precio").toString();
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
