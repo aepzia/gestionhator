@@ -10,6 +10,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -78,25 +84,44 @@ public class listadosGUI extends Application {
 		sql = sql + " FROM socio";
 		System.out.println(sql);
 		PdfPTable table = new PdfPTable(columnas);
+		String rutaExcel = "ejemploExcelJava.xls";
+    	File archivoXLS = new File(rutaExcel);
+    	if(archivoXLS.exists()) archivoXLS.delete();
 		
 		try {
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-			Connection conn = DriverManager.getConnection("jdbc:ucanaccess://C:/Asoziazioko_datuak/database.mdb;memory=false");
+			Class.forName("org.h2.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
 			Statement stmt = conn.createStatement();
 			ResultSet rs =  stmt.executeQuery(sql);
+			int kont=0;
+			archivoXLS.createNewFile();
+			Workbook libro = new HSSFWorkbook();
+			FileOutputStream archivo = new FileOutputStream(archivoXLS);
+			Sheet hoja = libro.createSheet("Mi hoja de trabajo 1");
+			for(int f=0;f<columnas;f++){
+				
+				}
+			Desktop.getDesktop().open(archivoXLS);
 			while ( rs.next() )
             {
+					
+					Row fila = hoja.createRow(kont);
 					for(int i =1 ; i<=columnas; i++){
+						   Cell celda = fila.createCell(i);
+						   celda.setCellValue(rs.getObject(i).toString());
 						table.addCell(rs.getObject(i).toString());
 					}
+					kont++;
             }
 		
-			
+				libro.write(archivo);
+				
+				archivo.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+	
 		document.add(table);
 	    document.close();
 		File pdfFile = new File("listado.pdf");
@@ -105,8 +130,10 @@ public class listadosGUI extends Application {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		 
+    
+    	 
+    	
+    	
 	}
 	@FXML private void atras(ActionEvent event){
 		menuPrincipalGUI newWindow = new menuPrincipalGUI();

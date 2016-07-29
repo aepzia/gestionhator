@@ -47,10 +47,12 @@ public class listaCesionariosGUI extends Application {
 	private static Stage pStage;
 	
 	@FXML private void atras(){
-		
+		tercerosGUI w = new tercerosGUI();
+		w.start(getPrimaryStage());
 	}
 	@FXML private void nuevoMoni(){
-	
+		nuevoCesionarioGUI w = new nuevoCesionarioGUI();
+		w.start(getPrimaryStage());
 	}
 	@FXML private void elimMoni(){
 		
@@ -97,7 +99,7 @@ public class listaCesionariosGUI extends Application {
 			
 		
     }
-    @FXML protected void initialize(){
+    {
     	try {
     		Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:C:\\Asoziazioko_datuak\\datuBasea", "", "" );
